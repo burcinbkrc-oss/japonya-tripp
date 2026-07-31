@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🇯🇵 Girls Trip in Japan — Seyahat El Kitapçığı</title>
+<title>🇯🇵 Japan Adventure 2026 — Seyahat El Kitapçığı</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
   --op: #E85D04; --os: #FFBA08; --ol: #FFF3E0; --oa: #DC2F02;
@@ -85,7 +85,7 @@ tr:nth-child(even) td { background: #FAFAFA; }
 .cover::before { top: 20px; }
 .cover::after  { bottom: 20px; }
 .cover-flag { font-size: 60px; margin-bottom: 14px; }
-.cover-title { font-size: 30px; font-weight: 700; color: white; letter-spacing: 3px; line-height: 1.2; margin-bottom: 8px; text-shadow: 0 2px 20px rgba(0,0,0,.5); }
+.cover-title { font-size: 30px; font-weight: 400; font-family: 'Pacifico', cursive; color: white; letter-spacing: 1px; line-height: 1.3; margin-bottom: 8px; text-shadow: 0 2px 20px rgba(0,0,0,.5); }
 .cover-subtitle { font-size: 12px; color: #FFBA08; font-weight: 300; letter-spacing: 2px; margin-bottom: 18px; }
 .cover-dates { background: rgba(255,255,255,.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.3); border-radius: 50px; padding: 9px 20px; color: white; font-size: 13px; letter-spacing: 1px; margin-bottom: 20px; }
 .cover-cities { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
@@ -349,9 +349,7 @@ ul li { margin-bottom:4px; font-size:13px; }
   }
 
 
-  input.budget-input::-webkit-outer-spin-button,
-  input.budget-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-  input.budget-input:focus { border-bottom-color: #27AE60 !important; }
+
 
 
   /* Renkli kutular içinde zebra arka planı iptal et */
@@ -361,6 +359,10 @@ ul li { margin-bottom:4px; font-size:13px; }
   .anime-box tr:nth-child(even) td {
     background: transparent !important;
   }
+
+  .cover-city:active { transform: scale(0.94); opacity: 0.8; }
+  .cover-city:hover  { transform: scale(1.04); border-color: rgba(255,186,8,0.9); }
+
 </style>
 </head>
 <body>
@@ -396,12 +398,25 @@ ul li { margin-bottom:4px; font-size:13px; }
       <a onclick="tocGo('bolum-yemek')"   class="toc-item" style="background:linear-gradient(135deg,#16A085,#1ABC9C);">
         <span class="toc-num">06</span><span class="toc-text">🍱 Helal Yemek Rehberi</span><span class="toc-arr">›</span>
       </a>
+      <a onclick="tocGo('bolum-harita')" class="toc-item" style="background:linear-gradient(135deg,#0D47A1,#1976D2);">
+        <span class="toc-num">07</span><span class="toc-text">🗺️ Google Maps Linkleri</span><span class="toc-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-araclar')" class="toc-item" style="background:linear-gradient(135deg,#B7410E,#E85D04);">
+        <span class="toc-num">08</span><span class="toc-text">🧮 Para Araçları</span><span class="toc-arr">›</span>
+      </a>
       <a onclick="tocGo('bolum-harcama')" class="toc-item" style="background:linear-gradient(135deg,#2C3E50,#4A5568);">
-        <span class="toc-num">07</span><span class="toc-text">📓 Harcama & Günlük Notlar</span><span class="toc-arr">›</span>
+        <span class="toc-num">08</span><span class="toc-text">💸 Harcama Listesi</span><span class="toc-arr">›</span>
       </a>
-      <a onclick="tocGo('bolum-butce')" class="toc-item" style="background:linear-gradient(135deg,#1B5E20,#2D6A4F);">
-        <span class="toc-num">08</span><span class="toc-text">📊 Toplam Bütçe Özeti</span><span class="toc-arr">›</span>
+      <a onclick="tocGo('bolum-neseyesek')" class="toc-item" style="background:linear-gradient(135deg,#FF6B35,#F7C59F);">
+        <span class="toc-num">09</span><span class="toc-text" style="color:#2C2C2C;">🎰 Ne Yesek? Çarkı</span><span class="toc-arr" style="color:rgba(0,0,0,0.3);">›</span>
       </a>
+      <a onclick="tocGo('bolum-spotify')" class="toc-item" style="background:linear-gradient(135deg,#1DB954,#191414);">
+        <span class="toc-num">10</span><span class="toc-text">🎵 Japonya Playlist</span><span class="toc-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-quiz')" class="toc-item" style="background:linear-gradient(135deg,#8B5CF6,#EC4899);">
+        <span class="toc-num">11</span><span class="toc-text">🎮 Gün Sonu Quiz</span><span class="toc-arr">›</span>
+      </a>
+
     </nav>
   </div>
 </div>
@@ -424,9 +439,7 @@ ul li { margin-bottom:4px; font-size:13px; }
 .toc-text { color: white; font-size: 14px; font-weight: 600; flex: 1; }
 .toc-arr { color: rgba(255,255,255,0.4); font-size: 18px; }
 
-  input.budget-input::-webkit-outer-spin-button,
-  input.budget-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-  input.budget-input:focus { border-bottom-color: #27AE60 !important; }
+
 
 </style>
 
@@ -452,24 +465,32 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
 });
 </script>
 
-  <div class="cover-title">GIRLS TRIP<br>IN JAPAN</div>
+  <div class="cover-title">JAPAN<br>ADVENTURE<br>2026</div>
   <div class="cover-subtitle">TAM & GÜNCEL MASTER PLAN</div>
   <div class="cover-dates">✈️ &nbsp; 21 – 30 Ağustos 2026 &nbsp; ✈️</div>
   <div class="cover-cities">
-    <div class="cover-city">
+    <a onclick="tocGo('sehir-osaka')" class="cover-city" style="cursor:pointer;text-decoration:none;transition:transform 0.15s,opacity 0.15s;-webkit-tap-highlight-color:transparent;">
       <div>🏯</div>
       <div class="city-name">OSAKA</div>
-    </div>
-    <div class="cover-city">
+      <div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;">Gün 1–4 →</div>
+    </a>
+    <a onclick="tocGo('sehir-kyoto')" class="cover-city" style="cursor:pointer;text-decoration:none;transition:transform 0.15s,opacity 0.15s;-webkit-tap-highlight-color:transparent;">
       <div>⛩️</div>
       <div class="city-name">KYOTO</div>
-    </div>
-    <div class="cover-city">
+      <div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;">Gün 5–6 →</div>
+    </a>
+    <a onclick="tocGo('sehir-tokyo')" class="cover-city" style="cursor:pointer;text-decoration:none;transition:transform 0.15s,opacity 0.15s;-webkit-tap-highlight-color:transparent;">
       <div>🗼</div>
       <div class="city-name">TOKYO</div>
-    </div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;">Gün 7–10 →</div>
+    </a>
+    <a onclick="tocGo('sehir-usj')" class="cover-city" style="cursor:pointer;text-decoration:none;transition:transform 0.15s,opacity 0.15s;-webkit-tap-highlight-color:transparent;border-color:rgba(184,79,208,0.6);">
+      <div>🎢</div>
+      <div class="city-name">USJ</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;">Gün 4 →</div>
+    </a>
   </div>
-  <div class="cover-tagline">4 Kız · 10 Gün · Sonsuz Anı 🌸</div>
+  <div class="cover-tagline">5 Kişi · 10 Gün · Sonsuz Anı 🌸</div>
 </div>
 
 <!-- ============================
@@ -491,7 +512,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   <div class="info-card">
     <div class="grid-2">
       <div>
-        <p><strong>Seyahat:</strong> Girls Trip in Japan ✨</p>
+        <p><strong>Seyahat:</strong> Japan Adventure 2026 ✨</p>
         <p><strong>Tarihler:</strong> 21 – 30 Ağustos 2026 (10 Gün)</p>
         <p><strong>Kişi Sayısı:</strong> 4 Kız 👩‍👩‍👩‍👩</p>
       </div>
@@ -819,7 +840,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
 </div>
 
 <!-- GÜN 1 -->
-<div class="content">
+<div id="sehir-osaka" class="content">
   <div class="day-header osaka-day">
     <div class="day-num"><div class="num">1</div><div class="label">GÜN</div></div>
     <div class="day-info">
@@ -1114,13 +1135,13 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
 </div>
 
 <!-- GÜN 4 — USJ ÖZEL -->
-<div class="page-break content">
+<div id="sehir-usj" class="page-break content">
   <div class="day-header usj-day">
     <div class="day-num"><div class="num">4</div><div class="label">GÜN</div></div>
     <div class="day-info">
       <h3>🎢 Universal Studios Japan + Kyoto'ya Geçiş!</h3>
       <div class="day-meta"><span>📅 24 Ağustos Pazartesi</span><span>📍 USJ → Kyoto</span></div>
-      <div class="day-theme">Mario, Harry Potter, adrenalin — Japonya'nın en büyük eğlence parkı!</div>
+      <div class="day-theme">Mario, Harry Potter, adrenalin — Express Pass ile VIP deneyim!</div>
     </div>
   </div>
 
@@ -1129,51 +1150,143 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
     Sabah bavulları otelde emanete bırakın → USJ → 18:30 otele uğrayıp al → 19:30 Osaka Station → 20:00 Kyoto treni
   </div>
 
-  <div class="usj-header">
-    <h2>🎢 UNIVERSAL STUDIOS JAPAN</h2>
-    <p>⭐ Express Pass 5 KESINLIKLE ALIN — Ağustos'ta bekleme 60–180 dk, EP5 ile 5–15 dk! (Nintendo World dahil, 5 ride)</p>
+  <!-- EXPRESS BİLET KARTI -->
+  <div style="background:linear-gradient(135deg,#7B2D8B,#B84FD0);border-radius:14px;padding:16px;margin:12px 0;border:2px solid #FFBA08;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="font-size:22px;">🎟️</span>
+      <div>
+        <div style="color:#FFBA08;font-size:13px;font-weight:700;letter-spacing:1px;">EXPRESS PASS — BİLETLERİM</div>
+        <div style="color:rgba(255,255,255,0.7);font-size:11px;">24 Ağustos • Kesinleşmiş Slotlar</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+
+      <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 12px;border-left:4px solid #E74C3C;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="color:#FFBA08;font-size:10px;font-weight:700;letter-spacing:0.5px;">🍄 SUPER NINTENDO WORLD</div>
+            <div style="color:white;font-size:13px;font-weight:600;margin-top:2px;">Nintendo World Giriş</div>
+          </div>
+          <div style="background:rgba(255,186,8,0.2);border:1px solid #FFBA08;border-radius:8px;padding:4px 10px;text-align:center;">
+            <div style="color:#FFBA08;font-size:12px;font-weight:700;">13:00</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:9px;">– 14:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 12px;border-left:4px solid #E74C3C;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="color:#FFBA08;font-size:10px;font-weight:700;letter-spacing:0.5px;">🏎️ EXPRESS</div>
+            <div style="color:white;font-size:13px;font-weight:600;margin-top:2px;">Mario Kart: Koopa's Challenge</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:10px;">1. tur</div>
+          </div>
+          <div style="background:rgba(255,186,8,0.2);border:1px solid #FFBA08;border-radius:8px;padding:4px 10px;text-align:center;">
+            <div style="color:#FFBA08;font-size:12px;font-weight:700;">13:00</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:9px;">– 13:30</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 12px;border-left:4px solid #F39C12;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="color:#FFBA08;font-size:10px;font-weight:700;letter-spacing:0.5px;">🏎️ EXPRESS — 2. TUR!</div>
+            <div style="color:white;font-size:13px;font-weight:600;margin-top:2px;">Mario Kart: Koopa's Challenge</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:10px;">2. tur — çok şanslısınız! 🎉</div>
+          </div>
+          <div style="background:rgba(255,186,8,0.2);border:1px solid #FFBA08;border-radius:8px;padding:4px 10px;text-align:center;">
+            <div style="color:#FFBA08;font-size:12px;font-weight:700;">13:30</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:9px;">– 14:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 12px;border-left:4px solid #3498DB;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="color:#FFBA08;font-size:10px;font-weight:700;letter-spacing:0.5px;">🎢 EXPRESS</div>
+            <div style="color:white;font-size:13px;font-weight:600;margin-top:2px;">Hollywood Dream — The Ride</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:10px;">Serbest zaman — sırasız giriş</div>
+          </div>
+          <div style="background:rgba(52,152,219,0.2);border:1px solid #3498DB;border-radius:8px;padding:4px 10px;text-align:center;">
+            <div style="color:#87CEEB;font-size:11px;font-weight:700;">EP</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:9px;">Serbest</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 12px;border-left:4px solid #3498DB;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="color:#FFBA08;font-size:10px;font-weight:700;letter-spacing:0.5px;">🦕 EXPRESS</div>
+            <div style="color:white;font-size:13px;font-weight:600;margin-top:2px;">The Flying Dinosaur</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:10px;">Serbest zaman — sırasız giriş</div>
+          </div>
+          <div style="background:rgba(52,152,219,0.2);border:1px solid #3498DB;border-radius:8px;padding:4px 10px;text-align:center;">
+            <div style="color:#87CEEB;font-size:11px;font-weight:700;">EP</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:9px;">Serbest</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 12px;border-left:4px solid #1ABC9C;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="color:#FFBA08;font-size:10px;font-weight:700;letter-spacing:0.5px;">🧙 EXPRESS</div>
+            <div style="color:white;font-size:13px;font-weight:600;margin-top:2px;">Harry Potter and the Forbidden Journey</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:10px;">Serbest zaman — sırasız giriş</div>
+          </div>
+          <div style="background:rgba(26,188,156,0.2);border:1px solid #1ABC9C;border-radius:8px;padding:4px 10px;text-align:center;">
+            <div style="color:#1ABC9C;font-size:11px;font-weight:700;">EP</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:9px;">Serbest</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <div class="grid-2">
-    <div class="nintendo-box">
-      <h4>🍄 SUPER NINTENDO WORLD</h4>
-      <div class="ts ts-inner"><table style="font-size:13px; width:100%; margin-top:6px;">
-        <tr style="background:rgba(255,255,255,0.12);"><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1);">Mario Kart: Bowser's Challenge</td><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐⭐ #1 Ride!</td></tr>
-        <tr style="background:rgba(0,0,0,0.1);"><td style="padding:7px 10px; color:rgba(255,255,255,0.9); border-bottom:1px solid rgba(255,255,255,0.1);">Yoshi's Adventure</td><td style="padding:7px 10px; color:rgba(255,255,255,0.9); border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐ Sevimli</td></tr>
-        <tr style="background:rgba(255,255,255,0.12);"><td style="padding:7px 10px; color:white;">Key Challenge (Power-Up Band)</td><td style="padding:7px 10px; color:white; white-space:nowrap;">⭐⭐⭐ Eğlenceli</td></tr>
-      </table></div>
-      <p style="font-size:9pt; margin-top:8px; color:rgba(255,255,255,0.8);">Power-Up Band ¥4.800 — Mario, Luigi, Peach tasarımları 🎁</p>
-      <p style="font-size:9pt; color:rgba(255,255,255,0.8);">📸 ?Block önünde zıplama • Peach's Castle grup fotoğrafı</p>
-    </div>
-    <div class="hp-box">
-      <h4>🧙 HARRY POTTER WIZARDING WORLD</h4>
-      <div class="ts ts-inner"><table style="font-size:13px; width:100%; margin-top:6px;">
-        <tr style="background:rgba(255,255,255,0.08);"><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1);">Forbidden Journey</td><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐⭐ EN İYİ!</td></tr>
-        <tr style="background:rgba(0,0,0,0.15);"><td style="padding:7px 10px; color:rgba(255,255,255,0.85); border-bottom:1px solid rgba(255,255,255,0.1);">Flight of the Hippogriff</td><td style="padding:7px 10px; color:rgba(255,255,255,0.85); border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐</td></tr>
-        <tr style="background:rgba(255,255,255,0.08);"><td style="padding:7px 10px; color:white;">Ollivanders Wand Experience</td><td style="padding:7px 10px; color:white; white-space:nowrap;">⭐⭐⭐ Büyülü</td></tr>
-      </table></div>
-      <p style="font-size:9pt; margin-top:8px; color:#D4AF37;">Interaktif asa ¥5.500 • Butterbeer ¥700 • Hogwarts cüppesi ¥6.000+</p>
-    </div>
-  </div>
-
+  <!-- GÜNLÜK PLAN -->
   <div class="ts"><table class="gen-table">
     <thead><tr><th>Saat</th><th>Aktivite</th></tr></thead>
     <tbody>
       <tr><td>06:30</td><td>Uyanış, konbini kahvaltısı</td></tr>
       <tr><td>07:00</td><td>Otel check-out, bavul emanet</td></tr>
-      <tr><td>08:00</td><td>Park kapısında sırada</td></tr>
-      <tr><td>08:30</td><td>🍄 Super Nintendo World — İLK KOŞUN!</td></tr>
-      <tr><td>10:00</td><td>🧙 Harry Potter Wizarding World</td></tr>
-      <tr><td>12:00</td><td>🍽️ Kinopio's Cafe (Nintendo) veya Three Broomsticks (HP)</td></tr>
-      <tr><td>13:00</td><td>Minion, Spider-Man, JAWS, Hollywood Dream</td></tr>
-      <tr><td>15:00</td><td>Parade & karakter fotoğrafları</td></tr>
-      <tr><td>16:30</td><td>Alışveriş & son fotoğraflar</td></tr>
-      <tr><td>17:30</td><td>Park çıkış, Citywalk</td></tr>
-      <tr><td style="font-weight:700; color:#922B21;">18:30</td><td style="font-weight:700; color:#922B21;">Otele — bavulları al! ⚠️ KAÇIRMAYIN</td></tr>
+      <tr><td>08:00</td><td>🎢 Park kapısında — erken giriş kuyruğu</td></tr>
+      <tr><td>08:30–10:00</td><td>🍄 Super Nintendo World — normal kuyruk ile sabah erken gidin!</td></tr>
+      <tr><td>10:00–12:00</td><td>🦕 The Flying Dinosaur EP • 🎢 Hollywood Dream EP</td></tr>
+      <tr><td>12:00–13:00</td><td>🍽️ Öğle yemeği — Kinopio's Cafe veya Three Broomsticks</td></tr>
+      <tr><td style="font-weight:700;color:#7B2D8B;">13:00–14:00</td><td style="font-weight:700;color:#7B2D8B;">🍄 EXPRESS: Nintendo World girişi<br>🏎️ 13:00–13:30 Mario Kart 1. tur<br>🏎️ 13:30–14:00 Mario Kart 2. tur</td></tr>
+      <tr><td>14:00–16:00</td><td>🧙 Harry Potter Wizarding World EP • Butterbeer • Dükkanlar</td></tr>
+      <tr><td>16:00–17:00</td><td>Parade & karakter fotoğrafları</td></tr>
+      <tr><td>17:00–17:30</td><td>🛍️ Son alışveriş — USJ hediyelik</td></tr>
+      <tr><td style="font-weight:700;color:#922B21;">18:30</td><td style="font-weight:700;color:#922B21;">⚠️ Otele — bavulları al! KAÇIRMAYIN</td></tr>
       <tr><td>20:00</td><td>🚃 Osaka → Kyoto (JR Special Rapid, 30dk, ¥580)</td></tr>
       <tr><td>21:30</td><td>🏨 Lili Hotel Kyoto check-in</td></tr>
     </tbody>
   </table></div>
+
+  <div class="nintendo-box">
+    <h4>🍄 SUPER NINTENDO WORLD — Taktik</h4>
+    <div class="ts ts-inner"><table style="font-size:13px; width:100%; margin-top:6px;">
+      <tr style="background:rgba(255,255,255,0.12);"><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1);">Mario Kart: Koopa's Challenge</td><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐⭐ #1 Ride!</td></tr>
+      <tr style="background:rgba(0,0,0,0.1);"><td style="padding:7px 10px; color:rgba(255,255,255,0.9); border-bottom:1px solid rgba(255,255,255,0.1);">Yoshi's Adventure</td><td style="padding:7px 10px; color:rgba(255,255,255,0.9); border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐ Sevimli</td></tr>
+      <tr style="background:rgba(255,255,255,0.12);"><td style="padding:7px 10px; color:white;">Key Challenge (Power-Up Band)</td><td style="padding:7px 10px; color:white; white-space:nowrap;">⭐⭐⭐ Eğlenceli</td></tr>
+    </table></div>
+    <p style="font-size:11px; margin-top:8px; color:rgba(255,255,255,0.8);">💡 13:00 slotunuzu kaçırmayın — EP slotu olduğu için bekleme süreniz 5–10 dk olacak!</p>
+    <p style="font-size:11px; color:rgba(255,255,255,0.8);">📸 ?Block önünde zıplama • Peach's Castle grup fotoğrafı</p>
+  </div>
+
+  <div class="hp-box">
+    <h4>🧙 HARRY POTTER WIZARDING WORLD — Taktik</h4>
+    <div class="ts ts-inner"><table style="font-size:13px; width:100%; margin-top:6px;">
+      <tr style="background:rgba(255,255,255,0.08);"><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1);">Harry Potter & the Forbidden Journey</td><td style="padding:7px 10px; color:white; border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐⭐ EN İYİ!</td></tr>
+      <tr style="background:rgba(0,0,0,0.15);"><td style="padding:7px 10px; color:rgba(255,255,255,0.85); border-bottom:1px solid rgba(255,255,255,0.1);">Flight of the Hippogriff</td><td style="padding:7px 10px; color:rgba(255,255,255,0.85); border-bottom:1px solid rgba(255,255,255,0.1); white-space:nowrap;">⭐⭐</td></tr>
+      <tr style="background:rgba(255,255,255,0.08);"><td style="padding:7px 10px; color:white;">Ollivanders Wand Experience</td><td style="padding:7px 10px; color:white; white-space:nowrap;">⭐⭐⭐ Büyülü</td></tr>
+    </table></div>
+    <p style="font-size:11px; margin-top:8px; color:#D4AF37;">Interaktif asa ¥5.500 • Butterbeer ¥700 • Hogwarts cüppesi ¥6.000+</p>
+  </div>
 
   <div class="shopping-box">
     <h4>🛍️ USJ Almadan Dönme Listesi</h4>
@@ -1193,13 +1306,13 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
 
   <div class="tip-box">
     <strong>📱 USJ Pratik</strong>
-    USJ App ile anlık kuyruk takibi • Locker ¥400–1.000 • Tam şarjlı powerbank • Yağmurluk (ani yağış!) • Girişte matching şapka/taç alın 🎀
+    USJ App ile anlık kuyruk takibi • Locker ¥400–1.000 • Tam şarjlı powerbank • Yağmurluk (ani yağış!) • 13:00 Nintendo World slotunu kaçırmayın! 🎀
   </div>
-  <p style="font-size:10pt; color:#888;">💰 Bilet + EP5: ¥16.000–24.000 | Park içi: ¥8.000–20.000 | ⏰ Alarm: 06:30</p>
+  <p style="font-size:10pt; color:#888;">💰 Bilet + EP: ¥16.000–24.000 | Park içi: ¥8.000–20.000 | ⏰ Alarm: 06:30</p>
 </div>
 
 <!-- GÜN 5 -->
-<div class="page-break content">
+<div id="sehir-kyoto" class="page-break content">
   <div class="day-header kyoto-day">
     <div class="day-num"><div class="num">5</div><div class="label">GÜN</div></div>
     <div class="day-info">
@@ -1378,7 +1491,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
 </div>
 
 <!-- GÜN 7 -->
-<div class="page-break content">
+<div id="sehir-tokyo" class="page-break content">
   <div class="day-header tokyo-day">
     <div class="day-num"><div class="num">7</div><div class="label">GÜN</div></div>
     <div class="day-info">
@@ -2175,390 +2288,779 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
      BÖLÜM 7: HARCAMA TAKİBİ
 ============================= -->
 <div class="page-break">
-  <div id="bolum-harcama" class="section-cover section-cover-harcama">
-    <div class="section-num">07</div>
+  <div id="bolum-harita" class="section-cover" style="background:linear-gradient(135deg,#0D47A1,#1565C0);">
+    <div class="section-num" style="font-size:56px;font-weight:700;color:rgba(255,255,255,0.15);position:absolute;top:10px;right:16px;">🗺️</div>
     <div class="section-title-cover">
-      <h2>📓 HARCAMA TAKİBİ & GÜNLÜK NOTLAR</h2>
-      <p>Seyahat Günlüğü — Anılarını Kaydet</p>
+      <h2>🗺️ GOOGLE MAPS LİNKLERİ</h2>
+      <p>Tıkla — navigasyon başlasın</p>
     </div>
   </div>
 </div>
 
 <div class="content">
-  <p class="subtitle">Her günün sonunda doldurun — döndüğünüzde okumak için!</p>
 
-  <!-- JOURNAL DAYS -->
-  <div class="journal-day">
-    <div class="journal-day-header">
-      <div class="day-label">🛬 GÜN 1</div>
-      <div class="date-label">21 Ağustos Cuma — Osaka Varış</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Toplam Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Ulaşım (KIX→Otel)</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Yemek</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Konbini / Diğer</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Bugünün En Güzel Anı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 Aklımda Kalan</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <div class="tip-box">
+    <strong>💡 Nasıl Kullanılır?</strong>
+    Her yere tıklayınca Google Maps açılır, navigasyonu başlat! Telefonda Google Maps yüklü olduğundan emin ol.
   </div>
 
-  <div class="journal-day">
-    <div class="journal-day-header">
-      <div class="day-label">⛩️ GÜN 2</div>
-      <div class="date-label">22 Ağustos Cumartesi — Katsuoji + Dotonbori</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Toplam Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Ulaşım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Yemek & Tatlı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Bugünün En Güzel Anı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 Notlar</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <!-- OSAKA -->
+  <div class="section-header" style="color:var(--op);margin-top:8px;">
+    <span class="section-icon">🏯</span>
+    <h3>Osaka</h3>
   </div>
 
-  <div class="journal-day">
-    <div class="journal-day-header">
-      <div class="day-label">🦌 GÜN 3</div>
-      <div class="date-label">23 Ağustos Pazar — Nara + Osaka Castle + Don Quijote</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Toplam Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Ulaşım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Yemek & Tatlı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Bugünün En Güzel Anı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 Notlar</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+    <a href="https://maps.google.com/?q=Osaka+Castle+Japan" target="_blank" class="map-link osaka">
+      <span class="map-icon">🏯</span>
+      <div class="map-info">
+        <div class="map-name">Osaka Castle</div>
+        <div class="map-sub">大阪城公園 · Gün 1</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Dotonbori+Osaka+Japan" target="_blank" class="map-link osaka">
+      <span class="map-icon">🌃</span>
+      <div class="map-info">
+        <div class="map-name">Dotonbori</div>
+        <div class="map-sub">道頓堀 · Gün 1–3</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Shinsaibashi+Osaka+Japan" target="_blank" class="map-link osaka">
+      <span class="map-icon">🛍️</span>
+      <div class="map-info">
+        <div class="map-name">Shinsaibashi Alışveriş</div>
+        <div class="map-sub">心斎橋筋 · Gün 2</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Tsutenkaku+Tower+Osaka+Japan" target="_blank" class="map-link osaka">
+      <span class="map-icon">🗼</span>
+      <div class="map-info">
+        <div class="map-name">Tsutenkaku & Shinsekai</div>
+        <div class="map-sub">通天閣 · Gün 2</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Katsuoji+Temple+Osaka+Japan" target="_blank" class="map-link osaka">
+      <span class="map-icon">⛩️</span>
+      <div class="map-info">
+        <div class="map-name">Katsuoji Temple</div>
+        <div class="map-sub">勝尾寺 · Gün 3</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Don+Quijote+Dotonbori+Osaka" target="_blank" class="map-link osaka">
+      <span class="map-icon">🛒</span>
+      <div class="map-info">
+        <div class="map-name">MEGA Don Quijote Dotonbori</div>
+        <div class="map-sub">ドン・キホーテ · Gün 3</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Universal+Studios+Japan+Osaka" target="_blank" class="map-link usj">
+      <span class="map-icon">🎢</span>
+      <div class="map-info">
+        <div class="map-name">Universal Studios Japan</div>
+        <div class="map-sub">USJ · Gün 4</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
   </div>
 
-  <div class="journal-day" style="border-color:#B84FD0;">
-    <div class="journal-day-header" style="border-color:#B84FD0;">
-      <div class="day-label" style="color:#7B2D8B;">🎢 GÜN 4</div>
-      <div class="date-label">24 Ağustos Pazartesi — USJ + Kyoto Geçişi</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>USJ Bilet + EP5</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Park İçi Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>USJ Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Kyoto Ulaşım + Diğer</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Bugünün En İyi Ride'ı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>✨ Bugünün En Güzel Anı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 USJ'den Ne Aldım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <!-- NARA -->
+  <div class="section-header" style="color:#27AE60;margin-top:8px;">
+    <span class="section-icon">🦌</span>
+    <h3>Nara</h3>
   </div>
 
-  <div class="journal-day" style="border-color:#A8763E;">
-    <div class="journal-day-header" style="border-color:#A8763E;">
-      <div class="day-label" style="color:#6B4226;">🎋 GÜN 5</div>
-      <div class="date-label">25 Ağustos Salı — Arashiyama + Gion + Kimono</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Toplam Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Ulaşım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Yemek & Kafe</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Kimono + Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Bugünün En Güzel Anı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 Kyoto'dan İzlenimlerim</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+    <a href="https://maps.google.com/?q=Nara+Deer+Park+Japan" target="_blank" class="map-link nara">
+      <span class="map-icon">🦌</span>
+      <div class="map-info">
+        <div class="map-name">Nara Deer Park</div>
+        <div class="map-sub">奈良公園 · Gün 3</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Todaiji+Temple+Nara" target="_blank" class="map-link nara">
+      <span class="map-icon">🏛️</span>
+      <div class="map-info">
+        <div class="map-name">Todai-ji Temple</div>
+        <div class="map-sub">東大寺 · Gün 3</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
   </div>
 
-  <div class="journal-day" style="border-color:#A8763E;">
-    <div class="journal-day-header" style="border-color:#A8763E;">
-      <div class="day-label" style="color:#6B4226;">⛩️ GÜN 6</div>
-      <div class="date-label">26 Ağustos Çarşamba — Fushimi Inari + Kiyomizu-dera</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Toplam Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Ulaşım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Yemek & Tatlı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Bugünün En Güzel Anı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 Son Kyoto Gecesi Hisleri</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <!-- KYOTO -->
+  <div class="section-header" style="color:var(--kp);margin-top:8px;">
+    <span class="section-icon">⛩️</span>
+    <h3>Kyoto</h3>
   </div>
 
-  <div class="journal-day" style="border-color:#0F3460;">
-    <div class="journal-day-header" style="border-color:#0F3460;">
-      <div class="day-label" style="color:#1A1A2E;">🚅 GÜN 7</div>
-      <div class="date-label">27 Ağustos Perşembe — Shinkansen + Tokyo İlk Günü</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Shinkansen Bileti</label><div style="font-size:9pt; color:#888; padding-top:4px;">¥13.320 / kişi</div></div>
-      <div class="expense-item"><label>Tokyo Ulaşım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Yemek & Tatlı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Fuji Dağı'nı Gördüm mü? 🗻</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>✨ Bugünün En Güzel Anı</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+    <a href="https://maps.google.com/?q=Fushimi+Inari+Taisha+Kyoto" target="_blank" class="map-link kyoto">
+      <span class="map-icon">⛩️</span>
+      <div class="map-info">
+        <div class="map-name">Fushimi Inari Taisha</div>
+        <div class="map-sub">伏見稲荷大社 · Gün 5</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Arashiyama+Bamboo+Grove+Kyoto" target="_blank" class="map-link kyoto">
+      <span class="map-icon">🎋</span>
+      <div class="map-info">
+        <div class="map-name">Arashiyama Bamboo Grove</div>
+        <div class="map-sub">嵐山竹林 · Gün 5</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Kiyomizudera+Temple+Kyoto" target="_blank" class="map-link kyoto">
+      <span class="map-icon">🛕</span>
+      <div class="map-info">
+        <div class="map-name">Kiyomizu-dera Temple</div>
+        <div class="map-sub">清水寺 · Gün 6</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Nishiki+Market+Kyoto" target="_blank" class="map-link kyoto">
+      <span class="map-icon">🏮</span>
+      <div class="map-info">
+        <div class="map-name">Nishiki Market</div>
+        <div class="map-sub">錦市場 · Gün 6</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Gion+District+Kyoto" target="_blank" class="map-link kyoto">
+      <span class="map-icon">🌸</span>
+      <div class="map-info">
+        <div class="map-name">Gion Geisha Bölgesi</div>
+        <div class="map-sub">祇園 · Gün 6</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
   </div>
 
-  <div class="journal-day" style="border-color:#0F3460;">
-    <div class="journal-day-header" style="border-color:#0F3460;">
-      <div class="day-label" style="color:#1A1A2E;">🎮 GÜN 8</div>
-      <div class="date-label">28 Ağustos Cuma — Asakusa + Akihabara + TeamLab</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Toplam Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Anime Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>TeamLab</label><div style="font-size:9pt; color:#888; padding-top:4px;">¥3.800 / kişi</div></div>
-      <div class="expense-item"><label>Diğer</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Akihabara'dan En İyi Bulduğum</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>✨ TeamLab'da En Çok Etkilendiğim Oda</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 Notlar</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <!-- TOKYO -->
+  <div class="section-header" style="color:var(--tp);margin-top:8px;">
+    <span class="section-icon">🗼</span>
+    <h3>Tokyo</h3>
   </div>
 
-  <div class="journal-day" style="border-color:#0F3460;">
-    <div class="journal-day-header" style="border-color:#0F3460;">
-      <div class="day-label" style="color:#E94560;">🌈 GÜN 9</div>
-      <div class="date-label">29 Ağustos Cumartesi — SON TAM GÜN!</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Toplam Harcama</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Yemek & Kafe</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Karaoke + Eğlence</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Veda Gecesi Nasıldı?</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>✨ Bu Seyahatin En Güzel Anım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💭 Tekrar Gelsek Nerede Daha Fazla Zaman Geçirmek İsterdim?</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+    <a href="https://maps.google.com/?q=Sensoji+Temple+Asakusa+Tokyo" target="_blank" class="map-link tokyo">
+      <span class="map-icon">⛩️</span>
+      <div class="map-info">
+        <div class="map-name">Senso-ji & Asakusa</div>
+        <div class="map-sub">浅草 · Gün 7</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Akihabara+Electric+Town+Tokyo" target="_blank" class="map-link tokyo">
+      <span class="map-icon">🎮</span>
+      <div class="map-info">
+        <div class="map-name">Akihabara</div>
+        <div class="map-sub">秋葉原 · Gün 7</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=TeamLab+Planets+Tokyo" target="_blank" class="map-link tokyo">
+      <span class="map-icon">🎨</span>
+      <div class="map-info">
+        <div class="map-name">TeamLab Planets</div>
+        <div class="map-sub">チームラボ · Gün 8</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Gotokuji+Temple+Tokyo" target="_blank" class="map-link tokyo">
+      <span class="map-icon">🐱</span>
+      <div class="map-info">
+        <div class="map-name">Gotokuji Temple (Şans Kedisi)</div>
+        <div class="map-sub">豪徳寺 · Gün 8</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Harajuku+Takeshita+Street+Tokyo" target="_blank" class="map-link tokyo">
+      <span class="map-icon">🎀</span>
+      <div class="map-info">
+        <div class="map-name">Harajuku & Takeshita Caddesi</div>
+        <div class="map-sub">原宿 · Gün 9</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Shibuya+Crossing+Tokyo" target="_blank" class="map-link tokyo">
+      <span class="map-icon">🚶</span>
+      <div class="map-info">
+        <div class="map-name">Shibuya Crossing</div>
+        <div class="map-sub">渋谷スクランブル · Gün 9</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Shinjuku+Kabukicho+Tokyo" target="_blank" class="map-link tokyo">
+      <span class="map-icon">🌃</span>
+      <div class="map-info">
+        <div class="map-name">Shinjuku Gece Hayatı</div>
+        <div class="map-sub">新宿 · Gün 10</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Narita+Airport+Terminal+2" target="_blank" class="map-link tokyo">
+      <span class="map-icon">✈️</span>
+      <div class="map-info">
+        <div class="map-name">Narita Havalimanı T2</div>
+        <div class="map-sub">成田空港 · Gün 10</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
   </div>
 
-  <div class="journal-day" style="border-color:#0F3460; background:#F8F8FF;">
-    <div class="journal-day-header" style="border-color:#0F3460;">
-      <div class="day-label" style="color:#1A1A2E;">✈️ GÜN 10</div>
-      <div class="date-label">30 Ağustos Pazar — Sayonara Japan 💕</div>
-    </div>
-    <div class="expense-grid">
-      <div class="expense-item"><label>Ulaşım (Havalimanı)</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item"><label>Son Alışveriş</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-      <div class="expense-item" style="grid-column: 1/-1;"><label>Bu seyahatte toplam harcamam (Kişi Başı Tahmini)</label><div class="journal-line" style="border-bottom: 2px solid #0F3460;"></div></div>
-    </div>
-    <div class="journal-field"><label>✨ Seyahatten Dönerken Aklımdan Geçen</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>💕 Bu Trip'te En Mutlu Anım</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
-    <div class="journal-field"><label>🌸 Japonya'ya Dair Tavsiyem</label><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div><div class="journal-line jl-edit" contenteditable="true" role="textbox" aria-multiline="false"></div></div>
+  <!-- OTELLER -->
+  <div class="section-header" style="color:#2D6A4F;margin-top:8px;">
+    <span class="section-icon">🏨</span>
+    <h3>Oteller</h3>
   </div>
 
-  <!-- TOPLAM BÜTÇE -->
-  <div id="bolum-butce" style="margin-top:30px; page-break-inside:avoid;">
-    <h3 style="margin-bottom:12px; color:#2C3E50;">📊 Toplam Bütçe Özeti (Kişi Başı)</h3>
-    <div class="ts ts-inner"><table class="gen-table">
+  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px;">
+    <a href="https://maps.google.com/?q=APA+Hotel+Osaka+Higobashi+Ekimae" target="_blank" class="map-link otel">
+      <span class="map-icon">🏨</span>
+      <div class="map-info">
+        <div class="map-name">APA Hotel Osaka Higobashi</div>
+        <div class="map-sub">Osaka Oteli · Gün 1–3</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Lili+Hotel+Kyoto+Shimogyo" target="_blank" class="map-link otel">
+      <span class="map-icon">🏨</span>
+      <div class="map-info">
+        <div class="map-name">Lili Hotel Kyoto</div>
+        <div class="map-sub">Kyoto Oteli · Gün 4–6</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+    <a href="https://maps.google.com/?q=Aizumi+Hostel+Shinjuku+Tokyo" target="_blank" class="map-link otel">
+      <span class="map-icon">🏨</span>
+      <div class="map-info">
+        <div class="map-name">Aizumi Hostel Shinjuku</div>
+        <div class="map-sub">Tokyo Oteli · Gün 7–9</div>
+      </div>
+      <span class="map-arr">↗</span>
+    </a>
+  </div>
+
+</div>
+
+<style>
+.map-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.15s, opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.map-link:active { transform: scale(0.97); opacity: 0.8; }
+.map-icon { font-size: 22px; flex-shrink: 0; }
+.map-info { flex: 1; min-width: 0; }
+.map-name { font-size: 13px; font-weight: 700; }
+.map-sub  { font-size: 11px; margin-top: 2px; opacity: 0.7; }
+.map-arr  { font-size: 18px; opacity: 0.6; flex-shrink: 0; }
+.map-link.osaka { background: #FFF3E0; color: #DC2F02; }
+.map-link.osaka .map-name { color: #DC2F02; }
+.map-link.kyoto { background: #F5ECD7; color: #6B4226; }
+.map-link.kyoto .map-name { color: #6B4226; }
+.map-link.tokyo { background: #E8EAF6; color: #1A1A2E; }
+.map-link.tokyo .map-name { color: #0F3460; }
+.map-link.nara  { background: #E8F5E9; color: #1B5E20; }
+.map-link.nara  .map-name { color: #1B5E20; }
+.map-link.usj   { background: #F3E5F5; color: #6A1B9A; }
+.map-link.usj   .map-name { color: #6A1B9A; }
+.map-link.otel  { background: #E3F2FD; color: #0D47A1; }
+.map-link.otel  .map-name { color: #0D47A1; }
+</style>
+
+<div class="page-break">
+  <div id="bolum-araclar" class="section-cover" style="background:linear-gradient(135deg,#B7410E,#E85D04);">
+    <div class="section-num" style="font-size:56px;font-weight:700;color:rgba(255,255,255,0.15);position:absolute;top:10px;right:16px;font-family:'Noto Serif';">💱</div>
+    <div class="section-title-cover">
+      <h2>🧮 PARA ARAÇLARI</h2>
+      <p>Tax-Free Hesaplayıcı & Kur Dönüştürücü</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- KUR DÖNÜŞTÜRÜCÜ -->
+  <div class="section-header" style="color:#E85D04;">
+    <span class="section-icon">💱</span>
+    <h3>Kur Dönüştürücü</h3>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#1A1A2E,#0F3460);border-radius:16px;padding:20px;margin-bottom:16px;">
+
+    <!-- Kur bilgisi -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <div style="color:rgba(255,255,255,0.6);font-size:11px;">Güncel Kur (Haziran 2026)</div>
+      <div style="color:#FFBA08;font-size:12px;font-weight:700;">1 ¥ = 0,288 ₺</div>
+    </div>
+
+    <!-- Yön seçimi -->
+    <div style="display:flex;background:rgba(255,255,255,0.08);border-radius:12px;padding:4px;margin-bottom:16px;">
+      <button id="yon-yen" onclick="kurYonSec('yen')" style="flex:1;border:none;border-radius:9px;padding:8px;font-size:12px;font-weight:700;background:#FFBA08;color:#1A1A2E;cursor:pointer;transition:all 0.2s;">¥ → ₺</button>
+      <button id="yon-tl"  onclick="kurYonSec('tl')"  style="flex:1;border:none;border-radius:9px;padding:8px;font-size:12px;font-weight:700;background:transparent;color:rgba(255,255,255,0.5);cursor:pointer;transition:all 0.2s;">₺ → ¥</button>
+    </div>
+
+    <!-- Giriş -->
+    <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:10px;">
+      <div id="kur-giris-label" style="color:rgba(255,255,255,0.5);font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:6px;">TUTAR (¥)</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span id="kur-giris-sembol" style="color:#FFBA08;font-size:22px;font-weight:700;">¥</span>
+        <input id="kur-giris" type="number" min="0" placeholder="0" oninput="kurHesapla()"
+          style="flex:1;background:transparent;border:none;outline:none;color:white;font-size:28px;font-weight:700;width:100%;-moz-appearance:textfield;">
+      </div>
+    </div>
+
+    <!-- Sonuç -->
+    <div style="background:rgba(255,186,8,0.15);border:1px solid rgba(255,186,8,0.3);border-radius:12px;padding:14px;text-align:center;">
+      <div id="kur-sonuc-label" style="color:rgba(255,255,255,0.5);font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:6px;">TÜRK LİRASI</div>
+      <div id="kur-sonuc" style="color:#FFBA08;font-size:32px;font-weight:700;">₺0</div>
+    </div>
+
+    <!-- Hızlı değerler -->
+    <div style="margin-top:14px;">
+      <div style="color:rgba(255,255,255,0.4);font-size:10px;margin-bottom:8px;">Hızlı çeviri:</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;" id="hizli-butonlar">
+        <button onclick="hizliCevir(100)"   class="hizli-btn">¥100</button>
+        <button onclick="hizliCevir(500)"   class="hizli-btn">¥500</button>
+        <button onclick="hizliCevir(1000)"  class="hizli-btn">¥1.000</button>
+        <button onclick="hizliCevir(5000)"  class="hizli-btn">¥5.000</button>
+        <button onclick="hizliCevir(10000)" class="hizli-btn">¥10.000</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAX-FREE HESAPLAYICI -->
+  <div class="section-header" style="color:#E85D04;margin-top:24px;">
+    <span class="section-icon">🏷️</span>
+    <h3>Tax-Free Hesaplayıcı</h3>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#1B4332,#2D6A4F);border-radius:16px;padding:20px;margin-bottom:16px;">
+
+    <div style="color:rgba(255,255,255,0.7);font-size:12px;margin-bottom:16px;line-height:1.6;">
+      Japonya'da ¥5.500+ alışverişte %10 KDV iadesi alırsın. Fiyat etiketi KDV dahil (税込), iade sonrası tutarı hesapla!
+    </div>
+
+    <!-- Ürün fiyatı -->
+    <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:14px;margin-bottom:10px;">
+      <div style="color:rgba(255,255,255,0.5);font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:6px;">ÜRÜN FİYATI (KDV DAHİL ¥)</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="color:#FFBA08;font-size:22px;font-weight:700;">¥</span>
+        <input id="tax-giris" type="number" min="0" placeholder="0" oninput="taxHesapla()"
+          style="flex:1;background:transparent;border:none;outline:none;color:white;font-size:28px;font-weight:700;width:100%;-moz-appearance:textfield;">
+      </div>
+    </div>
+
+    <!-- Sonuçlar -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+      <div style="background:rgba(255,255,255,0.08);border-radius:10px;padding:12px;text-align:center;">
+        <div style="color:rgba(255,255,255,0.5);font-size:9px;font-weight:700;letter-spacing:1px;margin-bottom:4px;">KDV İADESİ</div>
+        <div id="tax-iade-yen" style="color:#A5D6A7;font-size:18px;font-weight:700;">¥0</div>
+        <div id="tax-iade-tl"  style="color:rgba(165,214,167,0.7);font-size:11px;margin-top:2px;">₺0</div>
+      </div>
+      <div style="background:rgba(255,186,8,0.15);border:1px solid rgba(255,186,8,0.3);border-radius:10px;padding:12px;text-align:center;">
+        <div style="color:rgba(255,255,255,0.5);font-size:9px;font-weight:700;letter-spacing:1px;margin-bottom:4px;">NET ÖDERSIN</div>
+        <div id="tax-net-yen" style="color:#FFBA08;font-size:18px;font-weight:700;">¥0</div>
+        <div id="tax-net-tl"  style="color:rgba(255,186,8,0.7);font-size:11px;margin-top:2px;">₺0</div>
+      </div>
+    </div>
+
+    <!-- Minimum uyarısı -->
+    <div id="tax-uyari" style="display:none;background:rgba(231,76,60,0.2);border:1px solid rgba(231,76,60,0.4);border-radius:8px;padding:10px;text-align:center;font-size:12px;color:#FF8A80;">
+      ⚠️ Tax-free için minimum ¥5.500 harcaman gerekiyor!
+    </div>
+    <div id="tax-ok" style="display:none;background:rgba(39,174,96,0.2);border:1px solid rgba(39,174,96,0.4);border-radius:8px;padding:10px;text-align:center;font-size:12px;color:#A5D6A7;">
+      ✅ Tax-free için uygun! Passport'unu hazırla.
+    </div>
+
+    <!-- Hızlı ürünler -->
+    <div style="margin-top:14px;">
+      <div style="color:rgba(255,255,255,0.4);font-size:10px;margin-bottom:8px;">Sık alınanlar:</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <button onclick="taxHizli(3800)"  class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">TeamLab ¥3.800</button>
+        <button onclick="taxHizli(5500)"  class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">Min. limit ¥5.500</button>
+        <button onclick="taxHizli(6000)"  class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">Kimono ¥6.000</button>
+        <button onclick="taxHizli(20000)" class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">Alışveriş ¥20.000</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.hizli-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.15s;
+}
+.hizli-btn:active { background: rgba(255,186,8,0.2); color: #FFBA08; }
+</style>
+
+<script>
+(function(){
+  var JPY_TRY = 0.288;
+  var kurYon = 'yen'; // yen->tl veya tl->yen
+
+  // Kur yön seç
+  window.kurYonSec = function(yon){
+    kurYon = yon;
+    var btnYen = document.getElementById('yon-yen');
+    var btnTl  = document.getElementById('yon-tl');
+    if(yon === 'yen'){
+      btnYen.style.background = '#FFBA08'; btnYen.style.color = '#1A1A2E';
+      btnTl.style.background  = 'transparent'; btnTl.style.color = 'rgba(255,255,255,0.5)';
+      document.getElementById('kur-giris-label').textContent  = 'TUTAR (¥)';
+      document.getElementById('kur-giris-sembol').textContent = '¥';
+      document.getElementById('kur-sonuc-label').textContent  = 'TÜRK LİRASI';
+      // Hızlı butonlar
+      document.getElementById('hizli-butonlar').innerHTML =
+        '<button onclick="hizliCevir(100)"   class="hizli-btn">¥100</button>' +
+        '<button onclick="hizliCevir(500)"   class="hizli-btn">¥500</button>' +
+        '<button onclick="hizliCevir(1000)"  class="hizli-btn">¥1.000</button>' +
+        '<button onclick="hizliCevir(5000)"  class="hizli-btn">¥5.000</button>' +
+        '<button onclick="hizliCevir(10000)" class="hizli-btn">¥10.000</button>';
+    } else {
+      btnTl.style.background  = '#FFBA08'; btnTl.style.color = '#1A1A2E';
+      btnYen.style.background = 'transparent'; btnYen.style.color = 'rgba(255,255,255,0.5)';
+      document.getElementById('kur-giris-label').textContent  = 'TUTAR (₺)';
+      document.getElementById('kur-giris-sembol').textContent = '₺';
+      document.getElementById('kur-sonuc-label').textContent  = 'JAPON YENİ';
+      document.getElementById('hizli-butonlar').innerHTML =
+        '<button onclick="hizliCevir(100)"  class="hizli-btn">₺100</button>' +
+        '<button onclick="hizliCevir(500)"  class="hizli-btn">₺500</button>' +
+        '<button onclick="hizliCevir(1000)" class="hizli-btn">₺1.000</button>' +
+        '<button onclick="hizliCevir(5000)" class="hizli-btn">₺5.000</button>';
+    }
+    document.getElementById('kur-giris').value = '';
+    document.getElementById('kur-sonuc').textContent = kurYon === 'yen' ? '₺0' : '¥0';
+  };
+
+  // Kur hesapla
+  window.kurHesapla = function(){
+    var giris = parseFloat(document.getElementById('kur-giris').value) || 0;
+    var sonuc, fmt;
+    if(kurYon === 'yen'){
+      sonuc = giris * JPY_TRY;
+      fmt   = '₺' + sonuc.toLocaleString('tr-TR', {minimumFractionDigits:2, maximumFractionDigits:2});
+    } else {
+      sonuc = giris / JPY_TRY;
+      fmt   = '¥' + Math.round(sonuc).toLocaleString('tr-TR');
+    }
+    document.getElementById('kur-sonuc').textContent = giris > 0 ? fmt : (kurYon==='yen'?'₺0':'¥0');
+  };
+
+  // Hızlı çeviri
+  window.hizliCevir = function(val){
+    document.getElementById('kur-giris').value = val;
+    kurHesapla();
+  };
+
+  // Tax-free hesapla
+  window.taxHesapla = function(){
+    var fiyat = parseFloat(document.getElementById('tax-giris').value) || 0;
+    var iade  = Math.round(fiyat / 11); // %10 KDV: iade = fiyat - fiyat/1.1
+    var net   = fiyat - iade;
+    document.getElementById('tax-iade-yen').textContent = fiyat > 0 ? '¥' + iade.toLocaleString('tr-TR') : '¥0';
+    document.getElementById('tax-iade-tl').textContent  = fiyat > 0 ? '₺' + Math.round(iade * JPY_TRY).toLocaleString('tr-TR') : '₺0';
+    document.getElementById('tax-net-yen').textContent  = fiyat > 0 ? '¥' + net.toLocaleString('tr-TR') : '¥0';
+    document.getElementById('tax-net-tl').textContent   = fiyat > 0 ? '₺' + Math.round(net * JPY_TRY).toLocaleString('tr-TR') : '₺0';
+    // Uyarı
+    document.getElementById('tax-uyari').style.display = (fiyat > 0 && fiyat < 5500) ? 'block' : 'none';
+    document.getElementById('tax-ok').style.display    = fiyat >= 5500 ? 'block' : 'none';
+  };
+
+  // Tax hızlı
+  window.taxHizli = function(val){
+    document.getElementById('tax-giris').value = val;
+    taxHesapla();
+  };
+})();
+</script>
+
+<div class="page-break">
+  <div id="bolum-harcama" class="section-cover section-cover-harcama">
+    <div class="section-num">07</div>
+    <div class="section-title-cover">
+      <h2>💸 HARCAMA LİSTESİ</h2>
+      <p>Herkes kendi harcamasını girer, toplam otomatik hesaplanır</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="tip-box">
+    <strong>💡 Nasıl Kullanılır?</strong>
+    Harcama adını sol sütuna, tutarı (¥) sağ sütuna yaz. Satır ekle butonuyla yeni harcama ekle. Toplam otomatik güncellenir. Grafik en çok harcamadan en aza sıralanır.
+  </div>
+
+
+
+  <!-- HARCAMA TABLOSU -->
+  <div id="harcama-tablo-wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <h3 style="font-size:14px;font-weight:700;color:#2C3E50;">💸 Harcamalarım</h3>
+      <button onclick="satirEkle()" style="background:#2D6A4F;border:none;color:white;font-size:12px;padding:7px 14px;border-radius:20px;cursor:pointer;">+ Satır Ekle</button>
+    </div>
+
+    <div class="ts">
+    <table id="harcama-tablo" style="width:100%;min-width:280px;">
       <thead>
-      <tr>
-        <th>Kalem</th>
-        <th>Bütçe</th>
-        <th>Orta</th>
-        <th>Konforlu</th>
-        <th style="color:#FFBA08;">✏️ Gerçek (Benim)</th>
-      </tr>
-    </thead>
-    <tbody>
         <tr>
-          <td>Yemek (10 gün)</td>
-          <td>¥23.000</td>
-          <td>¥40.000</td>
-          <td>¥67.000</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-0"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
+          <th style="background:#2C3E50;color:white;padding:10px 12px;">Harcama</th>
+          <th style="background:#2C3E50;color:white;padding:8px 12px;text-align:right;white-space:nowrap;">
+            <div style="display:flex;align-items:center;justify-content:flex-end;gap:6px;">
+              <span id="para-label" style="font-size:12px;">Tutar</span>
+              <div onclick="paraBirimiToggle()" style="display:flex;background:rgba(255,255,255,0.15);border-radius:20px;overflow:hidden;cursor:pointer;font-size:11px;font-weight:700;">
+                <span id="btn-yen" style="padding:3px 8px;background:#FFBA08;color:#1A1A2E;transition:all 0.2s;">¥</span>
+                <span id="btn-tl"  style="padding:3px 8px;color:rgba(255,255,255,0.6);transition:all 0.2s;">₺</span>
+              </div>
             </div>
-          </td>
+          </th>
+          <th style="background:#2C3E50;color:white;padding:8px;width:32px;"></th>
         </tr>
-        <tr>
-          <td>Şehir içi ulaşım</td>
-          <td>¥10.000</td>
-          <td>¥12.000</td>
-          <td>¥15.000</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-1"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
+      </thead>
+      <tbody id="harcama-satirlar"></tbody>
+      <tfoot>
+        <tr style="background:#1A1A2E;">
+          <td style="padding:12px;color:white;font-weight:700;font-size:14px;">TOPLAM <span style="font-size:10px;opacity:0.6;">(TL'ye çevrildi)</span></td>
+          <td style="padding:12px;text-align:right;color:#FFBA08;font-weight:700;font-size:16px;" id="tablo-toplam">¥0</td>
+          <td></td>
         </tr>
-        <tr>
-          <td>Shinkansen + şehirlerarası</td>
-          <td>¥15.180</td>
-          <td>¥15.180</td>
-          <td>¥15.180</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-2"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
+        <tr style="background:#1B5E20;">
+          <td style="padding:8px 12px;color:rgba(255,255,255,0.8);font-size:11px;">≈ Türk Lirası</td>
+          <td style="padding:8px 12px;text-align:right;color:#A5D6A7;font-weight:600;font-size:13px;" id="tablo-tl">₺0</td>
+          <td></td>
         </tr>
-        <tr>
-          <td>Giriş ücretleri</td>
-          <td>¥6.000</td>
-          <td>¥10.000</td>
-          <td>¥15.000</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-3"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>USJ Bilet + EP5</td>
-          <td>¥16.000</td>
-          <td>¥20.000</td>
-          <td>¥24.000</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-4"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>TeamLab Planets</td>
-          <td>¥3.800</td>
-          <td>¥3.800</td>
-          <td>¥3.800</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-5"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Kimono kiralama</td>
-          <td>—</td>
-          <td>¥4.000</td>
-          <td>¥6.000</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-6"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Alışveriş</td>
-          <td>¥20.000</td>
-          <td>¥50.000</td>
-          <td>¥100.000+</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-7"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Kafe & tatlı</td>
-          <td>¥5.000</td>
-          <td>¥10.000</td>
-          <td>¥15.000</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-8"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Havalimanı ulaşım</td>
-          <td>¥4.400</td>
-          <td>¥4.400</td>
-          <td>¥6.500</td>
-          <td style="padding:4px 6px;">
-            <div style="display:flex;align-items:center;gap:3px;">
-              <span style="color:#888;font-size:11px;">¥</span>
-              <input type="number" class="budget-input" id="bi-9"
-                min="0" step="100" placeholder="0"
-                oninput="calcBudget()"
-                style="width:100%;border:none;border-bottom:1.5px dashed #2D6A4F;
-                       background:transparent;font-size:12px;color:#1B5E20;
-                       font-weight:600;padding:4px 2px;outline:none;
-                       -moz-appearance:textfield;">
-            </div>
-          </td>
-        </tr>
-      <tr style="font-weight:700; background:#E8F5E9;">
-          <td><strong>TOPLAM</strong></td>
-          <td><strong>~¥107.380</strong><br><small>~$740</small></td>
-          <td><strong>~¥174.380</strong><br><small>~$1.200</small></td>
-          <td><strong>~¥274.480+</strong><br><small>~$1.880+</small></td>
-          <td style="padding:6px 8px;">
-            <div style="background:#2D6A4F;border-radius:8px;padding:6px 10px;text-align:center;">
-              <div style="color:rgba(255,255,255,0.7);font-size:9px;letter-spacing:1px;margin-bottom:2px;">TOPLAM</div>
-              <div id="budget-total" style="color:#FFBA08;font-size:15px;font-weight:700;">¥0</div>
-              <div id="budget-usd"   style="color:rgba(255,255,255,0.6);font-size:10px;margin-top:1px;"></div>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-</table></div>
-    <p style="font-size:9pt; color:#888;">*Konaklama ve uçak bileti dahil değil | ¥1 ≈ ₺0,288 (Haziran 2026)</p>
+      </tfoot>
+    </table>
+    </div>
   </div>
+
+
+
+</div>
+
+<style>
+.kisi-btn {
+  border: 2px solid #DEE2E6;
+  background: white;
+  color: #2C3E50;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.kisi-btn.aktif {
+  background: #1A1A2E;
+  color: #FFBA08;
+  border-color: #FFBA08;
+}
+.harcama-input {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: #2C3E50;
+  width: 100%;
+  padding: 6px 4px;
+  outline: none;
+  border-bottom: 1px dashed #CCC;
+}
+.harcama-input:focus { border-bottom-color: #2D6A4F; }
+.tutar-input {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1B5E20;
+  width: 100%;
+  text-align: right;
+  padding: 6px 4px;
+  outline: none;
+  border-bottom: 1px dashed #CCC;
+  -moz-appearance: textfield;
+}
+.tutar-input::-webkit-outer-spin-button,
+.tutar-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.tutar-input:focus { border-bottom-color: #2D6A4F; }
+.sil-btn {
+  background: none;
+  border: none;
+  color: #CCC;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+.sil-btn:hover, .sil-btn:active { color: #E74C3C; }
+
+</style>
+
+<script>
+(function(){
+  var JPY_TRY = 0.288;
+  var KEY = 'jp_harcama_v2';
+  var paraBirimi = 'tl';
+
+  function veriOku(){
+    try{ var r=localStorage.getItem(KEY); return r?JSON.parse(r):[]; }catch(e){ return []; }
+  }
+  function veriKaydet(satirlar){
+    try{ localStorage.setItem(KEY, JSON.stringify(satirlar)); }catch(e){}
+  }
+
+  function satirEkleDOM(ad, tutarVal, birim){
+    birim = birim || paraBirimi;
+    tutarVal = tutarVal || '';
+    var tbody = document.getElementById('harcama-satirlar');
+    if(!tbody) return;
+    var tr = document.createElement('tr');
+    tr.dataset.birim = birim;
+    tr.innerHTML =
+      '<td style="padding:4px 8px;"><input class="harcama-input" placeholder="Harcama adı..." value="'+ad+'" oninput="kaydetVeGuncelle()"></td>'+
+      '<td style="padding:4px 6px;"><div style="display:flex;align-items:center;gap:3px;justify-content:flex-end;">'+
+        '<span style="color:#888;font-size:11px;">'+(birim==='yen'?'¥':'₺')+'</span>'+
+        '<input class="tutar-input" type="number" min="0" placeholder="0" value="'+tutarVal+'" oninput="kaydetVeGuncelle()" style="width:80px;">'+
+      '</div></td>'+
+      '<td style="padding:4px;"><button class="sil-btn" onclick="satirSil(this)">✕</button></td>';
+    tbody.appendChild(tr);
+  }
+
+  var VARSAYILAN = [
+    {ad:'✈️ Gidiş - Dönüş Uçak Bileti', tutar:'49400',  birim:'tl'},
+    {ad:'🏨 Osaka Otel',                 tutar:'4982',   birim:'tl'},
+    {ad:'🏨 Kyoto Otel',                 tutar:'3043',   birim:'tl'},
+    {ad:'🏨 Tokyo Otel',                 tutar:'3043',   birim:'tl'},
+    {ad:'🎢 USJ Bilet',                  tutar:'8400',   birim:'tl'},
+    {ad:'🚄 Tokyo Shinkansen Bileti',    tutar:'4500',   birim:'tl'},
+    {ad:'📋 Yurtdışı Çıkış Harç Pulu',  tutar:'1250',   birim:'tl'},
+    {ad:'👕 Uniqlo',                     tutar:'',       birim:'tl'},
+    {ad:'🛒 Daiso',                      tutar:'',       birim:'tl'},
+    {ad:'🛍️ Don Quijote',               tutar:'',       birim:'tl'},
+    {ad:'👗 GU',                         tutar:'',       birim:'tl'},
+    {ad:'💄 Shiseido',                   tutar:'',       birim:'tl'},
+    {ad:'',                              tutar:'',       birim:'tl'},
+  ];
+
+  function tabloYukle(){
+    var kayitli = veriOku();
+    var satirlar = kayitli.length > 0 ? kayitli : VARSAYILAN;
+    var tbody = document.getElementById('harcama-satirlar');
+    if(!tbody) return;
+    tbody.innerHTML = '';
+    satirlar.forEach(function(s){ satirEkleDOM(s.ad||'', s.tutar||'', s.birim||'tl'); });
+    toplamGuncelle();
+  }
+
+  function toplamGuncelle(){
+    var toplamTL = 0;
+    var rows = document.querySelectorAll('#harcama-satirlar tr');
+    rows.forEach(function(tr){
+      var inp = tr.querySelector('.tutar-input');
+      var tutar = parseFloat(inp ? inp.value : 0) || 0;
+      var birim = tr.dataset.birim || 'yen';
+      toplamTL += birim === 'yen' ? tutar * JPY_TRY : tutar;
+    });
+    var tlFmt = '₺' + Math.round(toplamTL).toLocaleString('tr-TR');
+    var el1 = document.getElementById('tablo-toplam');
+    var el2 = document.getElementById('aktif-toplam-banner');
+    var el3 = document.getElementById('tablo-tl');
+    if(el1) el1.textContent = tlFmt;
+    if(el2) el2.textContent = tlFmt;
+    if(el3){
+      if(paraBirimi === 'tl'){
+        el3.textContent = '≈ ¥' + Math.round(toplamTL / JPY_TRY).toLocaleString('tr-TR');
+      } else {
+        var topYen = 0;
+        document.querySelectorAll('#harcama-satirlar .tutar-input').forEach(function(i){ topYen += parseFloat(i.value)||0; });
+        el3.textContent = '¥' + topYen.toLocaleString('tr-TR') + ' harcandı';
+      }
+    }
+  }
+
+  window.satirEkle = function(){
+    satirEkleDOM('','',paraBirimi);
+    window.kaydetVeGuncelle();
+  };
+
+  window.satirSil = function(btn){
+    var tbody = document.getElementById('harcama-satirlar');
+    if(tbody && tbody.children.length > 1){ btn.closest('tr').remove(); window.kaydetVeGuncelle(); }
+  };
+
+  window.kaydetVeGuncelle = function(){
+    var satirlar = [];
+    document.querySelectorAll('#harcama-satirlar tr').forEach(function(tr){
+      var inputs = tr.querySelectorAll('input');
+      satirlar.push({ad: inputs[0]?inputs[0].value:'', tutar: inputs[1]?inputs[1].value:'', birim: tr.dataset.birim||paraBirimi});
+    });
+    veriKaydet(satirlar);
+    toplamGuncelle();
+  };
+
+  window.paraBirimiToggle = function(){
+    paraBirimi = paraBirimi === 'yen' ? 'tl' : 'yen';
+    var btnYen = document.getElementById('btn-yen');
+    var btnTl  = document.getElementById('btn-tl');
+    var lbl    = document.getElementById('para-label');
+    if(paraBirimi === 'yen'){
+      if(btnYen){ btnYen.style.background='#FFBA08'; btnYen.style.color='#1A1A2E'; }
+      if(btnTl){ btnTl.style.background='transparent'; btnTl.style.color='rgba(255,255,255,0.6)'; }
+      if(lbl) lbl.textContent = 'Tutar';
+    } else {
+      if(btnTl){ btnTl.style.background='#FFBA08'; btnTl.style.color='#1A1A2E'; }
+      if(btnYen){ btnYen.style.background='transparent'; btnYen.style.color='rgba(255,255,255,0.6)'; }
+      if(lbl) lbl.textContent = 'Tutar';
+    }
+    toplamGuncelle();
+  };
+
+  // Sayfa yüklenince başlat
+  function init(){
+    tabloYukle();
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 
   <!-- KAPANIŞ -->
   <div style="text-align:center; padding:40px 20px; margin-top:30px; background:linear-gradient(135deg, #1A1A2E, #0F3460); border-radius:16px; color:white; page-break-inside:avoid;">
     <div style="font-size:48px; margin-bottom:16px;">🌸 ⛩️ 🍜 🗼 🎋</div>
     <h2 style="font-size:28px; font-weight:700; letter-spacing:3px; margin-bottom:12px;">さようなら日本！</h2>
     <p style="font-size:18px; color:rgba(255,255,255,0.85); margin-bottom:16px;">またね — Tekrar görüşürüz!</p>
-    <p style="color:rgba(255,186,8,0.9); font-size:14px; letter-spacing:2px;">Girls Trip in Japan 2026 • 4 Kız • 10 Gün • Sonsuz Anı 💕</p>
+    <p style="color:rgba(255,186,8,0.9); font-size:14px; letter-spacing:2px;">Japan Adventure 2026 2026 • 4 Kız • 10 Gün • Sonsuz Anı 💕</p>
   </div>
 </div>
 
@@ -2730,49 +3232,352 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   <!-- Alttaki sabit çubuğa yer aç -->
   <div style="height:62px;"></div>
 
+
+
+
+<!-- NE YESEK ÇARKI -->
+<div class="page-break">
+  <div id="bolum-neseyesek" class="section-cover" style="background:linear-gradient(135deg,#FF6B35,#F7C59F);">
+    <div class="section-num" style="font-size:56px;font-weight:700;color:rgba(255,255,255,0.2);position:absolute;top:10px;right:16px;">🎰</div>
+    <div class="section-title-cover"><h2 style="color:#2C2C2C;">🎰 NE YESEK?</h2><p style="color:rgba(0,0,0,0.5);">Karar veremiyorsanız çevirin!</p></div>
+  </div>
+</div>
+<div class="content" style="text-align:center;">
+  <p style="color:#666;font-size:13px;margin-bottom:20px;">Helal & Vejetaryen dostu seçenekler dahil 🌙</p>
+  <div style="position:relative;width:260px;height:260px;margin:0 auto 24px;">
+    <canvas id="cark-canvas" width="260" height="260" style="border-radius:50%;display:block;"></canvas>
+    <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:28px;line-height:1;">▼</div>
+  </div>
+  <button id="cark-btn" style="background:linear-gradient(135deg,#FF6B35,#F7931E);border:none;color:white;font-size:16px;font-weight:700;padding:14px 36px;border-radius:50px;cursor:pointer;-webkit-tap-highlight-color:transparent;">🎰 ÇEVİR!</button>
+  <div id="cark-sonuc" style="display:none;background:linear-gradient(135deg,#1A1A2E,#0F3460);border-radius:20px;padding:20px;margin-top:20px;border:2px solid rgba(255,186,8,0.3);">
+    <div id="cark-emoji" style="font-size:52px;margin-bottom:8px;"></div>
+    <div id="cark-yemek" style="color:#FFBA08;font-size:20px;font-weight:700;margin-bottom:6px;"></div>
+    <div id="cark-aciklama" style="color:rgba(255,255,255,0.75);font-size:13px;line-height:1.6;margin-bottom:10px;"></div>
+    <div id="cark-helal" style="font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;display:inline-block;"></div>
+    <br><br>
+    <button onclick="carkTekrar()" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;font-size:13px;padding:10px 22px;border-radius:20px;cursor:pointer;">🔄 Tekrar</button>
+  </div>
+</div>
+
+<!-- SPOTİFY -->
+<div class="page-break">
+  <div id="bolum-spotify" class="section-cover" style="background:linear-gradient(135deg,#191414,#1DB954);">
+    <div class="section-num" style="font-size:56px;font-weight:700;color:rgba(255,255,255,0.1);position:absolute;top:10px;right:16px;">🎵</div>
+    <div class="section-title-cover"><h2>🎵 JAPONYA PLAYLİSTİ</h2><p>Seyahat boyunca arka fon müziği</p></div>
+  </div>
+</div>
+<div class="content">
+  <p style="color:#666;font-size:13px;margin-bottom:16px;text-align:center;">Japonya havasına girmek için özenle seçilmiş listeler 🎌</p>
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <a href="https://open.spotify.com/search/japan%20hits" target="_blank" style="display:flex;align-items:center;gap:14px;background:#282828;border-radius:16px;padding:16px;text-decoration:none;-webkit-tap-highlight-color:transparent;">
+      <div style="width:48px;height:48px;background:linear-gradient(135deg,#1DB954,#158a3e);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">🌸</div>
+      <div style="flex:1;"><div style="color:white;font-size:14px;font-weight:700;">J-Pop & Japan Hits</div><div style="color:#1DB954;font-size:11px;margin-top:2px;">Spotify'da ara →</div></div>
+    </a>
+    <a href="https://open.spotify.com/search/anime%20soundtrack" target="_blank" style="display:flex;align-items:center;gap:14px;background:#282828;border-radius:16px;padding:16px;text-decoration:none;-webkit-tap-highlight-color:transparent;">
+      <div style="width:48px;height:48px;background:linear-gradient(135deg,#E94560,#0F3460);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">⛩️</div>
+      <div style="flex:1;"><div style="color:white;font-size:14px;font-weight:700;">Anime Soundtrack</div><div style="color:#1DB954;font-size:11px;margin-top:2px;">Spotify'da ara →</div></div>
+    </a>
+    <a href="https://open.spotify.com/search/japanese%20city%20pop" target="_blank" style="display:flex;align-items:center;gap:14px;background:#282828;border-radius:16px;padding:16px;text-decoration:none;-webkit-tap-highlight-color:transparent;">
+      <div style="width:48px;height:48px;background:linear-gradient(135deg,#FF6B35,#F7931E);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">🌃</div>
+      <div style="flex:1;"><div style="color:white;font-size:14px;font-weight:700;">Japanese City Pop</div><div style="color:#1DB954;font-size:11px;margin-top:2px;">Spotify'da ara →</div></div>
+    </a>
+    <a href="https://open.spotify.com/search/japanese%20lo-fi" target="_blank" style="display:flex;align-items:center;gap:14px;background:#282828;border-radius:16px;padding:16px;text-decoration:none;-webkit-tap-highlight-color:transparent;">
+      <div style="width:48px;height:48px;background:linear-gradient(135deg,#6B4226,#A8763E);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">🎋</div>
+      <div style="flex:1;"><div style="color:white;font-size:14px;font-weight:700;">Japanese Lo-Fi</div><div style="color:#1DB954;font-size:11px;margin-top:2px;">Spotify'da ara →</div></div>
+    </a>
+  </div>
+  <div class="tip-box" style="margin-top:16px;"><strong>💡 İpucu</strong> Spotify'ı önceden indir, Japonya'da veri paketi pahalı! Playlist'leri offline kaydet.</div>
+</div>
+
+<!-- QUİZ -->
+<div class="page-break">
+  <div id="bolum-quiz" class="section-cover" style="background:linear-gradient(135deg,#8B5CF6,#EC4899);">
+    <div class="section-num" style="font-size:56px;font-weight:700;color:rgba(255,255,255,0.15);position:absolute;top:10px;right:16px;">🎮</div>
+    <div class="section-title-cover"><h2>🎮 GÜN SONU QUİZ</h2><p>Her gün 5 soru — toplam puan birikiyor!</p></div>
+  </div>
+</div>
+<div class="content">
+  <div style="text-align:center;margin-bottom:20px;">
+    <div style="background:linear-gradient(135deg,#8B5CF6,#EC4899);border-radius:16px;padding:16px;display:inline-block;min-width:160px;">
+      <div style="color:rgba(255,255,255,0.7);font-size:10px;letter-spacing:1px;font-weight:700;">TOPLAM PUANIM</div>
+      <div id="quiz-toplam" style="color:white;font-size:36px;font-weight:700;">0</div>
+      <div style="color:rgba(255,255,255,0.7);font-size:10px;">/ 50 puan</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;" id="gun-secim"></div>
+  <div id="quiz-alan"></div>
+</div>
+
+<style>
+.gun-btn{background:rgba(139,92,246,0.15);border:2px solid rgba(139,92,246,0.3);color:#8B5CF6;font-size:12px;font-weight:700;padding:7px 13px;border-radius:20px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.gun-btn.aktif{background:#8B5CF6;color:white;border-color:#8B5CF6;}
+.gun-btn.bitti{background:rgba(39,174,96,0.15);border-color:#27AE60;color:#27AE60;}
+.qsoru{background:#F8F9FA;border-radius:12px;padding:14px;margin-bottom:10px;}
+.qsoru p{font-size:14px;font-weight:600;color:#2C3E50;margin-bottom:10px;}
+.qsec{display:flex;flex-direction:column;gap:7px;}
+.qbtn{background:white;border:2px solid #DEE2E6;border-radius:10px;padding:10px 12px;font-size:13px;color:#2C3E50;cursor:pointer;text-align:left;-webkit-tap-highlight-color:transparent;width:100%;}
+.qbtn.dogru{background:#D4EDDA;border-color:#27AE60;color:#155724;}
+.qbtn.yanlis{background:#F8D7DA;border-color:#E74C3C;color:#721C24;}
+</style>
+
 <script>
-function calcBudget() {
-  var total = 0;
-  var n = 10; // satır sayısı
-  for (var i = 0; i < n; i++) {
-    var el = document.getElementById('bi-' + i);
-    if (el && el.value) total += parseFloat(el.value) || 0;
-  }
-  var fmt = total > 0 ? '¥' + total.toLocaleString('tr-TR') : '¥0';
-  var tl  = total > 0 ? '≈ ₺' + Math.round(total * 0.288).toLocaleString('tr-TR') : '';
-  document.getElementById('budget-total').textContent = fmt;
-  document.getElementById('budget-usd').textContent   = tl;
-  saveBudget();
-}
+// ÇARK
+(function(){
+  var YEMEKLER=[
+    {ad:'Ramen',emoji:'🍜',aciklama:'Sıcak doyurucu erişte. Helal dükkan için "halal ramen" ara!',helal:'🌙 Helal seçenek var',renk:'#E74C3C'},
+    {ad:'Sushi',emoji:'🍣',aciklama:'Taze balıklı pirinç topları. Vejetaryen kappa maki dene!',helal:'⚠️ Dükkan seç',renk:'#1ABC9C'},
+    {ad:'Takoyaki',emoji:'🐙',aciklama:'Ahtapotlu top — Osaka\'nın sembolü! Dotonbori\'de her yerde.',helal:'⚠️ Dükkan seç',renk:'#E85D04'},
+    {ad:'Gyudon',emoji:'🥩',aciklama:'Etli pirinç kasesi. Sukiya zinciri helal sertifikalı!',helal:'🌙 Sukiya = Helal',renk:'#8B4513'},
+    {ad:'Udon',emoji:'🍲',aciklama:'Kalın yumuşak erişte. Genellikle vejetaryen seçenek var.',helal:'✅ Güvenli',renk:'#F39C12'},
+    {ad:'Okonomiyaki',emoji:'🥞',aciklama:'Japon savoury pancake. Osaka tarzı mutlaka deneyin!',helal:'⚠️ Malzeme sor',renk:'#9B59B6'},
+    {ad:'Tempura',emoji:'🍤',aciklama:'Çıtır kızartma — sebze tempura kesinlikle helal!',helal:'✅ Sebze seç',renk:'#F1C40F'},
+    {ad:'Onigiri',emoji:'🍙',aciklama:'Pirinç üçgeni — konbiniden al, hızlı ve ucuz!',helal:'✅ Konbini\'den',renk:'#2ECC71'},
+    {ad:'Matcha Tatlı',emoji:'🍵',aciklama:'Matcha dondurma veya mochi! Kyoto\'da muhteşem.',helal:'✅ Tatlı güvenli',renk:'#27AE60'},
+    {ad:'Yakiniku',emoji:'🥩',aciklama:'Kore tarzı ızgara et. Helal dükkan araştır!',helal:'🌙 Helal dükkan bul',renk:'#C0392B'},
+    {ad:'Ekiben',emoji:'🚄',aciklama:'Tren bento kutusu! Shinkansen\'de pencereden izlerken ye.',helal:'⚠️ İçeriğe bak',renk:'#2980B9'},
+    {ad:'Conveyor Sushi',emoji:'🔄',aciklama:'Döner bantlı sushi! Vejetaryen tabakları seç.',helal:'⚠️ Vejetaryen seç',renk:'#16A085'}
+  ];
+  var aci=0, donuyor=false;
+  var btn=document.getElementById('cark-btn');
 
-function saveBudget() {
-  var vals = {};
-  for (var i = 0; i < 10; i++) {
-    var el = document.getElementById('bi-' + i);
-    if (el && el.value) vals[i] = el.value;
+  function ciz(offset){
+    var canvas=document.getElementById('cark-canvas');
+    if(!canvas)return;
+    var ctx=canvas.getContext('2d');
+    if(!ctx)return;
+    var n=YEMEKLER.length, W=260, CX=W/2, CY=W/2, R=CX-4;
+    var dilim=(2*Math.PI)/n;
+    ctx.clearRect(0,0,W,W);
+    for(var i=0;i<n;i++){
+      var b=offset+i*dilim, s=b+dilim;
+      ctx.beginPath();ctx.moveTo(CX,CY);ctx.arc(CX,CY,R,b,s);ctx.closePath();
+      ctx.fillStyle=YEMEKLER[i].renk;ctx.fill();
+      ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=1.5;ctx.stroke();
+      ctx.save();ctx.translate(CX,CY);ctx.rotate(b+dilim/2);
+      ctx.font='16px serif';ctx.textAlign='center';ctx.textBaseline='middle';
+      ctx.fillText(YEMEKLER[i].emoji,R*0.6,0);ctx.restore();
+    }
+    ctx.beginPath();ctx.arc(CX,CY,26,0,2*Math.PI);
+    ctx.fillStyle='#1A1A2E';ctx.fill();
+    ctx.strokeStyle='#FFBA08';ctx.lineWidth=3;ctx.stroke();
+    ctx.font='bold 10px sans-serif';ctx.fillStyle='#FFBA08';
+    ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('YE!',CX,CY);
   }
-  try { localStorage.setItem('jp_budget', JSON.stringify(vals)); } catch(e){}
-}
 
-function loadBudget() {
-  var raw; try { raw = localStorage.getItem('jp_budget'); } catch(e){}
-  if (!raw) return;
-  var vals; try { vals = JSON.parse(raw); } catch(e){ return; }
-  for (var i = 0; i < 10; i++) {
-    if (vals[i] !== undefined) {
-      var el = document.getElementById('bi-' + i);
-      if (el) el.value = vals[i];
+  function goster(y){
+    document.getElementById('cark-emoji').textContent=y.emoji;
+    document.getElementById('cark-yemek').textContent=y.ad;
+    document.getElementById('cark-aciklama').textContent=y.aciklama;
+    var h=document.getElementById('cark-helal');
+    h.textContent=y.helal;
+    h.style.background=y.helal[0]==='✅'?'rgba(46,204,113,0.2)':y.helal[0]==='🌙'?'rgba(39,174,96,0.2)':'rgba(243,156,18,0.2)';
+    h.style.color=y.helal[0]==='⚠️'?'#F39C12':'#2ECC71';
+    h.style.border='1px solid '+h.style.color;
+    var s=document.getElementById('cark-sonuc');
+    s.style.display='block';
+    s.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  function cevir(){
+    if(donuyor)return;
+    donuyor=true;
+    document.getElementById('cark-sonuc').style.display='none';
+    var ekstra=(Math.random()*4+5)*2*Math.PI;
+    var hedef=aci+ekstra;
+    var sure=3500, baslangic=null;
+    function adim(t){
+      if(!baslangic)baslangic=t;
+      var g=t-baslangic, p=Math.min(g/sure,1);
+      var ease=1-Math.pow(1-p,3);
+      ciz(aci+(hedef-aci)*ease);
+      if(p<1){requestAnimationFrame(adim);}
+      else{
+        aci=hedef%(2*Math.PI);donuyor=false;
+        var n=YEMEKLER.length;
+        var dilim=(2*Math.PI)/n;
+        var okA=(3*Math.PI/2-aci%(2*Math.PI)+2*Math.PI)%(2*Math.PI);
+        goster(YEMEKLER[Math.floor(okA/dilim)%n]);
+      }
+    }
+    requestAnimationFrame(adim);
+  }
+
+  window.carkTekrar=function(){document.getElementById('cark-sonuc').style.display='none';};
+  if(btn)btn.onclick=cevir;
+  // Sayfa yüklenince çark çiz
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){ciz(0);});
+  } else { ciz(0); }
+})();
+
+// QUİZ
+(function(){
+  var S={
+    1:[
+      {s:'Osaka\'nın lakabı nedir?',c:['Kyoto\'nun kızkardeşi','Japonya\'nın mutfağı','Batı başkenti','Gece şehri'],d:1},
+      {s:'Dotonbori\'deki ünlü tabela?',c:['Pikachu','Glico Running Man','Hello Kitty','Mario'],d:1},
+      {s:'Takoyaki içinde ne var?',c:['Tavuk','Ahtapot','Balık yumurtası','Sosis'],d:1},
+      {s:'Osaka\'daki tema parkı?',c:['DisneySea','Disneyland','Universal Studios','Fuji-Q'],d:2},
+      {s:'Tax-free minimum tutar?',c:['¥3.000','¥5.500','¥10.000','¥1.000'],d:1}
+    ],
+    2:[
+      {s:'Don Quijote\'nin kısaltması?',c:['Donki','Dokin','DQ','Quijote'],d:0},
+      {s:'Osaka\'da "pizza" denen yemek?',c:['Takoyaki','Ramen','Okonomiyaki','Gyudon'],d:2},
+      {s:'Shinsaibashi\'de ne alışverişi?',c:['Elektronik','Moda & kozmetik','Kitap','Oyuncak'],d:1},
+      {s:'Tsutenkaku hangi semti temsil eder?',c:['Namba','Shinsekai','Umeda','Tennoji'],d:1},
+      {s:'Don Quijote kaç saat açık?',c:['12 saat','18 saat','20 saat','24 saat'],d:3}
+    ],
+    3:[
+      {s:'Nara\'daki geyikler neyin sembolü?',c:['Güneş tanrısı','Kasuga Taisha tanrısı','Deniz tanrısı','Ay tanrısı'],d:1},
+      {s:'Geyiklere ne verilir?',c:['Ekmek','Havuç','Shika senbei','Elma'],d:2},
+      {s:'Todai-ji\'deki Buda neyin rekoru?',c:['En yüksek','En büyük tunç Buda','En eski','En pahalı'],d:1},
+      {s:'Katsuoji ne için ünlü?',c:['Kiraz çiçeği','Daruma bebekler','Geyikler','Bambu'],d:1},
+      {s:'Osaka\'dan Nara\'ya kaç dakika?',c:['15 dk','45 dk','90 dk','2 saat'],d:1}
+    ],
+    4:[
+      {s:'Nintendo World\'de en popüler ride?',c:['Yoshi\'s Adventure','Mario Kart: Koopa\'s Challenge','Bowser Tower','Luigi Mansion'],d:1},
+      {s:'HP bölümündeki içeceğin adı?',c:['Pumpkin Juice','Polyjuice','Butterbeer','Firewhisky'],d:2},
+      {s:'Power-Up Band fiyatı?',c:['¥2.400','¥4.800','¥6.000','¥1.500'],d:1},
+      {s:'Osaka\'dan Kyoto\'ya JR kaç dakika?',c:['15','30','60','90'],d:1},
+      {s:'Mario Kart kaçıncı saat slotunda?',c:['11:00','13:00','15:00','10:00'],d:1}
+    ],
+    5:[
+      {s:'Fushimi Inari\'deki kırmızı kapılar?',c:['Torii','Shimenawa','Ema','Omamori'],d:0},
+      {s:'Arashiyama\'da ne gezersiniz?',c:['Geyik parkı','Bambu ormanı','Kiraz bahçesi','Ninja köyü'],d:1},
+      {s:'Kyoto kaç yıl başkent oldu?',c:['500','1000','100','200'],d:1},
+      {s:'Geleneksel Japon kıyafeti?',c:['Hakama','Yukata','Kimono','Haori'],d:2},
+      {s:'Kyoto\'nun eski adı?',c:['Naniwa','Heiankyō','Edo','Yamato'],d:1}
+    ],
+    6:[
+      {s:'Kiyomizu-dera\'nın anlamı?',c:['Ateş tapınağı','Saf su tapınağı','Işık tapınağı','Rüzgar tapınağı'],d:1},
+      {s:'Nishiki Market\'in lakabı?',c:['Büyük çarşı','Kyoto\'nun mutfağı','Eski Kyoto','Renkli çarşı'],d:1},
+      {s:'Gion bölgesi neyle ünlü?',c:['Animeler','Geishalar','Samuraylar','Ninjalar'],d:1},
+      {s:'Osaka\'dan Tokyo\'ya Shinkansen?',c:['1 saat','2.5 saat','4 saat','6 saat'],d:1},
+      {s:'Ekiben ne demek?',c:['Tren bento','Japon sandviç','Konbini yemeği','Ünlü bento'],d:0}
+    ],
+    7:[
+      {s:'Senso-ji nerede?',c:['Kyoto','Osaka','Tokyo-Asakusa','Nara'],d:2},
+      {s:'Akihabara\'nın lakabı?',c:['Anime Mahallesi','Elektrik Kasabası','Manga Şehri','Otaku Cenneti'],d:1},
+      {s:'Asakusa\'daki ünlü kapının adı?',c:['Torii Kapısı','Kaminarimon','Senso-ji Kapısı','Nakamise'],d:1},
+      {s:'TeamLab Planets nerede?',c:['Shibuya','Shinjuku','Toyosu','Asakusa'],d:2},
+      {s:'Tokyo\'nun eski adı?',c:['Kyoto','Nara','Edo','Heian'],d:2}
+    ],
+    8:[
+      {s:'Gotokuji hangi kediyle ünlü?',c:['Kuro','Maneki-neko','Pikachu','Hello Kitty'],d:1},
+      {s:'TeamLab\'da ne var?',c:['Müzik konserleri','Dijital sanat enstalasyonları','VR oyunları','Film'],d:1},
+      {s:'Harajuku hangi kültürle ünlü?',c:['Punk','Kawaii & Lolita','Hip-hop','Gothic'],d:1},
+      {s:'Shibuya Crossing\'de günlük geçiş?',c:['10.000','50.000','500.000','2.500.000+'],d:3},
+      {s:'Harajuku\'nun ünlü caddesi?',c:['Takeshita','Omotesando','Nakamise','Shinsaibashi'],d:0}
+    ],
+    9:[
+      {s:'Shibuya\'nın sembol köpeği?',c:['Pochi','Hachiko','Taro','Shiro'],d:1},
+      {s:'Suica kart ne işe yarar?',c:['Yemek kartı','Ulaşım & alışveriş IC kartı','Müze passu','Turist kartı'],d:1},
+      {s:'Tokyo\'da kaç kişi yaşar?',c:['5 milyon','14 milyon','20 milyon','37 milyon+'],d:3},
+      {s:'Shinjuku\'da kaç çıkış var?',c:['12','36','50','200+'],d:3},
+      {s:'En meşhur Japon hızlı treni?',c:['Tokaido','Nozomi','Shinkansen','Hikari'],d:2}
+    ],
+    10:[
+      {s:'Bu seyahatte kaç şehir?',c:['2','3','4 (Osaka-Nara-Kyoto-Tokyo)','5'],d:2},
+      {s:'Japonya\'nın para birimi?',c:['Yuan','Won','Yen','Baht'],d:2},
+      {s:'Narita Havalimanı Tokyo\'ya kaç km?',c:['10','35','60','100'],d:2},
+      {s:'En güzel anı hangisi?',c:['USJ Mario Kart!','Fushimi Inari günbatımı','Nara geyikleri','Hepsi! 🌸'],d:3},
+      {s:'Bu seyahat kaç gün?',c:['7','8','9','10'],d:3}
+    ]
+  };
+
+  var puanlar={};
+  try{var r=localStorage.getItem('jp_quiz2');if(r)puanlar=JSON.parse(r);}catch(e){}
+
+  function kaydet(){try{localStorage.setItem('jp_quiz2',JSON.stringify(puanlar));}catch(e){}}
+
+  function toplam(){
+    var t=0;
+    for(var k in puanlar){if(puanlar.hasOwnProperty(k))t+=(puanlar[k].p||0);}
+    return t;
+  }
+
+  function toplamGoster(){
+    var el=document.getElementById('quiz-toplam');
+    if(el)el.textContent=toplam();
+  }
+
+  function gunButonlariOlustur(){
+    var wrap=document.getElementById('gun-secim');
+    if(!wrap)return;
+    wrap.innerHTML='';
+    for(var g=1;g<=10;g++){
+      (function(gun){
+        var b=document.createElement('button');
+        b.className='gun-btn'+(puanlar[gun]&&puanlar[gun].bitti?' bitti':'');
+        b.textContent='Gün '+gun+(puanlar[gun]&&puanlar[gun].bitti?' ✓':'');
+        b.onclick=(function(g2){return function(){
+          document.querySelectorAll('.gun-btn').forEach(function(x){x.classList.remove('aktif');});
+          b.classList.add('aktif');
+          gunGoster(g2);
+        };})(gun);
+        wrap.appendChild(b);
+      })(g);
     }
   }
-  calcBudget();
-}
 
-// Sayfa yüklenince bütçeyi yükle
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadBudget);
-} else {
-  loadBudget();
-}
+  function gunGoster(gun){
+    var alan=document.getElementById('quiz-alan');
+    alan.innerHTML='';
+    var sorular=S[gun];
+    if(!sorular){alan.innerHTML='<p style="color:#888;text-align:center;">Yakında!</p>';return;}
+    var bitti=puanlar[gun]&&puanlar[gun].bitti;
+    var div0=document.createElement('div');
+    div0.style.cssText='text-align:center;margin-bottom:14px;';
+    div0.innerHTML='<div style="font-size:15px;font-weight:700;color:#8B5CF6;">📅 Gün '+gun+' Quizi</div>'+
+      (bitti?'<div style="color:#27AE60;font-size:12px;margin-top:4px;">✅ Tamamlandı! '+(puanlar[gun].p||0)+'/5 puan</div>':
+             '<div style="color:#888;font-size:11px;margin-top:4px;">5 soru · doğru başına 1 puan</div>');
+    alan.appendChild(div0);
+
+    sorular.forEach(function(soru,si){
+      var div=document.createElement('div');div.className='qsoru';
+      var p=document.createElement('p');p.textContent=(si+1)+'. '+soru.s;div.appendChild(p);
+      var sec=document.createElement('div');sec.className='qsec';
+      soru.c.forEach(function(c,i){
+        var b=document.createElement('button');b.className='qbtn';b.textContent=c;b.disabled=!!bitti;
+        if(bitti&&puanlar[gun]&&puanlar[gun].cv){
+          var cv=puanlar[gun].cv[si];
+          if(i===soru.d)b.classList.add('dogru');
+          else if(i===cv&&cv!==soru.d)b.classList.add('yanlis');
+        }
+        b.onclick=(function(si2,i2,soru2){return function(){
+          if(b.disabled)return;
+          sec.querySelectorAll('.qbtn').forEach(function(x){x.disabled=true;});
+          b.classList.add(i2===soru2.d?'dogru':'yanlis');
+          if(i2!==soru2.d)sec.querySelectorAll('.qbtn')[soru2.d].classList.add('dogru');
+          if(!puanlar[gun])puanlar[gun]={p:0,cv:{}};
+          if(i2===soru2.d)puanlar[gun].p++;
+          puanlar[gun].cv[si2]=i2;
+          var tamam=Object.keys(puanlar[gun].cv).length===sorular.length;
+          if(tamam){
+            puanlar[gun].bitti=true;kaydet();toplamGoster();gunButonlariOlustur();
+            setTimeout(function(){
+              var s2=document.createElement('div');
+              s2.style.cssText='text-align:center;padding:16px;background:linear-gradient(135deg,#8B5CF6,#EC4899);border-radius:12px;margin-top:8px;';
+              var p2=puanlar[gun].p;
+              s2.innerHTML='<div style="font-size:28px;">'+(p2===5?'🏆':p2>=3?'⭐':'💪')+'</div>'+
+                '<div style="color:white;font-size:16px;font-weight:700;margin:6px 0;">'+p2+'/5 Puan!</div>'+
+                '<div style="color:rgba(255,255,255,0.8);font-size:12px;">'+(p2===5?'Mükemmel!':p2>=3?'Harika!':'Daha çok gezeceksin!')+'</div>';
+              alan.appendChild(s2);
+              s2.scrollIntoView({behavior:'smooth',block:'nearest'});
+            },600);
+          } else {kaydet();}
+        };})(si,i,soru);
+        sec.appendChild(b);
+      });
+      div.appendChild(sec);alan.appendChild(div);
+    });
+    alan.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  toplamGoster();
+  gunButonlariOlustur();
+})();
 </script>
+
 </body>
 </html>
