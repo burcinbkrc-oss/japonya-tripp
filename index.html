@@ -91,7 +91,7 @@ tr:nth-child(even) td { background: #FAFAFA; }
 .cover-cities { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
 .cover-city { background: rgba(255,255,255,.1); border: 1px solid rgba(255,186,8,.5); border-radius: 12px; padding: 10px 14px; color: white; text-align: center; min-width: 72px; }
 .cover-city .city-name { font-size: 12px; font-weight: 600; color: #FFBA08; margin-top: 3px; }
-.cover-tagline { color: rgba(255,255,255,.7); font-size: 11px; letter-spacing: 1px; font-style: italic; }
+.cover-tagline { color: rgba(255,200,215,.8); font-size: 11px; letter-spacing: 1px; font-style: italic; }
 
 /* ── SECTION COVER ── */
 .section-cover { padding: 28px 12px; margin: 0; min-height: 110px; display: flex; align-items: flex-end; position: relative; }
@@ -363,6 +363,140 @@ ul li { margin-bottom:4px; font-size:13px; }
   .cover-city:active { transform: scale(0.94); opacity: 0.8; }
   .cover-city:hover  { transform: scale(1.04); border-color: rgba(255,186,8,0.9); }
 
+
+  /* ── MAP CARDS ── */
+  .maps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .map-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    gap: 4px;
+    transition: transform 0.15s, opacity 0.15s;
+    -webkit-tap-highlight-color: transparent;
+    background: #FFF3E0;
+    border: 1.5px solid rgba(232,93,4,0.2);
+  }
+  .map-card:active { transform: scale(0.96); opacity: 0.8; }
+  .mc-icon { font-size: 22px; }
+  .mc-name { font-size: 11px; font-weight: 700; color: #2C3E50; line-height: 1.3; }
+  .mc-day  { font-size: 10px; color: #888; margin-top: 1px; }
+  .map-card.kyoto { background: #F5ECD7; border-color: rgba(107,66,38,0.2); }
+  .map-card.tokyo { background: #E8EAF6; border-color: rgba(26,26,46,0.15); }
+  .map-card.nara  { background: #E8F5E9; border-color: rgba(39,174,96,0.2); }
+  .map-card.usj2  { background: #F3E5F5; border-color: rgba(123,45,139,0.2); grid-column: 1/-1; flex-direction: row; gap: 10px; justify-content: center; }
+  .map-card.otel  { background: #E3F2FD; border-color: rgba(13,71,161,0.15); }
+  @media (min-width: 600px) {
+    .maps-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+
+  /* ── GENEL TASARIM SADELEŞTİRME ── */
+
+  /* İçerik padding daha nefesli */
+  .content { padding: 20px 14px; }
+
+  /* Bölüm başlıkları daha temiz */
+  .section-header {
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  /* Day header daha kompakt ve temiz */
+  .day-header { margin-bottom: 16px; border-radius: 14px; }
+  .day-num { padding: 14px 16px; min-width: 62px; }
+  .day-num .num { font-size: 26px; }
+  .day-info { padding: 12px 14px; }
+  .day-info h3 { font-size: 13px; }
+
+  /* Kartlar daha sade */
+  .place-card { padding: 14px; margin: 10px 0; border-radius: 14px; }
+  .info-card  { padding: 12px 14px; border-radius: 12px; }
+  .highlight-card { padding: 12px 14px; border-radius: 12px; }
+
+  /* Tablolar daha okunaklı */
+  th { font-size: 11px; padding: 9px 10px; }
+  td { font-size: 12px; padding: 9px 10px; }
+
+  /* Tip/warning/success box daha az padding */
+  .tip-box, .warning-box, .success-box { padding: 10px 12px; margin: 8px 0; }
+
+  /* Program label daha şık */
+  .program-label { font-size: 10px; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 10px; }
+
+  /* Checklist daha sade */
+  .cl-label { padding: 9px 4px 9px 0; font-size: 13px; }
+
+  /* USJ header daha kompakt */
+  .usj-header { padding: 18px 14px; }
+
+  /* Nintendo & HP box daha kompakt */
+  .nintendo-box, .hp-box, .anime-box, .shopping-box { padding: 12px 14px; border-radius: 12px; }
+
+  /* Section cover biraz daha ince */
+  .section-cover { min-height: 100px; padding: 24px 14px; }
+  .section-num { font-size: 48px; }
+  .section-title-cover h2 { font-size: 19px; }
+  .section-title-cover p { font-size: 11px; }
+
+  /* Divider */
+  .divider { margin: 14px 0; }
+
+  /* Route visual */
+  .route-visual { padding: 10px 12px; border-radius: 10px; }
+  .route-stop { font-size: 9px; padding: 4px 8px; border-radius: 6px; }
+
+  /* Fancy divider */
+  .fancy-divider { margin: 12px 0; font-size: 12px; }
+
+
+  /* ── ACCORDION ── */
+  .sehir-label { font-size:11px; font-weight:700; letter-spacing:1px; margin:16px 0 8px; }
+  .acc-item { border-radius:14px; overflow:hidden; margin-bottom:8px; border:1.5px solid rgba(0,0,0,0.06); }
+  .osaka-acc  { border-color:rgba(232,93,4,0.2); }
+  .kyoto-acc  { border-color:rgba(107,66,38,0.2); }
+  .tokyo-acc  { border-color:rgba(26,26,46,0.12); }
+  .nara-acc   { border-color:rgba(39,174,96,0.2); }
+  .usj-acc    { border-color:rgba(123,45,139,0.2); }
+  .acc-head { display:flex; align-items:center; gap:10px; padding:12px 14px; cursor:pointer; background:white; -webkit-tap-highlight-color:transparent; user-select:none; }
+  .osaka-acc  .acc-head { background:#FFF8F5; }
+  .kyoto-acc  .acc-head { background:#FAF6F0; }
+  .tokyo-acc  .acc-head { background:#F5F6FC; }
+  .nara-acc   .acc-head { background:#F2FAF4; }
+  .usj-acc    .acc-head { background:#FBF2FE; }
+  .acc-icon { font-size:22px; flex-shrink:0; }
+  .acc-preview { flex:1; min-width:0; }
+  .acc-name { font-size:13px; font-weight:700; color:#1A1A2E; }
+  .acc-meta { font-size:11px; color:#888; margin-top:1px; }
+  .acc-arr  { font-size:18px; color:#CCC; flex-shrink:0; transition:transform 0.25s; }
+  .acc-item.open .acc-arr { transform:rotate(90deg); }
+  .acc-body { display:none; padding:14px 14px 16px; background:white; border-top:1px solid rgba(0,0,0,0.05); font-size:13px; line-height:1.6; color:#444; }
+  .acc-item.open .acc-body { display:block; }
+  .acc-body p { margin-bottom:8px; }
+  .acc-facts { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:12px 0; }
+  .acc-fact  { background:#F8F9FA; border-radius:8px; padding:6px 10px; font-size:11px; color:#555; }
+  .acc-maps-btn { display:block; background:linear-gradient(135deg,#1565C0,#1976D2); color:white; text-align:center; padding:10px; border-radius:10px; font-size:12px; font-weight:700; text-decoration:none; margin-top:12px; -webkit-tap-highlight-color:transparent; }
+  .acc-maps-btn:active { opacity:0.85; }
+
+
+  /* ── GÜNLÜK ÖĞÜN TABLOSU ── */
+  .gun-ogun { display:flex; flex-direction:column; gap:0; margin-bottom:12px; border-radius:10px; overflow:hidden; border:1px solid #F0F0F0; }
+  .ogun-row { display:flex; gap:0; border-bottom:1px solid #F0F0F0; }
+  .ogun-row:last-child { border-bottom:none; }
+  .ogun-aksam { background:rgba(26,26,46,0.03); }
+  .ogun-label { min-width:90px; font-size:11px; font-weight:700; color:#888; padding:10px 10px; background:#FAFAFA; border-right:1px solid #F0F0F0; display:flex; align-items:flex-start; flex-shrink:0; }
+  .ogun-val { flex:1; font-size:12px; color:#2C3E50; padding:10px 10px; line-height:1.5; }
+  .ogun-val small { color:#888; font-size:10px; display:block; margin-top:2px; }
+
 </style>
 </head>
 <body>
@@ -373,72 +507,114 @@ ul li { margin-bottom:4px; font-size:13px; }
 <div class="cover">
   <div class="cover-flag">🇯🇵</div>
 <!-- İÇİNDEKİLER PANELİ -->
-<div id="toc-panel" style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,0.7); backdrop-filter:blur(6px);">
-  <div style="position:absolute; bottom:0; left:0; right:0; background:#1A1A2E; border-radius:24px 24px 0 0; padding:20px 0 32px; max-height:85vh; overflow-y:auto;">
-    <div style="display:flex; justify-content:space-between; align-items:center; padding:0 20px 16px; border-bottom:1px solid rgba(255,255,255,0.1);">
-      <span style="color:white; font-size:16px; font-weight:700;">📖 İçindekiler</span>
-      <button onclick="closeToc()" style="background:rgba(255,255,255,0.1); border:none; color:white; width:32px; height:32px; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+<div id="toc-panel" style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(15,15,30,0.85); backdrop-filter:blur(12px);">
+  <div style="position:absolute; bottom:0; left:0; right:0; background:#FAFBFC; border-radius:28px 28px 0 0; max-height:88vh; overflow-y:auto; padding-bottom:32px;">
+
+    <!-- Başlık -->
+    <div style="position:sticky;top:0;background:#FAFBFC;z-index:1;padding:18px 20px 14px;border-bottom:1px solid #F0F0F0;display:flex;justify-content:space-between;align-items:center;border-radius:28px 28px 0 0;">
+      <div>
+        <div style="font-size:17px;font-weight:800;color:#1A1A2E;font-family:'Pacifico',cursive;">Bölümler</div>
+        <div style="font-size:11px;color:#999;margin-top:1px;">Japan Adventure 2026</div>
+      </div>
+      <button onclick="closeToc()" style="background:#F0F0F5;border:none;color:#666;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
     </div>
-    <nav style="padding:8px 0;">
-      <a onclick="tocGo('bolum-genel')"   class="toc-item" style="background:linear-gradient(135deg,#1B4332,#2D6A4F);">
-        <span class="toc-num">01</span><span class="toc-text">🌐 Genel Bilgiler</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-ozet')"    class="toc-item" style="background:linear-gradient(135deg,#1A1A2E,#0F3460);">
-        <span class="toc-num">02</span><span class="toc-text">📋 Gün Gün Özet</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-detay')"   class="toc-item" style="background:linear-gradient(135deg,#7B2D8B,#B84FD0);">
-        <span class="toc-num">03</span><span class="toc-text">📅 Günlük Detaylı Plan</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-yerler')"  class="toc-item" style="background:linear-gradient(135deg,#C0392B,#E74C3C);">
-        <span class="toc-num">04</span><span class="toc-text">📍 Gezilecek Yerler</span><span class="toc-arr">›</span>
-      </a>
 
-      <a onclick="tocGo('bolum-yemek')"   class="toc-item" style="background:linear-gradient(135deg,#16A085,#1ABC9C);">
-        <span class="toc-num">05</span><span class="toc-text">🍱 Helal Yemek Rehberi</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-harita')" class="toc-item" style="background:linear-gradient(135deg,#0D47A1,#1976D2);">
-        <span class="toc-num">06</span><span class="toc-text">🗺️ Google Maps Linkleri</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-araclar')" class="toc-item" style="background:linear-gradient(135deg,#B7410E,#E85D04);">
-        <span class="toc-num">07</span><span class="toc-text">🧮 Para Araçları</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-harcama')" class="toc-item" style="background:linear-gradient(135deg,#2C3E50,#4A5568);">
-        <span class="toc-num">08</span><span class="toc-text">💸 Harcama Listesi</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-eglen')" class="toc-item" style="background:linear-gradient(135deg,#F39C12,#F1C40F);">
-        <span class="toc-num">09</span><span class="toc-text" style="color:#2C2C2C;">✅ Yapmadan Dönme</span><span class="toc-arr" style="color:rgba(0,0,0,0.3);">›</span>
-      </a>
-      <a onclick="tocGo('bolum-neseyesek')" class="toc-item" style="background:linear-gradient(135deg,#FF6B35,#F7C59F);">
-        <span class="toc-num">10</span><span class="toc-text" style="color:#2C2C2C;">🎰 Ne Yesek? Çarkı</span><span class="toc-arr" style="color:rgba(0,0,0,0.3);">›</span>
-      </a>
-      <a onclick="tocGo('bolum-spotify')" class="toc-item" style="background:linear-gradient(135deg,#1DB954,#191414);">
-        <span class="toc-num">11</span><span class="toc-text">🎵 Japonya Playlist</span><span class="toc-arr">›</span>
-      </a>
-      <a onclick="tocGo('bolum-quiz')" class="toc-item" style="background:linear-gradient(135deg,#8B5CF6,#EC4899);">
-        <span class="toc-num">12</span><span class="toc-text">🎮 Gün Sonu Quiz</span><span class="toc-arr">›</span>
-      </a>
+    <!-- Şehir hızlı erişim -->
+    <div style="display:flex;gap:8px;padding:14px 16px 6px;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <button onclick="tocGo('sehir-osaka')" style="flex-shrink:0;background:#FFF3E0;border:1.5px solid #E85D04;color:#E85D04;font-size:11px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;-webkit-tap-highlight-color:transparent;">🏯 Osaka</button>
+      <button onclick="tocGo('sehir-kyoto')" style="flex-shrink:0;background:#F5ECD7;border:1.5px solid #6B4226;color:#6B4226;font-size:11px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;-webkit-tap-highlight-color:transparent;">⛩️ Kyoto</button>
+      <button onclick="tocGo('sehir-usj')"   style="flex-shrink:0;background:#F3E5F5;border:1.5px solid #7B2D8B;color:#7B2D8B;font-size:11px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;-webkit-tap-highlight-color:transparent;">🎢 USJ</button>
+      <button onclick="tocGo('sehir-tokyo')" style="flex-shrink:0;background:#E8EAF6;border:1.5px solid #1A1A2E;color:#1A1A2E;font-size:11px;font-weight:700;padding:6px 14px;border-radius:20px;cursor:pointer;-webkit-tap-highlight-color:transparent;">🗼 Tokyo</button>
+    </div>
 
+    <!-- Bölüm listesi -->
+    <nav style="padding:8px 14px;">
+      <a onclick="tocGo('bolum-genel')"   class="toc2">
+        <div class="t2-icon" style="background:#E8F5E9;">🌐</div>
+        <div class="t2-body"><div class="t2-title">Genel Bilgiler</div><div class="t2-sub">Uçuş, otel, ulaşım</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-ozet')"    class="toc2">
+        <div class="t2-icon" style="background:#E3F2FD;">📋</div>
+        <div class="t2-body"><div class="t2-title">Gün Gün Özet</div><div class="t2-sub">10 günün tablo özeti</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-detay')"   class="toc2">
+        <div class="t2-icon" style="background:#F3E5F5;">📅</div>
+        <div class="t2-body"><div class="t2-title">Günlük Detaylı Plan</div><div class="t2-sub">Saatli program & rotalar</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-yerler')"  class="toc2">
+        <div class="t2-icon" style="background:#FFEBEE;">📍</div>
+        <div class="t2-body"><div class="t2-title">Kısa Bilgiler</div><div class="t2-sub">Yerler hakkında detaylı bilgi</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-yemek')"   class="toc2">
+        <div class="t2-icon" style="background:#E0F7FA;">🍜</div>
+        <div class="t2-body"><div class="t2-title">Yemek, Kafe & Alışveriş</div><div class="t2-sub">Restoran & mağaza önerileri</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-harita')"  class="toc2">
+        <div class="t2-icon" style="background:#E8EAF6;">🗺️</div>
+        <div class="t2-body"><div class="t2-title">Harita Linkleri</div><div class="t2-sub">Google Maps — tek tıkla git</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-araclar')" class="toc2">
+        <div class="t2-icon" style="background:#FFF3E0;">🧮</div>
+        <div class="t2-body"><div class="t2-title">Para Araçları</div><div class="t2-sub">Kur dönüştürücü & tax-free</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-harcama')" class="toc2">
+        <div class="t2-icon" style="background:#ECEFF1;">💸</div>
+        <div class="t2-body"><div class="t2-title">Harcama Listesi</div><div class="t2-sub">Kişisel gider takibi</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-eglen')"   class="toc2">
+        <div class="t2-icon" style="background:#FFFDE7;">✅</div>
+        <div class="t2-body"><div class="t2-title">Yapmadan Dönme</div><div class="t2-sub">Mutlaka yapılacaklar listesi</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-neseyesek')" class="toc2">
+        <div class="t2-icon" style="background:#FFF8E1;">🎰</div>
+        <div class="t2-body"><div class="t2-title">Ne Yesek? Çarkı</div><div class="t2-sub">Kararsızlar için çevir!</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-spotify')"  class="toc2">
+        <div class="t2-icon" style="background:#E8F5E9;">🎵</div>
+        <div class="t2-body"><div class="t2-title">Japonya Playlistleri</div><div class="t2-sub">Seyahat müziği</div></div>
+        <span class="t2-arr">›</span>
+      </a>
+      <a onclick="tocGo('bolum-quiz')"     class="toc2">
+        <div class="t2-icon" style="background:#F3E5F5;">🎮</div>
+        <div class="t2-body"><div class="t2-title">Gün Sonu Quiz</div><div class="t2-sub">50 soru — puan topla!</div></div>
+        <span class="t2-arr">›</span>
+      </a>
     </nav>
   </div>
 </div>
 
+
 <style>
-.toc-item {
+.toc2 {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 13px 20px;
-  margin: 4px 12px;
-  border-radius: 12px;
+  padding: 11px 12px;
+  margin: 4px 0;
+  border-radius: 14px;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.15s, transform 0.15s;
+  background: white;
+  border: 1px solid #F0F0F5;
+  transition: all 0.15s;
   -webkit-tap-highlight-color: transparent;
 }
-.toc-item:active { opacity: 0.75; transform: scale(0.98); }
-.toc-num { color: rgba(255,255,255,0.5); font-size: 11px; font-weight: 700; min-width: 20px; }
-.toc-text { color: white; font-size: 14px; font-weight: 600; flex: 1; }
-.toc-arr { color: rgba(255,255,255,0.4); font-size: 18px; }
+.toc2:active { background: #F5F5FF; transform: scale(0.98); }
+.t2-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.t2-body { flex: 1; min-width: 0; }
+.t2-title { font-size: 13px; font-weight: 700; color: #1A1A2E; }
+.t2-sub   { font-size: 11px; color: #999; margin-top: 1px; }
+.t2-arr   { color: #CCC; font-size: 18px; flex-shrink: 0; }
 
 
 
@@ -467,7 +643,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
 </script>
 
   <div class="cover-title">JAPAN<br>ADVENTURE<br>2026</div>
-  <div class="cover-subtitle">TAM & GÜNCEL MASTER PLAN</div>
+  <div class="cover-subtitle">✈️ 21 – 30 Ağustos 2026 ✈️</div>
   <div class="cover-dates">✈️ &nbsp; 21 – 30 Ağustos 2026 &nbsp; ✈️</div>
   <div class="cover-cities">
     <a onclick="tocGo('sehir-osaka')" class="cover-city" style="cursor:pointer;text-decoration:none;transition:transform 0.15s,opacity 0.15s;-webkit-tap-highlight-color:transparent;">
@@ -556,7 +732,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
     </thead>
     <tbody>
       <tr><td><span class="osaka-badge city-badge">OSAKA</span></td><td><strong>APA Hotel Osaka Higobashi Ekimae</strong></td><td>Gün 1–3 (3 gece)</td><td>1-2-1 Tosabori, Nishi-ku, Osaka</td></tr>
-      <tr><td><span class="kyoto-badge city-badge">KYOTO</span></td><td><strong>Lili Hotel Kyoto</strong></td><td>Gün 4–6 (3 gece)</td><td>123-2 Ebisucho, Shimogyo-ku, Kyoto</td></tr>
+      <tr><td><span class="kyoto-badge city-badge">KYOTO</span></td><td><strong>Wayfarer Kyoto Shijo</strong></td><td>Gün 4–6 (3 gece)</td><td>123-2 Ebisucho, Shimogyo-ku, Kyoto</td></tr>
       <tr><td><span class="tokyo-badge city-badge">TOKYO</span></td><td><strong>Aizumi Hostel Shinjuku</strong></td><td>Gün 7–9 (3 gece)</td><td>8-16 Aizumicho, Shinjuku City, Tokyo</td></tr>
     </tbody>
   </table></div>
@@ -804,20 +980,19 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
         <th>Tarih</th>
         <th>Şehir</th>
         <th>Ana Program</th>
-        <th>Konaklama</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 1</td><td>21 Ağu Cuma</td><td><span class="osaka-badge city-badge">OSAKA</span></td><td>✈️ Varış 19:05 → Otel → Hafif yemek + konbini</td><td>APA Hotel Higobashi</td></tr>
-      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 2</td><td>22 Ağu Cmt</td><td><span class="osaka-badge city-badge">OSAKA</span></td><td>⛩️ Katsuoji Temple → 🐟 Kuromon Market → 🌆 Shinsekai → 🛍️ Shinsaibashi → 🌃 Dotonbori</td><td>APA Hotel Higobashi</td></tr>
-      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 3</td><td>23 Ağu Paz</td><td><span class="nara-badge city-badge">NARA</span> + <span class="osaka-badge city-badge">OSAKA</span></td><td>🦌 Nara Deer Park + Todai-ji → 🏯 Osaka Castle → 🛒 Don Quijote → 🌃 Dotonbori</td><td>APA Hotel Higobashi</td></tr>
-      <tr><td style="background:#F3E5F5;font-weight:700;">GÜN 4</td><td>24 Ağu Pzt</td><td><span class="usj-badge city-badge">USJ</span> → <span class="kyoto-badge city-badge">KYOTO</span></td><td>🎢 Universal Studios Japan (TAM GÜN) → 20:00 JR Special Rapid → Kyoto varış</td><td>Lili Hotel Kyoto</td></tr>
-      <tr><td style="background:#F5ECD7;font-weight:700;">GÜN 5</td><td>25 Ağu Sal</td><td><span class="kyoto-badge city-badge">KYOTO</span></td><td>🎋 Arashiyama (Bambu + Tenryu-ji) → ☕ %Arabica → 🥢 Nishiki Market → 🏮 Gion → 👘 Kimono</td><td>Lili Hotel Kyoto</td></tr>
-      <tr><td style="background:#F5ECD7;font-weight:700;">GÜN 6</td><td>26 Ağu Çar</td><td><span class="kyoto-badge city-badge">KYOTO</span></td><td>⛩️ Fushimi Inari (torii tünelleri) → 🛕 Kiyomizu-dera → Geleneksel alışveriş → Son Kyoto</td><td>Lili Hotel Kyoto</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 7</td><td>27 Ağu Per</td><td><span class="kyoto-badge city-badge">KYOTO</span> → <span class="tokyo-badge city-badge">TOKYO</span></td><td>🚅 09:00 Shinkansen → Tokyo 11:15 → 🐱 Gotokuji Temple → 🌿 Shinjuku Gyoen → 🌃 Omoide</td><td>Aizumi Hostel Shinjuku</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 8</td><td>28 Ağu Cum</td><td><span class="tokyo-badge city-badge">TOKYO</span></td><td>⛩️ Asakusa + Senso-ji → 🗼 Skytree → 🎮 Akihabara (ANİME!) → 🎨 TeamLab Planets</td><td>Aizumi Hostel Shinjuku</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 9</td><td>29 Ağu Cmt</td><td><span class="tokyo-badge city-badge">TOKYO</span></td><td>⛩️ Meiji Shrine → 🌈 Harajuku Takeshita → 🏙️ Shibuya Sky → 🛍️ PARCO (Nintendo/Pokémon) → ✨ Ginza → 🎤 Karaoke</td><td>Aizumi Hostel Shinjuku</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 10</td><td>30 Ağu Paz</td><td><span class="tokyo-badge city-badge">TOKYO</span> ✈️</td><td>05:30 Kalkış → Havalimanı → Son alışveriş → 10:25 Uçuş → 17:40 İstanbul varış</td><td>—</td></tr>
+      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 1</td><td>21 Ağu Cuma</td><td><span class="osaka-badge city-badge">OSAKA</span></td><td>✈️ Varış 19:05 → Otel → Hafif yemek + konbini</td></tr>
+      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 2</td><td>22 Ağu Cmt</td><td><span class="osaka-badge city-badge">OSAKA</span></td><td>⛩️ Katsuoji Temple → 🐟 Kuromon Market → 🌆 Shinsekai → 🛍️ Shinsaibashi → 🌃 Dotonbori</td></tr>
+      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 3</td><td>23 Ağu Paz</td><td><span class="nara-badge city-badge">NARA</span> + <span class="osaka-badge city-badge">OSAKA</span></td><td>🦌 Nara Deer Park + Todai-ji → 🏯 Osaka Castle → 🛒 Don Quijote → 🌃 Dotonbori</td></tr>
+      <tr><td style="background:#F3E5F5;font-weight:700;">GÜN 4</td><td>24 Ağu Pzt</td><td><span class="usj-badge city-badge">USJ</span> → <span class="kyoto-badge city-badge">KYOTO</span></td><td>🎢 Universal Studios Japan (TAM GÜN) → 20:00 JR Special Rapid → Kyoto varış</td></tr>
+      <tr><td style="background:#F5ECD7;font-weight:700;">GÜN 5</td><td>25 Ağu Sal</td><td><span class="kyoto-badge city-badge">KYOTO</span></td><td>🎋 Arashiyama (Bambu + Tenryu-ji) → ☕ %Arabica → 🥢 Nishiki Market → 🏮 Gion → 👘 Kimono</td></tr>
+      <tr><td style="background:#F5ECD7;font-weight:700;">GÜN 6</td><td>26 Ağu Çar</td><td><span class="kyoto-badge city-badge">KYOTO</span></td><td>⛩️ Fushimi Inari (torii tünelleri) → 🛕 Kiyomizu-dera → Geleneksel alışveriş</td></tr>
+      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 7</td><td>27 Ağu Per</td><td><span class="kyoto-badge city-badge">KYOTO</span> → <span class="tokyo-badge city-badge">TOKYO</span></td><td>🚅 NOZOMI242 08:21 → Tokyo 10:33 → 🏯 İmparatorluk Sarayı → 🛍️ Ginza → 🌃 Shibuya</td></tr>
+      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 8</td><td>28 Ağu Cum</td><td><span class="tokyo-badge city-badge">TOKYO</span></td><td>🏙️ Shinjuku → 🌿 Meiji Tapınağı → 🛍️ Shibuya → 🌃 Ginza akşamı</td></tr>
+      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 9</td><td>29 Ağu Cmt</td><td><span class="tokyo-badge city-badge">TOKYO</span></td><td>⛩️ Senso-ji → 🗼 Tokyo Skytree → 🏺 Kappabashi Street → Serbest zaman</td></tr>
+      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 10</td><td>30 Ağu Paz</td><td><span class="tokyo-badge city-badge">TOKYO</span> ✈️</td><td>Dönüş — 05:30 Kalkış → Havalimanı → 10:25 Uçuş → 17:40 İstanbul varış</td></tr>
     </tbody>
   </table></div>
 
@@ -1264,7 +1439,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
       <tr><td>17:00–17:30</td><td>🛍️ Son alışveriş — USJ hediyelik</td></tr>
       <tr><td style="font-weight:700;color:#922B21;">18:30</td><td style="font-weight:700;color:#922B21;">⚠️ Otele — bavulları al! KAÇIRMAYIN</td></tr>
       <tr><td>20:00</td><td>🚃 Osaka → Kyoto (JR Special Rapid, 30dk, ¥580)</td></tr>
-      <tr><td>21:30</td><td>🏨 Lili Hotel Kyoto check-in</td></tr>
+      <tr><td>21:30</td><td>🏨 Wayfarer Kyoto Shijo check-in</td></tr>
     </tbody>
   </table></div>
 
@@ -1326,7 +1501,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   <div class="route-visual">
     <div class="mini-route-title">🗺️ Günün Rotası</div>
     <div class="route-stops">
-      <div class="route-stop stop-kyoto">🏨 Lili Hotel</div>
+      <div class="route-stop stop-kyoto">🏨 Wayfarer Kyoto Shijo</div>
       <div class="route-arrow">→</div>
       <div class="route-stop stop-kyoto">🏛️ Tenryu-ji<br><small>08:00</small></div>
       <div class="route-arrow">→</div>
@@ -1496,26 +1671,26 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   <div class="day-header tokyo-day">
     <div class="day-num"><div class="num">7</div><div class="label">GÜN</div></div>
     <div class="day-info">
-      <h3>🚅 Kyoto→Tokyo + 🐱 Gotokuji + 🌃 Shinjuku</h3>
+      <h3>🚅 Kyoto→Tokyo + 🏯 İmparatorluk Sarayı + 🛍️ Ginza + 🌃 Shibuya</h3>
       <div class="day-meta"><span>📅 27 Ağustos Perşembe</span><span>📍 Kyoto → Tokyo</span></div>
-      <div class="day-theme">Bullet train heyecanı, şans kedileri ve Tokyo'nun neon geceleri!</div>
+      <div class="day-theme">08:21 treni, Tokyo'ya varış, İmparatorluk Sarayı ve Ginza alışverişi!</div>
     </div>
   </div>
 
   <div class="route-visual">
     <div class="mini-route-title">🗺️ Günün Rotası</div>
     <div class="route-stops">
-      <div class="route-stop stop-kyoto">🚅 Shinkansen<br><small>09:00</small></div>
+      <div class="route-stop stop-kyoto">🚅 NOZOMI242<br><small>08:21</small></div>
       <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">Tokyo Station<br><small>11:15</small></div>
+      <div class="route-stop stop-tokyo">Tokyo Station<br><small>10:33</small></div>
       <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🏨 Shinjuku<br><small>12:00</small></div>
+      <div class="route-stop stop-tokyo">🏯 İmp. Sarayı<br><small>11:30</small></div>
       <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🐱 Gotokuji<br><small>14:00</small></div>
+      <div class="route-stop stop-tokyo">🛍️ Ginza<br><small>13:30</small></div>
       <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🌿 Shinjuku Gyoen<br><small>15:30</small></div>
+      <div class="route-stop stop-tokyo">🏨 Otel<br><small>17:00</small></div>
       <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🌃 Omoide Yokocho<br><small>18:30</small></div>
+      <div class="route-stop stop-tokyo">🌃 Shibuya<br><small>19:00</small></div>
     </div>
   </div>
 
@@ -1523,9 +1698,14 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
     <span class="program-label sabah">☀️ SABAH — ŞİNKANSEN!</span>
     <div class="grid-2">
       <div class="info-card">
-        <p><strong>🚅 Shinkansen Detayları</strong></p>
-        <p>Nozomi (en hızlı): Kyoto → Tokyo</p>
-        <p>Süre: ~2 saat 15 dk | Ücret: ¥13.320</p>
+        <p><strong>🚅 NOZOMI 242 — Biletler Hazır!</strong></p>
+        <p>📅 27 Ağustos Perşembe | 08:21 → 10:33</p>
+        <p>🛤️ Kyoto → Tokyo | Rezervasyon: 2260</p>
+        <p style="margin-top:6px;"><strong>Koltuklar (Vagon 12):</strong></p>
+        <p>👤 Yetişkin 1 — Koltuk 5-D</p>
+        <p>👤 Yetişkin 2 — Koltuk 5-E</p>
+        <p>👤 Yetişkin 3 — Koltuk 6-D</p>
+        <p>👤 Yetişkin 4 — Koltuk 6-E</p>
         <p>⭐ E koltuğu — Fuji Dağı SAĞ taraf! 📸</p>
         <p>🗻 Kalkıştan ~45 dk sonra Fuji görünür</p>
         <p>🔌 Her koltukta priz var — şarj!!</p>
@@ -1539,37 +1719,47 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   </div>
 
   <div class="program-section">
-    <span class="program-label aksam">🌇 ÖĞLEDEN SONRA — GOTOKUJİ TEMPLE</span>
+    <span class="program-label ogle">☀️ ÖĞLE — İMPARATORLUK SARAYI</span>
     <div class="tokyo-card highlight-card">
-      <p><strong>🐱 Gotokuji Temple</strong> <span class="tag tag-free">ÜCRETSİZ 🎉</span> — Odakyu Line: Shinjuku → Gotokuji | 15dk | ¥200</p>
-      <p style="font-size:10pt;">Maneki-Neko (şans kedisi) figürlerinin doğduğu yer! Yüzlerce beyaz porselen kedi — Tokyo'nun en kawaii noktası 📸</p>
-      <p style="font-size:10pt;">📸 Kedi heykeli setinin karşısından geniş açı • Hepiniz kedi pençe pozu yapın! 🐱✨</p>
-      <p style="font-size:10pt;">Mini porselen maneki-neko ¥500–1.500 • Kedi çorap/anahtarlık ¥300–800</p>
+      <p><strong>🏯 Tokyo İmparatorluk Sarayı</strong> <span class="tag tag-free">ÜCRETSİZ 🎉</span></p>
+      <p style="font-size:12px;">Tokyo'nun kalbindeki tarihi saray ve Doğu Bahçeleri. Resimlerde harika görünen taş köprü ve hendek 📸</p>
+      <p style="font-size:12px;">🚇 Tokyo Station'dan yürüyüş mesafesi — 10 dk • Bagajları istasyondaki coin locker'a bırakın (¥400–700)</p>
     </div>
   </div>
 
   <div class="program-section">
-    <span class="program-label aksam">🌙 AKŞAM — SHİNJUKU</span>
+    <span class="program-label ogle">🛍️ ÖĞLEDEN SONRA — GİNZA</span>
     <div class="ts ts-inner"><table class="tokyo-table">
-      <thead><tr><th>Nokta</th><th>Açıklama</th><th>Fiyat</th></tr></thead>
+      <thead><tr><th>Nokta</th><th>Açıklama</th></tr></thead>
       <tbody>
-        <tr><td><strong>Omoide Yokocho</strong></td><td>Dar nostaljik izakaya sokağı — eski Tokyo atmosferi 📸</td><td>—</td></tr>
-        <tr><td><strong>Kabukicho Tower</strong></td><td>2023 eğlence kompleksi — Namco arcade</td><td>—</td></tr>
-        <tr><td><strong>Golden Gai</strong></td><td>200+ küçük bar sokağı — yürüyerek bakın 📸</td><td>—</td></tr>
-        <tr><td><strong>Godzilla Heykeli</strong></td><td>TOHO Cinema üstü — yukarı bakıp fotoğraf 📸</td><td>—</td></tr>
+        <tr><td><strong>Ginza Six</strong></td><td>Ginza'nın en büyük alışveriş merkezi — çatı bahçesi ücretsiz 📸</td></tr>
+        <tr><td><strong>UNIQLO Ginza</strong></td><td>12 katlı amiral mağaza — dünyanın en büyük Uniqlo'su!</td></tr>
+        <tr><td><strong>Itoya</strong></td><td>12 katlı kırtasiye & hediye cenneti — kawaii dolu 🎀</td></tr>
+        <tr><td><strong>Mitsukoshi Ginza</strong></td><td>Japon lüks department store — food hall mutlaka görün</td></tr>
+        <tr><td><strong>DOVER STREET MARKET</strong></td><td>Avant-garde moda galerisi — fotoğraflanacak alan 📸</td></tr>
       </tbody>
     </table></div>
-    <div class="warning-box">
-      <strong>⚠️ Kabukicho Güvenlik</strong>
-      Ana caddeler güvenli. Ama ısrarcı tout'lara cevap vermeyin!
-    </div>
+  </div>
+
+  <div class="program-section">
+    <span class="program-label aksam">🌙 AKŞAM — SHİBUYA</span>
+    <div class="ts ts-inner"><table class="tokyo-table">
+      <thead><tr><th>Nokta</th><th>Açıklama</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Shibuya Crossing 📸</strong></td><td>Dünyanın en yoğun yaya geçidi — akşam ışıkları efsane!</td></tr>
+        <tr><td><strong>Shibuya Sky</strong></td><td>360° açık teras — Tokyo panorama (¥2.000) 🌆</td></tr>
+        <tr><td><strong>Shibuya 109</strong></td><td>Japon gençlik modası — 10 kat!</td></tr>
+        <tr><td><strong>Hachiko Heykeli 📸</strong></td><td>Sadık köpek Hachiko — buluşma noktası</td></tr>
+        <tr><td><strong>🍣 Sushiro Shibuya</strong></td><td>Akşam yemeği — döner sushi, uygun fiyat!</td></tr>
+      </tbody>
+    </table></div>
   </div>
 
   <div class="success-box">
     <strong>📱 Bu Gece Yapılacaklar</strong>
-    Tokyo Subway 24hr Ticket (¥600) alın • TeamLab Planets biletini kontrol edin (yarın değil, öbür gün!) • Alarm: 08:00
+    Otel check-in • Bagajları otele bırak • Alarm: 08:30
   </div>
-  <p style="font-size:10pt; color:#888;">💰 Tahmini Harcama: ¥10.000–16.000 (Shinkansen hariç)</p>
+  <p style="font-size:10pt; color:#888;">💰 Tahmini Harcama: ¥8.000–15.000 (Shinkansen hariç)</p>
 </div>
 
 <!-- GÜN 8 -->
@@ -1577,9 +1767,9 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   <div class="day-header tokyo-day">
     <div class="day-num"><div class="num">8</div><div class="label">GÜN</div></div>
     <div class="day-info">
-      <h3>⛩️ Asakusa + 🗼 Skytree + 🎮 Akihabara + 🎨 TeamLab</h3>
+      <h3>⛩️ Shinjuku + 🌿 Meiji + 🛍️ Shibuya + 🌃 Ginza</h3>
       <div class="day-meta"><span>📅 28 Ağustos Cuma</span><span>📍 Tokyo</span></div>
-      <div class="day-theme">Doğu Tokyo hattı — antik tapınaktan dijital sanata!</div>
+      <div class="day-theme">Shinjuku, Meiji tapınağı, Shibuya ve Ginza gecesiyle dolu bir Tokyo günü!</div>
     </div>
   </div>
 
@@ -1673,9 +1863,9 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   <div class="day-header tokyo-day">
     <div class="day-num"><div class="num">9</div><div class="label">GÜN</div></div>
     <div class="day-info">
-      <h3>⛩️ Meiji + 🌈 Harajuku + 🏙️ Shibuya + ✨ Ginza — SON TAM GÜN!</h3>
+      <h3>⛩️ Senso-ji + 🗼 Tokyo Skytree + 🏺 Kappabashi</h3>
       <div class="day-meta"><span>📅 29 Ağustos Cumartesi</span><span>📍 Tokyo</span></div>
-      <div class="day-theme">Batı Tokyo'nun en Instagram'lık günü — güzel giyinin! 📸</div>
+      <div class="day-theme">Senso-ji tapınağı, Tokyo Skytree ve Kappabashi'de mutfak alışverişi!</div>
     </div>
   </div>
 
@@ -1841,747 +2031,1060 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   <div id="bolum-yerler" class="section-cover section-cover-yerler">
     <div class="section-num">04</div>
     <div class="section-title-cover">
-      <h2>📍 GEZİLECEK YERLER</h2>
-      <p>Kısa & Keyifli Yer Rehberi</p>
+      <h2>💡 KISA BİLGİLER</h2>
+      <p>Tıkla — detayları gör</p>
     </div>
   </div>
 </div>
 
 <div class="content">
-  <h2 class="section-main">Osaka</h2>
-  <span class="osaka-badge city-badge">OSAKA</span>
 
-  <div class="place-card osaka-card">
-    <h4>⛩️ Katsuoji Temple (勝尾寺)</h4>
-    <div class="place-tags">
-      <span class="place-tag">🏔️ Tapınak</span><span class="place-tag">📸 Fotoğrafik</span><span class="place-tag">🌿 Doğa</span>
+  <!-- OSAKA -->
+  <p class="sehir-label" style="color:var(--op);">🏯 OSAKA — GÜN 1–3</p>
+
+  <div class="acc-item osaka-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">⛩️</span>
+      <div class="acc-preview">
+        <div class="acc-name">Katsuoji Temple</div>
+        <div class="acc-meta">Gün 2 · ¥400 · 1.5–2 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
     </div>
-    <p>Osaka'nın dışında, ormanlık bir tepede saklı bu tapınak, "Zafer Tapınağı" olarak bilinir. 6.000'den fazla beyaz Daruma bebek tapınağın her köşesini kaplamış — bu görüntü gerçekten büyüleyici. Her Daruma bir dileği temsil eder; ziyaretçiler dilek tutup Daruma'nın bir gözünü boyar, dilek gerçekleşince öteki gözü boyar.</p>
-    <p>Mistik köprüler, yosunlu merdivenler ve yoğun ormanlık ortam, Instagram için eşsiz bir arka plan sağlar.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Giriş: ¥400</div>
-      <div class="place-fact">⏱️ Önerilen Süre: 1.5–2 saat</div>
-      <div class="place-fact">📸 En İyi: Giriş köprüsü + Daruma sırası</div>
-      <div class="place-fact">🚌 Ulaşım: Metro + Hankyu Bus ~60 dk</div>
+    <div class="acc-body">
+      <p>Osaka'nın dışında, ormanlık bir tepede saklı bu tapınak <strong>"Zafer Tapınağı"</strong> olarak bilinir. 6.000'den fazla beyaz Daruma bebek tapınağın her köşesini kaplamış! 🎎</p>
+      <p>Her Daruma bir dileği temsil eder — dilediğinde bir gözünü boyarsın, dilek gerçekleşince öteki gözü boyarsın. Yani tapınakta tek gözlü binlerce Daruma var... biraz ürkütücü ama çok kawaii! 😂</p>
+      <p>🌿 <strong>Eğlenceli Bilgi:</strong> Japon politikacılar ve iş insanları seçim veya proje öncesi buraya gelip dev Daruma satın alır. Kazanırlarsa gözü boyarlar. Kaybederlerse... o Daruma sonsuza kadar tek gözlü kalır. 😅</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Giriş: ¥400</div>
+        <div class="acc-fact">⏱️ 1.5–2 saat</div>
+        <div class="acc-fact">🚌 Metro + Bus ~60 dk</div>
+        <div class="acc-fact">📸 Giriş köprüsü + Daruma sırası</div>
+        <div class="acc-fact">⏰ Sabah erken git!</div>
+        <div class="acc-fact">🎯 Dilekler için Daruma al ¥500</div>
+      </div>
+      <a href="https://maps.google.com/?q=Katsuoji+Temple+Minoh+Osaka" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
     </div>
   </div>
 
-  <div class="place-card osaka-card">
-    <h4>🗼 Tsutenkaku Tower & Shinsekai</h4>
-    <div class="place-tags">
-      <span class="place-tag">🌆 Retro</span><span class="place-tag">🍢 Sokak Yemeği</span><span class="place-tag">📸 Fotoğrafik</span>
+  <div class="acc-item osaka-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🌆</span>
+      <div class="acc-preview">
+        <div class="acc-name">Tsutenkaku & Shinsekai</div>
+        <div class="acc-meta">Gün 2 · ¥900 · 1 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
     </div>
-    <p>1912 yılında Paris'in Eiffel Kulesi'nden ilham alınarak inşa edilen Tsutenkaku, Osaka'nın retro-nostalji semtinin simgesidir. Shinsekai mahallesi çevresindeki sokaklar, eski Japonya'nın renkli ve neşeli atmosferini taşır. Kule içindeki Billiken heykeline dokunmak şans getirir!</p>
-    <p>Kule ziyaretini Shinsekai'daki sokak lezzetleriyle birleştirin — takoyaki ve kushi-katsu burada başroldedir.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Kule: ¥900 (+cam zemin ¥200)</div>
-      <div class="place-fact">⏱️ Önerilen Süre: 45 dk–1 saat</div>
-      <div class="place-fact">📸 Billiken heykeli ile fotoğraf</div>
-      <div class="place-fact">🍢 Takoyaki & kushi-katsu çevresi</div>
-    </div>
-  </div>
-
-  <div class="place-card osaka-card">
-    <h4>🌃 Dotonbori</h4>
-    <div class="place-tags">
-      <span class="place-tag">🌃 Gece Hayatı</span><span class="place-tag">🍜 Yemek</span><span class="place-tag">📸 Neon</span>
-    </div>
-    <p>Osaka'nın kalbi olan Dotonbori, Glico Running Man ikonik tabelası ve neon ışıklı kanal kenarıyla dünyanın en fotoğrafik yerlerinden biridir. Ağzınız açık gezin — her köşede bir sürpriz var! Hozenji Yokocho'da yosun kaplı Buda heykeli; Tonbori River Cruise ile 20 dakikalık tekne turu mutlaka yapılmalı.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Giriş: ÜCRETSİZ</div>
-      <div class="place-fact">⏱️ Gece turu: 2–3 saat</div>
-      <div class="place-fact">📸 Glico Running Man önünde grup foto</div>
-      <div class="place-fact">🚤 Nehir turu: ¥1.000 (20 dk)</div>
+    <div class="acc-body">
+      <p>1912'de Paris'in Eiffel Kulesi'nden ilham alınarak inşa edilen kule, Osaka'nın <strong>retro-nostalji semti</strong> Shinsekai'ın simgesi. Ama Paris'in Eiffel'inden çok daha az ücretli! 😄</p>
+      <p>☝️ <strong>Billiken Heykeli:</strong> Saçları diken diken, garip sırıtışlı bu heykel "Mutluluk Tanrısı" — ama aslında 1908'de bir Amerikalı sanatçı tarafından tasarlandı! Ayak tabanına dokunursan şans getirdiğine inanılıyor. Kimse neden ayak tabanı bilmiyor. 🦶😂</p>
+      <p>🍢 <strong>Kushi-katsu Kuralı:</strong> Shinsekai'da kushi-katsu (şişte kızartma) yerken ASLA sosu iki kez bandırmayın! Bu o kadar ciddi bir kural ki dükkanların duvarına yazılı: "Double dipping = yasak!" 😤</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Kule: ¥900</div>
+        <div class="acc-fact">💰 Cam zemin: +¥200</div>
+        <div class="acc-fact">⏱️ 1 saat</div>
+        <div class="acc-fact">📸 Billiken heykeli ile fotoğraf</div>
+        <div class="acc-fact">🍢 Takoyaki & kushi-katsu</div>
+        <div class="acc-fact">🌆 Akşam ışıkları güzel</div>
+      </div>
+      <a href="https://maps.google.com/?q=Tsutenkaku+Tower+Osaka" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
     </div>
   </div>
 
-  <div class="place-card osaka-card">
-    <h4>🏯 Osaka Castle (大阪城)</h4>
-    <div class="place-tags">
-      <span class="place-tag">🏯 Tarihi</span><span class="place-tag">🌸 Park</span><span class="place-tag">📸 İkonik</span>
+  <div class="acc-item osaka-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🌃</span>
+      <div class="acc-preview">
+        <div class="acc-name">Dotonbori & Shinsaibashi</div>
+        <div class="acc-meta">Gün 1–3 · Ücretsiz · Her gece git!</div>
+      </div>
+      <span class="acc-arr">›</span>
     </div>
-    <p>1583 yılında Toyotomi Hideyoshi tarafından inşa edilen bu görkemli kale, Japonya'nın en ünlü tarihi yapılarından biridir. 8 katlı kule, Osaka tarihini anlatan bir müzeye dönüştürülmüştür ve tepeden şehrin panoramik manzarası büyüleyicidir. Çevresindeki park her mevsim güzel — ağustos sonu hâlâ yemyeşil.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Park: ÜCRETSİZ | Bahçe: ¥200 | Kule: ¥600</div>
-      <div class="place-fact">⏱️ Önerilen: 1–1.5 saat</div>
-      <div class="place-fact">📸 Nishinomaru Bahçesi'nden kaleye</div>
-      <div class="place-fact">🍦 Jo-Terrace matcha soft serve</div>
-    </div>
-  </div>
-
-  <h2 class="section-main" style="margin-top:30px;">Nara</h2>
-  <span class="nara-badge city-badge">NARA</span>
-
-  <div class="place-card" style="background:#E8F5E9; border:1px solid #A5D6A7;">
-    <h4>🦌 Nara Deer Park (奈良公園)</h4>
-    <div class="place-tags"><span class="place-tag">🦌 Hayvan</span><span class="place-tag">📸 Viral</span><span class="place-tag">🌿 Park</span></div>
-    <p>Nara'nın özgürce dolaşan 1.000'den fazla kutsal Sika geyiği, şehri dünyanın en büyüleyici destinasyonlarından biri yapar. Japon kültüründe "shika" geyikleri kutsal sayılır ve Kasuga Tapınağı'nın tanrısının elçisi olarak görülür. Geyik krakeri (shika senbei, ¥200/demet) satın alarak besleyebilirsiniz.</p>
-    <p>⚠️ İpucu: Krakerle geyikleri kendinize çekmeyin, hızlıca verin — ısırabilirler! "Ojigi" pozu yapan, eğilerek selam veren geyikler viral olmak için biçilmiş kaftan.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Park: ÜCRETSİZ 🎉</div>
-      <div class="place-fact">⏱️ Önerilen: 1–1.5 saat</div>
-      <div class="place-fact">📸 Geyikle selfi & eğilen geyik pozu</div>
-      <div class="place-fact">🦌 Shika senbei: ¥200/demet</div>
+    <div class="acc-body">
+      <p>Osaka'nın kalbi — ama aslında buranın resmi sloganı <strong>"Kuidaore!"</strong> yani "yiyerek kendini mahvet!" 😂 Osaka halkı yiyeceğe o kadar düşkün ki bu şehrin kimliği haline gelmiş!</p>
+      <p>🏃 <strong>Glico Adam Efsanesi:</strong> O koşan adam tabelası 1935'ten beri burada! Her büyük spor zaferinde farklı kostüm giydiriliyor — baseball, futbol, olimpiyat... Şu an hangi kostümle karşılaşırsanız şans eseri! 🎽</p>
+      <p>🐙 <strong>Takoyaki Yarışması:</strong> Dotonbori'de en az 50 takoyaki dükkanı var ve hepsi "en iyi" iddiasında! 😅 En uzun kuyruklu dükkan her zaman doğru tercih olmayabilir — yerel Osakalıların gittiği küçük dükkanlar genelde daha lezzetli. Siz karar verin! 🎯</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Ücretsiz giriş</div>
+        <div class="acc-fact">🛍️ Tax-free mağazalar</div>
+        <div class="acc-fact">📸 Glico Man önü — akşam!</div>
+        <div class="acc-fact">🍜 Her çeşit yemek</div>
+        <div class="acc-fact">🛒 Don Quijote 24 saat açık</div>
+        <div class="acc-fact">🚤 Tekne turu ¥900</div>
+      </div>
+      <a href="https://maps.google.com/?q=Dotonbori+Osaka" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
     </div>
   </div>
 
-  <div class="place-card" style="background:#E8F5E9; border:1px solid #A5D6A7;">
-    <h4>🏛️ Todai-ji Temple (東大寺)</h4>
-    <div class="place-tags"><span class="place-tag">🏛️ Tarihi</span><span class="place-tag">🗿 UNESCO</span><span class="place-tag">😄 Aktivite</span></div>
-    <p>Dünyanın en büyük ahşap binasında, 15 metre yüksekliğindeki bronz Buda heykelini görmek gerçekten etkileyici. MS 745'te inşa edilen bu dev tapınak, Japon tarihinin en önemli dini yapılarından biridir. İçeride eğlenceli bir sütun deliği var — Buda'nın burun deliği büyüklüğünde olan bu delikten geçmek sağlık ve mutluluk getirir!</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Giriş: ¥600</div>
-      <div class="place-fact">⏱️ Önerilen: 45 dk</div>
-      <div class="place-fact">📸 Nandaimon Gate önünde</div>
-      <div class="place-fact">😄 Sütun deliğinden geçin!</div>
+  <div class="acc-item osaka-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🏯</span>
+      <div class="acc-preview">
+        <div class="acc-name">Osaka Castle</div>
+        <div class="acc-meta">Gün 3 · ¥600 · 1.5 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>1583'te inşa edildi, yakıldı, yıkıldı, yeniden yapıldı... Bu kalenin tarihi tam bir dizi gibi! 🏯 Bugün gördüğünüz yapı 1931 tarihli — ama o kadar güzel görünüyor ki kimse sormaya cesaret edemiyor. 😄</p>
+      <p>⚡ <strong>Altın Detay:</strong> Kalenin çatısındaki balık figürleri (shachi) altın kaplama! Toyotomi Hideyoshi, düşmanlarına "bak ne kadar zengim" mesajını vermek için bunları yaptırmış. Japonya'nın ilk flex hareketi. 💛</p>
+      <p>🌸 <strong>Kiraz Çiçeği Sırrı:</strong> Kale parkında 600'den fazla kiraz ağacı var. Mart-Nisan'da gelseydik cennet gibi olurdu — ama Ağustos'ta yeşillik de çok güzel! Üstelik kiraz çiçeği sezonu turistten geçilmiyor. Biz şanslıyız! 😎</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Kale müzesi: ¥600</div>
+        <div class="acc-fact">💰 Park: Ücretsiz</div>
+        <div class="acc-fact">⏱️ 1.5 saat</div>
+        <div class="acc-fact">📸 Su hendeğinden kale</div>
+        <div class="acc-fact">🌿 Picnic için ideal park</div>
+        <div class="acc-fact">🚇 Tanimachi 4-chome istasyonu</div>
+      </div>
+      <a href="https://maps.google.com/?q=Osaka+Castle+Japan" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
     </div>
   </div>
 
-  <h2 class="section-main" style="margin-top:30px;">Kyoto</h2>
-  <span class="kyoto-badge city-badge">KYOTO</span>
+  <!-- NARA -->
+  <p class="sehir-label" style="color:#27AE60;margin-top:20px;">🦌 NARA — GÜN 3</p>
 
-  <div class="place-card kyoto-card">
-    <h4>⛩️ Fushimi Inari Taisha (伏見稲荷大社)</h4>
-    <div class="place-tags"><span class="place-tag">⛩️ Tapınak</span><span class="place-tag">📸 İkonik</span><span class="place-tag">🎉 ÜCRETSİZ</span></div>
-    <p>Japonya'nın en çok ziyaret edilen tapınağı, 10.000'den fazla turuncu torii kapısının oluşturduğu tüneller sayesinde dünyanın en fotoğrafik noktalarından biridir. Her torii, bir işletme veya birey tarafından iyilik için bağışlanmıştır — arka yüzünde bağışçının adı yazar.</p>
-    <p>Tam tepeden Kyoto'yu görmek için 90 dakikalık yürüyüş gerekir; Yotsutsuji noktasına (35-40 dk) çıkmak panorama için yeterlidir. 07:00–08:30 arası kalabalıktan uzak, ışık en güzel saattir.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Giriş: ÜCRETSİZ 🎉</div>
-      <div class="place-fact">⏱️ Yotsutsuji'ye kadar: 1.5 saat</div>
-      <div class="place-fact">📸 Senbon Torii çift tünel</div>
-      <div class="place-fact">👗 Kırmızı/açık renk giy — kontrast!</div>
+  <div class="acc-item nara-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🦌</span>
+      <div class="acc-preview">
+        <div class="acc-name">Nara Deer Park & Todai-ji</div>
+        <div class="acc-meta">Gün 3 · Deer Park ücretsiz · 2–3 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>500'den fazla serbest gezen geyik — ve hepsi resmi olarak <strong>ulusal hazine</strong> sayılıyor! 🦌 Japonya'da birine zarar verirseniz ciddi para cezası yiyebilirsiniz. Bu geyikler bunu biliyor olmalı çünkü hiç çekinmeden yanınıza geliyorlar! 😂</p>
+      <p>🍪 <strong>Bisküvi Hilesi:</strong> Shika senbei'yi (¥200) aldığınız an geyikler sizi görüyor! Bisküviyi çantanıza saklasanız bile koku alıyorlar. Tavsiye: Fotoğrafı çektikten sonra hepsini verin yoksa takipten kurtulamazsınız! 🏃‍♀️🦌🦌🦌</p>
+      <p>🏛️ <strong>Todai-ji Buda Gerçeği:</strong> İçeride bir direğin altında insan boyutunda delik var. Efsaneye göre bu delikten geçebilirsen aydınlanıyorsun! Delik tam Buda'nın burnuyla aynı boyutta. Deneyin mi? 😄 (Dar ama imkansız değil!)</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Park: Ücretsiz</div>
+        <div class="acc-fact">💰 Todai-ji: ¥600</div>
+        <div class="acc-fact">⏱️ 2–3 saat toplam</div>
+        <div class="acc-fact">🦌 Bisküvi ¥200 — geyikler gelir!</div>
+        <div class="acc-fact">📸 Geyikle selfie!</div>
+        <div class="acc-fact">🚃 Osaka'dan 45 dk · ¥640</div>
+      </div>
+      <a href="https://maps.google.com/?q=Nara+Deer+Park+Japan" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
     </div>
   </div>
 
-  <div class="place-card kyoto-card">
-    <h4>🎋 Arashiyama Bamboo Grove (嵐山竹林)</h4>
-    <div class="place-tags"><span class="place-tag">🎋 Doğa</span><span class="place-tag">📸 Viral</span><span class="place-tag">🎉 ÜCRETSİZ</span></div>
-    <p>Devasa bambuların oluşturduğu bu doğal koridor, dünyanın en etkileyici manzaralarından biridir. Bambu gövdelerinin yaydığı hafif uğultu, sanki doğanın sesi gibi huzur verir. Tenryu-ji'nin arka çıkışından direkt girilir — bu sayede tapınak + bambu turu tek seferde yapılır.</p>
-    <p>Sabah erken gidin — 08:00–09:00 arası bambu ormanı neredeyse boş! Işık bu saatte bambu aralıklarından süzülür ve fotoğraf için eşsizdir.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Giriş: ÜCRETSİZ 🎉</div>
-      <div class="place-fact">⏱️ Önerilen: 30–40 dk</div>
-      <div class="place-fact">📸 Sabah 08:00 — en iyi ışık</div>
-      <div class="place-fact">🎥 Slow-mo video = viral!</div>
+  <!-- USJ -->
+  <p class="sehir-label" style="color:#7B2D8B;margin-top:20px;">🎢 USJ — GÜN 4 · 24 AĞUSTOS</p>
+
+  <div class="tip-box" style="margin-bottom:12px;">
+    <strong>🎟️ Express Pass Özeti</strong>
+    Hollywood Dream ⚡ · Flying Dinosaur ⚡ · Harry Potter: Forbidden Journey ⚡ · <strong>Super Nintendo World Girişi + Mario Kart × 2 tur ⚡ (13:00–14:00)</strong>
+  </div>
+
+  <!-- 1. Space Fantasy -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🚀</span>
+      <div class="acc-preview">
+        <div class="acc-name">1. Space Fantasy — The Ride</div>
+        <div class="acc-meta">Sabah erken · Normal kuyruk · ~30 dk bekleme</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Güne bu ride ile başlıyorsunuz — harika bir tercih! 🌌 Sizi renkli bir uzay yolculuğuna çıkaran, dönüp dönen kapsülde gezintili bir ride. Aile dostu ama çok eğlenceli!</p>
+      <p>🌟 <strong>Neden İlk?</strong> Sabah açılışta kuyruğu en kısa olan popüler ride'lardan biri. Express Pass'ınız yok bu için ama sabah 08:30'da girerseniz 15–20 dakikada binersiniz. Öğleden sonra 45–60 dk bekleme olabiliyor.</p>
+      <div class="acc-facts">
+        <div class="acc-fact">🎟️ Express Pass: YOK</div>
+        <div class="acc-fact">⏰ Sabah 08:30'da koş!</div>
+        <div class="acc-fact">⏱️ Ride süresi: ~4 dk</div>
+        <div class="acc-fact">📸 Ride içi fotoğraf satılıyor</div>
+        <div class="acc-fact">😵 Dönerek gidiyor — midesi zayıf dikkat!</div>
+        <div class="acc-fact">👶 Min. yükseklik: 106 cm</div>
+      </div>
     </div>
   </div>
 
-  <div class="place-card kyoto-card">
-    <h4>🛕 Kiyomizu-dera Temple (清水寺)</h4>
-    <div class="place-tags"><span class="place-tag">🗿 UNESCO</span><span class="place-tag">💕 Aşk</span><span class="place-tag">📸 Panorama</span></div>
-    <p>MS 778'de kurulan, "Saf Su Tapınağı" anlamına gelen bu UNESCO mirası, Kyoto'nun en simgesel yapısıdır. 13 metre yüksekliğindeki ahşap platform (Butai), hiçbir çivi kullanılmadan inşa edilmiştir — hem mimari bir mucize hem de şehri kuşbakışı görmek için en iyi nokta. Otowa Şelalesi'nde üç farklı su akar: başarı, aşk ve uzun ömür — ama sadece birini seçebilirsiniz!</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Giriş: ¥400</div>
-      <div class="place-fact">⏱️ Önerilen: 1–1.5 saat</div>
-      <div class="place-fact">📸 Butai platformundan manzara</div>
-      <div class="place-fact">💕 Jishu Shrine aşk taşları</div>
+  <!-- 2. Hollywood Dream -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🎢</span>
+      <div class="acc-preview">
+        <div class="acc-name">2. Hollywood Dream — The Ride ⚡</div>
+        <div class="acc-meta">Express Pass ✓ · Serbest zaman · Hızlı giriş!</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>🎢 <strong>Hollywood Dream:</strong> Binerken müzik seçiyorsunuz — ABBA mı, Katy Perry mi, BTS mi? 🎵 Hız treninde kulaklıkla müzik dinliyorsunuz! Arka yüz yüze binme seçeneği (Backdrop) de var — arkasına bakarak gidiyorsunuz. Tam terör! 😂</p>
+      <p>🌟 <strong>Sırrı:</strong> Normal kuyruk 60–90 dakika olabiliyor — ama siz EP ile direkt biniyorsunuz. Arkasına binme (Backdrop) için ayrı kuyruk var, o da uzun olabilir. Önce normale binin, vakit kalırsa Backdrop deneyin!</p>
+      <div class="acc-facts">
+        <div class="acc-fact">⚡ Express Pass: VAR ✓</div>
+        <div class="acc-fact">🎵 Müzik seçimi binerken</div>
+        <div class="acc-fact">🔄 Backdrop (ters) seçeneği</div>
+        <div class="acc-fact">⏱️ Ride süresi: ~5 dk</div>
+        <div class="acc-fact">📸 Ride fotoğrafı satılıyor</div>
+        <div class="acc-fact">👶 Min. yükseklik: 132 cm</div>
+      </div>
     </div>
   </div>
 
-  <h2 class="section-main" style="margin-top:30px;">Tokyo</h2>
-  <span class="tokyo-badge city-badge">TOKYO</span>
-
-  <div class="place-card tokyo-card">
-    <h4>⛩️ Senso-ji & Asakusa (浅草)</h4>
-    <div class="place-tags"><span class="place-tag">⛩️ Tarihi</span><span class="place-tag">🛍️ Alışveriş</span><span class="place-tag">🎉 ÜCRETSİZ</span></div>
-    <p>MS 628'de kurulan Tokyo'nun en eski tapınağı, şehrin ruhunu taşır. Dev kırmızı Kaminarimon fenerinin altında fotoğraf çektirmek Tokyo'da yapılacaklar listesinin en başındadır. Nakamise-dori'deki 250 metrelik geleneksel dükkan sırası, hem alışveriş hem de Edo dönemi atmosferi sunar.</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Tapınak: ÜCRETSİZ 🎉</div>
-      <div class="place-fact">⏱️ Önerilen: 1.5–2 saat</div>
-      <div class="place-fact">📸 Kaminarimon fener altında</div>
-      <div class="place-fact">🍡 Kibidango & age-manju lezzetleri</div>
+  <!-- 3. New York / Minion Park -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">💛</span>
+      <div class="acc-preview">
+        <div class="acc-name">3. New York Bölgesi & Minion Park</div>
+        <div class="acc-meta">Normal kuyruk · Eğlenceli fotoğraf noktaları</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>💛 <strong>Minion Park:</strong> Her köşesi sarı! Minion karakterleriyle fotoğraf, Minion Hachaame Time (dans ve su sıçrayan interaktif show), Minion Mayhem ride. O kadar sarı ki gözleriniz kamaşır! 😄</p>
+      <p>🗽 <strong>New York Bölgesi:</strong> Retro New York sokak atmosferi, backdrop olarak harika fotoğraflar. Bazı dönemlerde canlı performanslar da oluyor.</p>
+      <div class="acc-facts">
+        <div class="acc-fact">🎟️ Express Pass: YOK</div>
+        <div class="acc-fact">💛 Minion karakterleri — selfie!</div>
+        <div class="acc-fact">💦 Minion show — ıslanabilirsiniz!</div>
+        <div class="acc-fact">🛍️ Minion hediyelik dükkanı</div>
+        <div class="acc-fact">🍌 Muz aromalı her şey var 😂</div>
+        <div class="acc-fact">📸 Sarı fotoğraf noktaları</div>
+      </div>
     </div>
   </div>
 
-  <div class="place-card tokyo-card">
-    <h4>🐱 Gotokuji Temple (豪徳寺)</h4>
-    <div class="place-tags"><span class="place-tag">🐱 Kawaii</span><span class="place-tag">📸 Efsanevi</span><span class="place-tag">🎉 ÜCRETSİZ</span></div>
-    <p>Maneki-Neko (şans kedisi) figürlerinin efsanevi doğum yeri! Tapınakta yüzlerce beyaz porselen kedi heykeli, pençesini yukarı kaldırarak sizi karşılar. Efsaneye göre bir kedi, yağmurdan sığınan zor durumda bir samurayı buraya yönlendirmiş ve hayatını kurtarmış. İşte bu yüzden "davet eden kedi" geleneği doğmuş.</p>
-    <p>Hepiniz kedi pençe pozu yapın — serinin en tatlı fotoğrafı bu olacak! 🐱✨</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 Giriş: ÜCRETSİZ 🎉</div>
-      <div class="place-fact">⏱️ Önerilen: 45 dk–1 saat</div>
-      <div class="place-fact">📸 Kedi heykeli denizi geniş açı</div>
-      <div class="place-fact">🐱 Mini maneki-neko al, tapınağa bırak ¥500</div>
+  <!-- 4. Super Nintendo World -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🍄</span>
+      <div class="acc-preview">
+        <div class="acc-name">4. Super Nintendo World ⚡ — 13:00–14:00</div>
+        <div class="acc-meta">EP Giriş: 13:00 · Mario Kart × 2 tur! · KAÇIRMAYIN!</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>⚠️ <strong>13:00'DA ORADA OLUN!</strong> Bu slot kaçırılırsa Nintendo World'e giremezsiniz — Timed Entry gerekiyor ve sizinki 13:00–14:00 arası! 5–10 dk önce kapıda bekleyin.</p>
+      <p>🏎️ <strong>Mario Kart × 2 TUR:</strong> Koopa's Challenge'a normal kuyrukta 60–90 dk bekleme var — ama siz EP ile 13:00–13:30 ve 13:30–14:00 slotlarında 2 kez biniyorsunuz! Bu Japonya'da çok nadir bir ayrıcalık!</p>
+      <p>🎮 <strong>Power-Up Band Sırrı:</strong> ¥4.800 — ama tüm park boyunca interaktif görevler açıyor! Kapılar açıyorsunuz, düşman yeniyorsunuz, puan topluyorsunuz. Ayrıca eve gerçek Nintendo hatırası olarak kalıyor. 🍄</p>
+      <div class="acc-facts">
+        <div class="acc-fact">⚡ EP Giriş + Mario Kart: VAR ✓</div>
+        <div class="acc-fact">⏰ SLOT: 13:00–14:00</div>
+        <div class="acc-fact">🏎️ Mario Kart × 2 tur!</div>
+        <div class="acc-fact">💰 Power-Up Band: ¥4.800</div>
+        <div class="acc-fact">📸 ?Block + Peach Castle foto</div>
+        <div class="acc-fact">🧢 Yoshi, Toad karakterleri</div>
+      </div>
     </div>
   </div>
 
-  <div class="place-card tokyo-card">
-    <h4>🎨 TeamLab Planets Tokyo</h4>
-    <div class="place-tags"><span class="place-tag">🎨 Dijital Sanat</span><span class="place-tag">📸 Efsanevi</span><span class="place-tag">🤍 Beyaz Giyin</span></div>
-    <p>Dünyanın en etkileyici dijital sanat müzelerinden biri — TeamLab, fotoğraf için değil deneyim için tasarlanmış immersif bir dünya. Infinity mirror odaları, ayaklarınızın altındaki dijital koi balıkları, gerçek havada asılı orkideler... Burada her oda bir başka hayale kapı açar.</p>
-    <p>⚠️ Önemli: Diz altı giysilerle gelin (suya giriyorsunuz!), beyaz veya açık renk giyin — projeksiyonlar yansıyınca fotoğraflarınız inanılmaz güzel çıkar!</p>
-    <div class="place-facts">
-      <div class="place-fact">💰 ¥3.800 (online almak ŞART!)</div>
-      <div class="place-fact">⏱️ Önerilen: 1.5–2 saat</div>
-      <div class="place-fact">📸 Infinity Mirror Room — en ikonik</div>
-      <div class="place-fact">🤍 Beyaz kıyafet = viral fotoğraf</div>
+  <!-- 5. Harry Potter -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🧙</span>
+      <div class="acc-preview">
+        <div class="acc-name">5. Wizarding World of Harry Potter ⚡</div>
+        <div class="acc-meta">Express Pass ✓ · Forbidden Journey dahil</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Hogsmeade köyüne adım attığınızda gerçekten başka bir dünyaya geçiyorsunuz — mimari, sesler, kokular, her şey HP! 🧙‍♀️</p>
+      <p>🌟 <strong>Forbidden Journey:</strong> Parkın en iyi ride'ı! EP ile direkt biniyor olmanız inanılmaz avantaj — normal kuyruk 60–90 dk. Uçuyorsunuz, ejderha nefesi hissediyorsunuz, örümcek ağına takılıyorsunuz. Mide bulandırıcı ama efsane! 😅</p>
+      <p>🍺 <strong>Butterbeer:</strong> Sıcak, soğuk veya dondurma — dondurma versiyonu en çok fotoğraflananı! Tadı vanilya-karamel arası. Harry Potter izlememiş olsanız bile mutlaka deneyin! 🍦</p>
+      <p>🪄 <strong>İnteraktif Asa (¥5.500):</strong> Park içinde 13 noktada büyü yapabiliyorsunuz. Yerde işaretler var, asayı doğruyken gerçekten bir şeyler oluyor — fıskiye, pencere açılıyor... Cadı gibi hissediyorsunuz! 🔮</p>
+      <div class="acc-facts">
+        <div class="acc-fact">⚡ Forbidden Journey: VAR ✓</div>
+        <div class="acc-fact">⚡ Flight of Hippogriff: VAR ✓</div>
+        <div class="acc-fact">🍺 Butterbeer: ¥700</div>
+        <div class="acc-fact">🪄 İnteraktif asa: ¥5.500</div>
+        <div class="acc-fact">👗 Hogwarts cüppesi: ¥6.000+</div>
+        <div class="acc-fact">📸 Hogwarts önü grup foto şart!</div>
+      </div>
     </div>
   </div>
+
+  <!-- 6. Jurassic Park -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🦕</span>
+      <div class="acc-preview">
+        <div class="acc-name">6. Jurassic Park & Flying Dinosaur ⚡</div>
+        <div class="acc-meta">Express Pass ✓ · ISLANACAKSINIZ!</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>🦕 <strong>Flying Dinosaur:</strong> Bacaklarınız sarkıyor, gökyüzüne bakarak uçuyorsunuz — tam 3 dakika! Japonya'nın en uzun coaster'ı. EP ile bekleme yok. Yükseklik korkusu olan? Bu ride ya iyileştirir ya da korkuyu 10 katına çıkarır! 😅</p>
+      <p>💦 <strong>Jurassic Park — The Ride:</strong> Su ride'ı — ıslak çıkacaksınız neredeyse kesin! Tişörtünüzün altına yedek giysi hazırlayın ya da ponçolar alın (parkta ¥300–500). Yaz sıcağında aslında çok serinletici! 😄</p>
+      <p>🦖 <strong>Fotoğraf Noktası:</strong> Jurassic Park bölgesinde dev T-Rex kafası ve kapı önünde grup fotoğrafı çekilebilir — ikonik!</p>
+      <div class="acc-facts">
+        <div class="acc-fact">⚡ Flying Dinosaur: VAR ✓</div>
+        <div class="acc-fact">🎟️ Jurassic Ride: EP YOK</div>
+        <div class="acc-fact">💦 Jurassic Ride — ISLANIRSINIZ!</div>
+        <div class="acc-fact">👗 Yedek tişört getirin!</div>
+        <div class="acc-fact">👶 Flying Dino min: 132 cm</div>
+        <div class="acc-fact">📸 T-Rex kapısı fotoğraf</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Amity Village / Jaws -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🦈</span>
+      <div class="acc-preview">
+        <div class="acc-name">7. Amity Village & Jaws</div>
+        <div class="acc-meta">Normal kuyruk · Deniz kasabası atmosferi</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>🦈 <strong>Jaws:</strong> Tekneye biniyorsunuz, dev köpek balığı saldırıyor! 1975 filminden esinlenen bu klasik ride hâlâ çok eğlenceli — özellikle köpekbalığı "aniden" çıktığında yanınızdakinin çığlığını duymak paha biçilemez! 😂</p>
+      <p>🎣 <strong>Amity Village:</strong> Sahil kasabası temalı bölge, balık&cips tarzı yemekler, retro Amerika atmosferi. Fotoğraf için güzel bir backdrop!</p>
+      <div class="acc-facts">
+        <div class="acc-fact">🎟️ Express Pass: YOK</div>
+        <div class="acc-fact">🦈 Köpekbalığı saldırısı — eğlenceli!</div>
+        <div class="acc-fact">💦 Hafif ıslanabilirsiniz</div>
+        <div class="acc-fact">⏱️ Kuyruk genelde kısa</div>
+        <div class="acc-fact">🍟 Balık&cips yemek noktası</div>
+        <div class="acc-fact">📸 Retro kasaba fotoğrafı</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Universal Wonderland -->
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🎠</span>
+      <div class="acc-preview">
+        <div class="acc-name">8. Universal Wonderland</div>
+        <div class="acc-meta">Snoopy & Hello Kitty · Fotoğraf cenneti!</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>🐾 Snoopy, Hello Kitty, Elmo, Sesame Street karakterleriyle dolu kawaii bölge! Büyükler için biraz çocukça görünebilir ama fotoğraf için muhteşem. Hello Kitty'nin evine girebilirsiniz! 🏠</p>
+      <p>🎠 <strong>Snoopy'nin Dönen Bölümü:</strong> Snoopy temalı küçük dönme dolap ve oyun alanları var. Ama asıl amaç karakter selfie'leri! Burada kuyruklar kısa ama karakterler çok sevimli. 📸</p>
+      <p>🛍️ <strong>Alışveriş Uyarısı:</strong> Bu bölgedeki hediyelik dükkanlar çok tehlikeli — her şey çok kawaii ve satın almak istiyorsunuz! Bütçenizi bu bölge için ayırın. 😅</p>
+      <div class="acc-facts">
+        <div class="acc-fact">🎟️ Express Pass: YOK</div>
+        <div class="acc-fact">🐾 Hello Kitty, Snoopy, Elmo</div>
+        <div class="acc-fact">📸 Karakter selfie fırsatı</div>
+        <div class="acc-fact">🏠 Hello Kitty'nin evi</div>
+        <div class="acc-fact">🛍️ Kawaii hediyelik dükkanlar</div>
+        <div class="acc-fact">👶 Aileler için ideal — ama biz de seveceğiz! 😄</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Günün Stratejisi -->
+  <div class="success-box" style="margin-top:12px;">
+    <strong>📋 USJ Gün Stratejisi</strong><br>
+    08:30 Park açılış → 🚀 Space Fantasy (koş!) → 🎢 Hollywood Dream EP → 💛 Minion Park → 🦕 Flying Dinosaur EP → 🍔 Öğle yemeği → ⏰ 12:50 Nintendo World kapısında bekle → 🍄 13:00 Nintendo World girişi + Mario Kart × 2 → 🧙 Harry Potter EP → 🦈 Jaws/Amity → 🎠 Wonderland → 🛍️ Son alışveriş → 🚃 18:30 Çıkış
+  </div>
+
+<!-- KYOTO -->
+  <p class="sehir-label" style="color:var(--kp);margin-top:20px;">⛩️ KYOTO — GÜN 5–6</p>
+
+  <div class="acc-item kyoto-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🎋</span>
+      <div class="acc-preview">
+        <div class="acc-name">Arashiyama Bambu Ormanı</div>
+        <div class="acc-meta">Gün 5 · Ücretsiz · Sabah erken git!</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Bu bambu ormanının gerçek olduğuna inanmak zor — sanki bir film seti gibi! 🎋 Rüzgar esince bambuların birbirine sürtünmesinden çıkan ses Japonya'nın resmi "korunması gereken sesler" listesinde. Evet, Japonya'nın böyle bir listesi var! 🎵</p>
+      <p>⏰ <strong>Zamanlama Sırrı:</strong> Sabah 07:00'de giderseniz neredeyse yalnızsınız — sisli hava varsa adeta büyülü bir orman. Saat 10:00'dan sonra selfie çubukları ve kalabalık başlıyor. "Instagram vs gerçeklik" farkını yaşarsınız! 😅</p>
+      <p>☕ <strong>% Arabica Sırrı:</strong> Bu kahve dükkanı "dünyanın en güzel kahve dükkanı" listelerine giriyor. Cappuccino ¥700 civarı ama o manzarayla birlikte priceless! Mutlaka fotoğrafını çekin — latte art'ı da çok şık yapıyorlar. 📸</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Ücretsiz</div>
+        <div class="acc-fact">⏰ Sabah 07:00 gidin!</div>
+        <div class="acc-fact">⏱️ 1–1.5 saat</div>
+        <div class="acc-fact">📸 Tünel içinden arkaya bak</div>
+        <div class="acc-fact">🌿 Tenryu-ji bahçesi: ¥500</div>
+        <div class="acc-fact">☕ % Arabica hemen yakında</div>
+      </div>
+      <a href="https://maps.google.com/?q=Arashiyama+Bamboo+Grove+Kyoto" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item kyoto-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🏮</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gion & Nishiki Market</div>
+        <div class="acc-meta">Gün 5 · Ücretsiz</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>🌸 <strong>Geisha Sırrı:</strong> Gion'da gördüğünüz kimono giyen kadınların çoğu turist! Gerçek geisha (geiko) ve çırak (maiko) akşam 17:00–18:00 arası Hanamikoji Caddesi'nde görülebilir. Ve lütfen fotoğraf için kovalaşmayın — bu çok ayıp sayılıyor! 🙏</p>
+      <p>🤫 <strong>Gizli Gerçek:</strong> Machiya (ahşap şehir evi) denen binaların çoğu artık içinde cafe, restoran veya butik otel. Dışarıdan 100 yıllık geleneksel Japon evi görünümü, içeri girince modern tasarım. Japonya bunu çok iyi yapıyor! 🏠✨</p>
+      <p>🥢 <strong>Nishiki Market Taktik:</strong> 400 yıllık bu pazarda en ilginç şey: çopstick ile her şeyi yiyebilirsiniz, serbestçe gezebilirsiniz, ama alışveriş torbaları çok küçük çünkü yer yok! Tadım yaparak gezin — zaten doyarsınız. 😄</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Ücretsiz</div>
+        <div class="acc-fact">📍 Hanamikoji Cad. — akşam</div>
+        <div class="acc-fact">📸 Lanternlı sokaklar</div>
+        <div class="acc-fact">🍡 Nishiki'de tadım zorunlu!</div>
+        <div class="acc-fact">🛍️ El yapımı hediyelikler</div>
+        <div class="acc-fact">⏰ Nishiki: 10:00–18:00</div>
+      </div>
+      <a href="https://maps.google.com/?q=Gion+District+Kyoto" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item kyoto-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">⛩️</span>
+      <div class="acc-preview">
+        <div class="acc-name">Fushimi Inari Taisha</div>
+        <div class="acc-meta">Gün 6 · Ücretsiz · Sabah erken git!</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Bu tapınakta <strong>10.000'den fazla torii kapısı</strong> var — ve hepsini bir şirket veya kişi bağışlamış! Her kapının üzerinde bağışçının adı yazıyor. En küçük torii ¥175.000, en büyükler milyonlarca yen! 😲</p>
+      <p>🦊 <strong>Tilki Efsanesi:</strong> Kitsune (tilki) burada Inari tanrısının habercisi. Tapınaktaki tilki heykellerinin her biri farklı bir şey tutuyor — anahtar, top, pirinç... Her biri farklı dilekleri temsil ediyor. Dileklerinize göre seçin! 🔑</p>
+      <p>📸 <strong>Fotoğraf Sırrı:</strong> "Sonsuz tünel" fotoğrafı için arka kısma kadar gidin, sonra geri dönün ve fotoğrafı tünelin içinden dışarı doğru çekin. Erkenden gidin, kalabalıkta insansız fotoğraf çekmek neredeyse imkansız! Saat 06:15'te orada olun. ⏰</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Ücretsiz</div>
+        <div class="acc-fact">⏰ 06:00'da gidin!</div>
+        <div class="acc-fact">⏱️ 1–3 saat (ne kadar gidersen)</div>
+        <div class="acc-fact">📸 Tünel içinden arkaya bak</div>
+        <div class="acc-fact">👟 Rahat ayakkabı şart!</div>
+        <div class="acc-fact">🦊 Tilki heykellerine dikkat</div>
+      </div>
+      <a href="https://maps.google.com/?q=Fushimi+Inari+Taisha+Kyoto" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item kyoto-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🛕</span>
+      <div class="acc-preview">
+        <div class="acc-name">Kiyomizu-dera</div>
+        <div class="acc-meta">Gün 6 · ¥500 · 1.5 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Bu tapınak <strong>tek bir çivi kullanılmadan</strong> inşa edilmiş! 139 adet devasa ahşap direk üzerinde duruyor — ve 400 yılda tek bir kez bile çökmemiş. Japonların ahşap ustalığı akıl almaz. 🪵</p>
+      <p>💧 <strong>Üç Çeşme Efsanesi:</strong> Otawa-no-taki çeşmesinden üç farklı akıntı var: uzun ömür, başarı ve aşk. Ama sadece İKİSİNİ içmeniz gerekiyor — üçünü birden içerseniz açgözlü sayılıyor ve dilek tutmuyor! 😂 Siz hangisini seçersiniz?</p>
+      <p>🌃 <strong>Gece Sırrı:</strong> Tapınak özel etkinliklerde gece de açılıyor ve altın renkli ışıklandırmayla aydınlanıyor. Ağustos'ta açık olma ihtimali var — kontrol edin, o manzara "bir kez görünce unutulmaz" kategorisinde! ✨</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 ¥500</div>
+        <div class="acc-fact">⏱️ 1.5 saat</div>
+        <div class="acc-fact">📸 Veranda'dan panorama</div>
+        <div class="acc-fact">💧 Üç çeşmeden su iç</div>
+        <div class="acc-fact">🛍️ Oteai-zaka alışveriş</div>
+        <div class="acc-fact">⏰ Sabah erken daha sakin</div>
+      </div>
+      <a href="https://maps.google.com/?q=Kiyomizudera+Temple+Kyoto" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <!-- TOKYO -->
+  <p class="sehir-label" style="color:var(--tp);margin-top:20px;">🗼 TOKYO — GÜN 7–10</p>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🏯</span>
+      <div class="acc-preview">
+        <div class="acc-name">Tokyo İmparatorluk Sarayı</div>
+        <div class="acc-meta">Gün 7 · Ücretsiz · 1 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Japon İmparatoru hâlâ burada yaşıyor — yani bu gerçek bir saray, müze değil! 👑 Ana bina kapalı ama Doğu Bahçeleri'ni ücretsiz gezebilirsiniz. Ve bilgi: İmparator görünürse fotoğraf çekmek serbest ama yaklaşmak yasak!</p>
+      <p>📐 <strong>İlginç Gerçek:</strong> Saray 1,15 km² alanıyla Manhattan'ın bazı mahallelerinden büyük. Bu dev alanın tam ortasında bir adam yaşıyor. Tokyo'nun en pahalı arazisi — tahminlere göre değeri tüm Kanada'nın arazisini geçiyor! 🤯</p>
+      <p>🌸 <strong>Nijubashi Köprüsü Sırrı:</strong> Bu taş köprü aslında tek köprü — ama su yüzeyine yansımasıyla "iki köprü" (niju = iki) gibi görünüyor, bu yüzden adı öyle! İki köprüyü aynı anda görmek için güneşli saatleri seçin. ☀️</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Doğu Bahçe: Ücretsiz</div>
+        <div class="acc-fact">⏱️ 1 saat</div>
+        <div class="acc-fact">🚶 Tokyo Stn'dan 10 dk</div>
+        <div class="acc-fact">📸 Nijubashi köprüsü</div>
+        <div class="acc-fact">🧳 Coin locker: ¥400–700</div>
+        <div class="acc-fact">⏰ 09:00–17:00 açık</div>
+      </div>
+      <a href="https://maps.google.com/?q=Imperial+Palace+East+Garden+Tokyo" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🛍️</span>
+      <div class="acc-preview">
+        <div class="acc-name">Ginza</div>
+        <div class="acc-meta">Gün 7–8 · Ücretsiz giriş</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Ginza'nın 1m² arazisinin değeri ¥40 milyon (yaklaşık ₺11,5 milyon!) — dünyanın en pahalı alışveriş caddelerinden biri. Ama UNIQLO ve Daiso burada bile var, yani demokratik bir lüks! 😄</p>
+      <p>🏬 <strong>UNIQLO Ginza Sırrı:</strong> 12 katlı bu mağaza dünyanın en büyük UNIQLO'su — her kat farklı kategori! Basement'te özel Ginza koleksiyonu var, normale göre daha tasarımlı ve biraz daha pahalı. Ama buradaki special edition ürünler hatıra olarak eşsiz! 🛍️</p>
+      <p>✏️ <strong>Itoya'yı Kaçırmayın:</strong> 12 katlı kırtasiye dükkanı — Japonya'nın en güzel kırtasiye mağazası! Masaüstü bitkisi bile var. Her kat farklı bir kırtasiye kategorisi. Çanta kadar gelip 2 saat sonra çıkarsınız. 😅</p>
+      <div class="acc-facts">
+        <div class="acc-fact">🏬 UNIQLO Ginza (12 kat!)</div>
+        <div class="acc-fact">🏬 Ginza Six — çatı ücretsiz</div>
+        <div class="acc-fact">🏬 Itoya kırtasiye (12 kat)</div>
+        <div class="acc-fact">🏬 Mitsukoshi dept. store</div>
+        <div class="acc-fact">🍽️ The Emperor Kobe (Gün 8)</div>
+        <div class="acc-fact">🌆 Akşam yürüyüşü çok güzel</div>
+      </div>
+      <a href="https://maps.google.com/?q=Ginza+Tokyo" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🚶</span>
+      <div class="acc-preview">
+        <div class="acc-name">Shibuya Crossing & Çevresi</div>
+        <div class="acc-meta">Gün 7–8 · Ücretsiz</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Shibuya Crossing'de bir günde <strong>2,5 milyon kişi</strong> geçiyor — bu Tokyo'nun nüfusunun neredeyse çeyreği! Işık kırmızıya döndüğünde 6 yönden aynı anda yayalar geçiyor. Karşıdan bakarken kaos gibi görünüyor ama kimse kimseye çarpmıyor. Japon disiplini! 🇯🇵</p>
+      <p>☕ <strong>Üst Kattan Bakan Sırrı:</strong> Crossing'in tam karşısındaki Starbucks'ın 2. katından manzara inanılmaz! Yer bulmak zor ama sabah 08:00'de gelirseniz boş koltuklara kavuşursunuz. Kahve eşliğinde seyredersiniz. 📸</p>
+      <p>🐕 <strong>Hachiko'nun Hikayesi:</strong> 1925-1935 yılları arasında bu köpek her gün sahibini tren istasyonunda bekledi. Sahibi öldükten sonra da 9 yıl boyunca aynı saatte gelip bekledi. Japon halkı o kadar sevdi ki 1934'te heykelini diktiler — köpek hâlâ hayattayken! 🥺</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Crossing: Ücretsiz</div>
+        <div class="acc-fact">💰 Shibuya Sky: ¥2.000</div>
+        <div class="acc-fact">📸 Üstten fotoğraf için Starbucks</div>
+        <div class="acc-fact">🐕 Hachiko heykeli — buluşma</div>
+        <div class="acc-fact">🛍️ Shibuya 109 (Japon moda)</div>
+        <div class="acc-fact">🌃 Akşam 19:00+ en güzel</div>
+      </div>
+      <a href="https://maps.google.com/?q=Shibuya+Crossing+Tokyo" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🌃</span>
+      <div class="acc-preview">
+        <div class="acc-name">Shinjuku</div>
+        <div class="acc-meta">Gün 8 · Ücretsiz</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Shinjuku İstasyonu <strong>günde 3,5 milyon yolcu</strong> ile dünyanın en kalabalık istasyonu — ve 200'den fazla çıkışı var! İlk kez gidenler genelde kaybolur. "Doğu Çıkış / Batı Çıkış" önemli: Doğu = eğlence, Batı = iş bölgesi. 🗺️</p>
+      <p>🦖 <strong>Godzilla Sırrı:</strong> TOHO Cinema binasının 8. katında Godzilla'nın kafası çıkıyor! Belirli saatlerde hareket ediyor ve ses çıkarıyor — programa bakın, yoksa sadece durgun kafa görürsünüz. 😅 Yakındaki Gracery Hotel'in terasından daha iyi fotoğraf çekiliyor!</p>
+      <p>🍢 <strong>Omoide Yokocho Gerçeği:</strong> "Memory Lane" denen bu dar sokak WWII sonrasında açılan izakayaların mirası. O kadar dar ki iki kişi yan yana zor geçiyor! Duman ve ızgara kokusu sokağı kaplıyor. Otantik Tokyo deneyimi için burası şart — ama vejetaryen seçenek az! 🔥</p>
+      <div class="acc-facts">
+        <div class="acc-fact">🦖 Godzilla heykeli — ücretsiz</div>
+        <div class="acc-fact">🍢 Omoide Yokocho</div>
+        <div class="acc-fact">🍺 Golden Gai (yürüyerek bak)</div>
+        <div class="acc-fact">🎮 Kabukicho Tower: Namco arcade</div>
+        <div class="acc-fact">⚠️ Israrcı tout'lara cevap verme</div>
+        <div class="acc-fact">🌃 Gece çok daha eğlenceli</div>
+      </div>
+      <a href="https://maps.google.com/?q=Shinjuku+Tokyo" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🌿</span>
+      <div class="acc-preview">
+        <div class="acc-name">Meiji Jingu Tapınağı</div>
+        <div class="acc-meta">Gün 8 · Ücretsiz · 1 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Meiji Tapınağı'nın ormanı <strong>doğal değil</strong> — 1920'de 100.000 gönüllü tarafından elle dikildi! 365 tür ağaç var ve her biri Japonya'nın farklı bir bölgesinden getirildi. 100 yılda kendi kendine büyüyen bir ekosisteme dönüştü. 🌳</p>
+      <p>🍶 <strong>Sake Fıçıları Duvarı:</strong> Girişte dev sake fıçıları duvarı görürsünüz — bunlar gerçek değil, boş! Sake üreticileri her yıl Meiji İmparatoru'nun ruhuna saygı olarak buraya bağışlıyor. Karşı tarafta şarap fıçıları da var — Fransız bağcılar da katılmış! 🍷😄</p>
+      <p>💌 <strong>Ema Sırrı:</strong> Ahşap dileк tablaları (ema) üzerine Japonca, İngilizce, hatta Türkçe bile dilekler yazılmış! Komik olanlar da var: "Chelsea FC şampiyon olsun", "Sınav geçeyim yoksa annem beni öldürür"... 😂 Siz ne dilerdiniz?</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Ücretsiz</div>
+        <div class="acc-fact">⏱️ 1 saat</div>
+        <div class="acc-fact">📸 Dev torii kapısı</div>
+        <div class="acc-fact">🍶 Sake fıçıları duvarı</div>
+        <div class="acc-fact">📝 Ema: dilek yaz ¥500–800</div>
+        <div class="acc-fact">👟 Harajuku'ya 5 dk yürüyüş</div>
+      </div>
+      <a href="https://maps.google.com/?q=Meiji+Shrine+Tokyo" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">⛩️</span>
+      <div class="acc-preview">
+        <div class="acc-name">Senso-ji & Asakusa</div>
+        <div class="acc-meta">Gün 9 · Ücretsiz · 1.5 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Senso-ji tapınağı <strong>628 yılında</strong> kurulmuş — yani Tokyo şehri kurulmadan 1.000 yıl önce! Efsaneye göre iki balıkçı nehirden bir Buda heykeli çıkarmış, halk tapınak inşa etmiş. O heykeli bugün kimse göremez — yılda bir kez bile değil! 🐟</p>
+      <p>🎋 <strong>Omikuji (Fal) Geleneği:</strong> Tapınakta metal kutular var, sallayıp bir çubuk çıkarıyorsunuz, numaraya göre kağıt alıyorsunuz — bu sizin "talih kağıdınız"! Kötü çıkarsa katlayıp tapınaktaki tele bağlıyorsunuz (kötü şansı tapınakta bırakmak için). İyi çıkarsa cebinize koyuyorsunuz. Deneyin! 🎯</p>
+      <p>🛍️ <strong>Nakamise Alışveriş Taktik:</strong> 200m'lik bu sokaktaki dükkanlar sabah 10:00'da açıyor. En orijinal hediyelikler burada — ama aynı ürünler Kappabashi'de daha ucuz! Ningyoyaki (tapınak şekilli kek) ise sadece burada, mutlaka deneyin! 🍡</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Ücretsiz</div>
+        <div class="acc-fact">⏱️ 1.5 saat</div>
+        <div class="acc-fact">📸 Kaminarimon kapısı</div>
+        <div class="acc-fact">🛍️ Nakamise hediyelik sokağı</div>
+        <div class="acc-fact">👘 Kimono kiralama yakında</div>
+        <div class="acc-fact">🗼 Skytree'ye 15 dk yürüyüş</div>
+      </div>
+      <a href="https://maps.google.com/?q=Sensoji+Temple+Asakusa+Tokyo" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🗼</span>
+      <div class="acc-preview">
+        <div class="acc-name">Tokyo Skytree</div>
+        <div class="acc-meta">Gün 9 · ¥2.100–3.400 · 1.5 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>634 metre — bu sayı tesadüf değil! 634 rakamı Japoncada "mu-sa-shi" (武蔵) okunuyor, yani bu bölgenin tarihi adı Musashi. Tam anlamıyla kuleye kimlik koydular! 🗼</p>
+      <p>🌋 <strong>Fuji Gerçeği:</strong> Tokyo Skytree'den Fuji Dağı görünür ama sadece NET havada! Ağustos ayında nem yüksek olduğundan görüş mesafesi düşük olabilir. Sabah erken saatler (08:00–10:00) şansınızı artırıyor. Fuji'yi görecek misiniz? Kader! 🍀</p>
+      <p>😱 <strong>Yükseklik Korkusu İçin:</strong> 350m'deki Tembo Deck'te bazı yerlerde cam zemin var — ayaklarınızın altında Tokyo! Kalp atışınız hızlanıyorsa normal. Japonyalı ziyaretçiler selfie çekerken siz kaçmaya çalışıyorsunuzdur muhtemelen 😂 — ama en az bir fotoğraf çekin!</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Tembo Deck (350m): ¥2.100</div>
+        <div class="acc-fact">💰 Galleria (450m): ¥3.400</div>
+        <div class="acc-fact">⏱️ 1.5 saat</div>
+        <div class="acc-fact">📸 Hava açıksa Fuji görünür!</div>
+        <div class="acc-fact">🛍️ Alt katta alışveriş</div>
+        <div class="acc-fact">⛩️ Asakusa'ya 15 dk yürüyüş</div>
+      </div>
+      <a href="https://maps.google.com/?q=Tokyo+Skytree+Japan" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🏺</span>
+      <div class="acc-preview">
+        <div class="acc-name">Kappabashi Street</div>
+        <div class="acc-meta">Gün 9 · Ücretsiz · 1 saat</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <p>Restoranlarda gördüğünüz o inanılmaz gerçekçi plastik yemekler buradan geliyor! 🍜 Bir kase ramen modeli ¥2.000–5.000, pizza dilimi ¥1.500... ama gerçekten çok gerçekçi — elinize alınca "acıkıyorum" diyorsunuz! 😂</p>
+      <p>🔪 <strong>Bıçak Sırrı:</strong> Japon mutfak bıçakları burada çok uygun! Global, Kai, Masamoto markalarını her yerde görürsünüz. Ama dikkat: bıçağı bavula koyun, el bagajına kesinlikle almayın. Ve Türkiye'ye girişte gümrükte sorun yaşamamak için kutusuyla getirin. ✈️</p>
+      <p>😂 <strong>En Tuhaf Ürünler:</strong> Bu sokakta normal olmayan şeyler var: gerçek boyutlu plastik kek dilimleri (duvar süsü için), takoyaki şeklinde kalem tutacakları, onigiri şeklinde silgiler... Hediyelik için harika, "ne bu?" dedirtecek türden! 🎁</p>
+      <div class="acc-facts">
+        <div class="acc-fact">💰 Ücretsiz giriş</div>
+        <div class="acc-fact">⏱️ 1 saat</div>
+        <div class="acc-fact">🎁 Plastik yemek modeli</div>
+        <div class="acc-fact">🔪 Japon bıçağı — hatıra!</div>
+        <div class="acc-fact">🍵 Çay seti hediyelik</div>
+        <div class="acc-fact">⛩️ Asakusa'ya 10 dk yürüyüş</div>
+      </div>
+      <a href="https://maps.google.com/?q=Kappabashi+Street+Tokyo" target="_blank" class="acc-maps-btn">🗺️ Google Maps'te Aç</a>
+    </div>
+  </div>
+
 </div>
 
-<!-- ============================
-     BÖLÜM 5: YAPMADAN DÖNME
-============================= -->
 <div class="page-break">
   <div id="bolum-yemek" class="section-cover section-cover-yemek">
     <div class="section-num">06</div>
     <div class="section-title-cover">
       <h2>🍜 YEMEK, KAFE & ALIŞVERİŞ</h2>
-      <p>Şehir Şehir Öneri Tablosu</p>
+      <p>Güne göre tıkla — planı gör</p>
     </div>
   </div>
 </div>
 
 <div class="content">
-  <span class="osaka-badge city-badge">OSAKA — Enerji & Lezzet</span>
-  <div class="ts"><table class="osaka-table" style="margin-top:10px;">
-    <thead><tr><th>Gün</th><th>Yemek / Kafe</th><th>Alışveriş</th><th>Not</th></tr></thead>
-    <tbody>
-      <tr><td>Gün 1<br><small>21 Ağu</small></td><td>Sukiya / Matsuya (tavuk donburi) ✅<br>Konbini: matcha KitKat, mochi</td><td>Konbini ihtiyaç alışverişi</td><td>Hafif geç varış — sadece ihtiyaç</td></tr>
-      <tr><td>Gün 2<br><small>22 Ağu</small></td><td>Kuromon Market atıştırmalık<br>Matsuri Halal / Halal Ramen Honolu ✅<br>Rikuro Ojisan Cheesecake 📸</td><td>Shinsaibashi: GU, UNIQLO, Daiso<br>Matsumoto Kiyoshi / @cosme<br>Don Quijote (gece)</td><td>Tax-free ilk gün — pasaport hazır!</td></tr>
-      <tr><td>Gün 3<br><small>23 Ağu</small></td><td>Matsuri Halal / Coco Curry Halal ✅<br>Hajime Halal ✅<br>Gram Pancakes 📸</td><td>Don Quijote MEGA (Ana gün!)<br>Nara: geyik hediyelik<br>Shinsaibashi son tur</td><td>DQ kupon + tax-free = %18 indirim!</td></tr>
-    </tbody>
-  </table></div>
 
-  <div class="shopping-box" style="margin-top:14px;">
-    <h4>🛒 Osaka Alışveriş Özel Noktaları</h4>
-    <div class="grid-2">
-      <div>
-        <p><strong>Kozmetik:</strong> Matsumoto Kiyoshi • @cosme Store • Don Quijote 1F</p>
-        <p><strong>Hediyelik:</strong> Konbini matcha KitKat • Nara geyik ürünleri • Daruma bebek</p>
+  <!-- OSAKA -->
+  <p class="sehir-label" style="color:var(--op);">🏯 OSAKA — GÜN 1–3</p>
+
+  <div class="acc-item osaka-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">1️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 1 — 21 Ağustos Cuma</div>
+        <div class="acc-meta">Varış günü · Hafif plan</div>
       </div>
-      <div>
-        <p><strong>Moda:</strong> GU • UNIQLO Shinsaibashi • Namba Marui</p>
-        <p><strong>¥100 Shop:</strong> Daiso • Seria • 3COINS</p>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">— (uçuşta)</span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">— (uçuşta)</span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🏪 7-Eleven / Konbini<br><small>Varış sonrası hızlı alışveriş — onigiri, sandviç, matcha içecek</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">✈️ Varış: 19:05 Kansai</div>
+        <div class="acc-fact">🏪 Konbini: 24 saat açık</div>
+        <div class="acc-fact">🍙 Onigiri dene: ¥150–200</div>
+        <div class="acc-fact">🍵 Matcha içecek: ¥150</div>
       </div>
     </div>
   </div>
 
-  <div class="anime-box" style="margin-top:14px;">
-    <h4>🎌 Osaka Anime Noktaları</h4>
-    <p>Animate Shinsaibashi — manga, figür, poster &nbsp;|&nbsp; Nipponbashi / Den-Den Town — "Osaka'nın Akihabara'sı" (Shinsaibashi'den 10 dk) &nbsp;|&nbsp; Gashapon makineleri — her köşede!</p>
+  <div class="acc-item osaka-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">2️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 2 — 22 Ağustos Cumartesi</div>
+        <div class="acc-meta">Gyumon Ramen · Kura Sushi</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🏪 7-Eleven / Konbini</span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">🍜 <strong>Gyumon Dotonbori 2nd</strong> ✅<br><small>Helal ramen! Dotonbori'de, kalabalık öncesi gidin • ¥900–1.200</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🍣 <strong>Kura Sushi Dotonbori Global</strong><br><small>Döner bantlı sushi — gacha oyunu var! Tabak başına çekiliş • ¥115/tabak</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">✅ Gyumon: Helal sertifikalı</div>
+        <div class="acc-fact">🎰 Kura Sushi: 15 tabakta 1 gacha</div>
+        <div class="acc-fact">📍 İkisi de Dotonbori'de</div>
+        <div class="acc-fact">☕ Ara: Rikuro Ojisan cheesecake!</div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:8px;">🛍️ <strong>Alışveriş:</strong> Shinsaibashi — GU, UNIQLO, Daiso, Matsumoto Kiyoshi, @cosme Store · Don Quijote (gece)</p>
+    </div>
   </div>
 
-  <hr class="divider">
-  <span class="kyoto-badge city-badge">KYOTO — Geleneksel & Zarif</span>
-  <div class="ts ts-inner"><table class="kyoto-table" style="margin-top:10px;">
-    <thead><tr><th>Gün</th><th>Yemek / Kafe</th><th>Alışveriş</th><th>Not</th></tr></thead>
-    <tbody>
-      <tr><td>Gün 5<br><small>25 Ağu</small></td><td>% Arabica Arashiyama ☕ 📸<br>Nasai Halal Ramen ✅<br>Saryo Suisen matcha parfesi</td><td>Bambu ürünleri, yelpaze<br>Nishiki Market<br>Sannen-zaka yatsuhashi</td><td>Starbucks Ninen-zaka 📸 ¥500–700<br>Kimono kiralama öncesi hazırlık</td></tr>
-      <tr><td>Gün 6<br><small>26 Ağu</small></td><td>Starbucks Ninen-zaka ☕<br>Kerala / Omen udon ✅<br>Kasagiya / Kyoto Chacha matcha tiramisu<br>Tsujiri son matcha parfesi</td><td>Kiyomizu-yaki seramik<br>Omamori (Jishu Shrine)<br>Yatsuhashi hediye kutusu<br>Kyoto Station son omiyage</td><td>Geleneksel Kyoto hediyeliği için<br>en iyi gün! Bagaj hazırlığı bu gece.</td></tr>
-    </tbody>
-  </table></div>
-
-  <div class="kyoto-card highlight-card" style="margin-top:14px;">
-    <h4 style="color:#6B4226;">🛍️ Kyoto Özel Alışveriş</h4>
-    <div class="grid-2">
-      <div>
-        <p><strong>Geleneksel Hediyelik:</strong></p>
-        <ul style="font-size:10pt;">
-          <li>Kiyomizu-yaki seramik fincan ¥1.000–5.000</li>
-          <li>Omamori (aşk muskası) ¥500–1.000</li>
-          <li>Sensu (el yapımı yelpaze) ¥800–3.000</li>
-          <li>Tenugui (geleneksel bez) ¥500–1.500</li>
-          <li>Kyoto tütsüsü ¥500–2.000</li>
-        </ul>
+  <div class="acc-item osaka-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">3️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 3 — 23 Ağustos Pazar</div>
+        <div class="acc-meta">A5 Wagyu Yakiniku · Don Quijote ANA GÜN</div>
       </div>
-      <div>
-        <p><strong>Tatlı & Yiyecek Hediyelik:</strong></p>
-        <ul style="font-size:10pt;">
-          <li>Yatsuhashi (Kyoto ikonu) ¥500–1.200</li>
-          <li>Kuzu tatlısı — Nara anısı</li>
-          <li>Matcha özel koleksiyon çayları</li>
-          <li>Kyoto Station omiyage reyonu</li>
-        </ul>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🏪 7-Eleven / Konbini</span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">☕ Kahve + Tatlı<br><small>Gram Pancakes veya kafe molası</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🥩 <strong>A5 Wagyu Yakiniku — Osaka PANGA</strong> ✅<br><small>Helal sertifikalı wagyu! Japonya'nın en kaliteli eti. Rezervasyon önerilir • ¥3.000–6.000</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">✅ PANGA: Helal sertifikalı</div>
+        <div class="acc-fact">🥩 A5 Wagyu — en üst kalite!</div>
+        <div class="acc-fact">📞 Rezervasyon yapın!</div>
+        <div class="acc-fact">🛒 Don Quijote ANA ALIŞVERİŞ günü</div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:8px;">🛍️ <strong>Alışveriş:</strong> MEGA Don Quijote Dotonbori (TAM GÜN!) · Tax-free için pasaport hazır · Nara dönüşü hediyeler</p>
+    </div>
+  </div>
+
+  <!-- USJ -->
+  <p class="sehir-label" style="color:#7B2D8B;margin-top:20px;">🎢 USJ — GÜN 4</p>
+
+  <div class="acc-item usj-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">4️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 4 — 24 Ağustos Pazartesi</div>
+        <div class="acc-meta">USJ içinde yemek · Kyoto'ya geçiş</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🏪 7-Eleven / Konbini</span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">🎢 USJ içinde<br><small>Three Broomsticks (HP bölgesi) veya Kinopio's Cafe (Nintendo — rezervasyon şart!)</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🎢 USJ içinde veya çıkış sonrası konbini<br><small>18:30 çıkış — Osaka'dan Kyoto'ya trenle hareket</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">🍺 Butterbeer: ¥700 — dene!</div>
+        <div class="acc-fact">🍄 Kinopio's Cafe: rezervasyon şart</div>
+        <div class="acc-fact">🌭 Hot dog & atıştırmalıklar park içi</div>
+        <div class="acc-fact">⏰ 18:30 çıkış — Kyoto treni</div>
       </div>
     </div>
   </div>
 
-  <hr class="divider">
-  <span class="tokyo-badge city-badge">TOKYO — Neon & Modern</span>
-  <div class="ts"><table class="tokyo-table" style="margin-top:10px;">
-    <thead><tr><th>Gün</th><th>Yemek / Kafe</th><th>Alışveriş</th><th>Not</th></tr></thead>
-    <tbody>
-      <tr><td>Gün 7<br><small>27 Ağu</small></td><td>Sakura Halal Kitchen ✅<br>Sekai Cafe ✅<br>Shinjuku Takano Fruit Parlor 📸</td><td>Shinjuku: Takashimaya, Lumine<br>Don Quijote Shinjuku<br>Gotokuji kedi hediyelik</td><td>İlk Tokyo günü — hafif tutun!</td></tr>
-      <tr><td>Gün 8<br><small>28 Ağu</small></td><td>Narita Halal / Asakusa Halal ✅<br>Maid Cafe (Akihabara) 🪄<br>Asakusa Silk Pudding 📸</td><td>Nakamise-dori geleneksel<br>Solamachi (Ghibli: Donguri!)<br>Akihabara TAM ANİME GÜNÜ</td><td>Akihabara için 3–4 saat ayırın!<br>Mandarake'de ikinci el hazine avı</td></tr>
-      <tr><td>Gün 9<br><small>29 Ağu</small></td><td>Flipper's soufflé pancake 📸<br>Ain Soph. Journey vegan ✅<br>Son akşam yemeği 🎊</td><td>Takeshita: kawaii & Sanrio<br>Shibuya PARCO 6F: Nintendo/Pokémon<br>Ginza: Itoya stationery, UNIQLO</td><td>Son alışveriş günü — eksikleri tamamla!<br>Karaoke & veda gecesi 🎤</td></tr>
-      <tr><td>Gün 10<br><small>30 Ağu</small></td><td>Konbini (havalimanında)</td><td>Havalimanı: Tokyo Banana<br>Shiroi Koibito, matcha KitKat</td><td>Kalan yen'i havalimanında harca!</td></tr>
-    </tbody>
-  </table></div>
+  <!-- KYOTO -->
+  <p class="sehir-label" style="color:var(--kp);margin-top:20px;">⛩️ KYOTO — GÜN 5–6</p>
 
-  <div class="anime-box" style="margin-top:14px;">
-    <h4>🎌 Tokyo Anime & Oyun Noktaları</h4>
-    <div class="grid-2">
-      <div>
-        <p style="font-weight:700; color:#FFBA08;">Akihabara (Gün 8)</p>
-        <ul>
-          <li>Animate Akihabara — en büyük anime zinciri</li>
-          <li>Mandarake Complex — ikinci el hazine</li>
-          <li>Kotobukiya — premium figür</li>
-          <li>Gashapon Kaikan — 500+ makine!</li>
-          <li>Super Potato — retro oyun müzesi</li>
-        </ul>
+  <div class="acc-item kyoto-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">5️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 5 — 25 Ağustos Salı</div>
+        <div class="acc-meta">% Arabica · Ramen Ayam-Ya ✅</div>
       </div>
-      <div>
-        <p style="font-weight:700; color:#FFBA08;">Shibuya PARCO 6F (Gün 9)</p>
-        <ul>
-          <li>Nintendo Tokyo — TEK Nintendo mağazası!</li>
-          <li>Pokémon Center — Shibuya özel Pikachu</li>
-          <li>Jump Shop — One Piece, Naruto, JJK</li>
-          <li>Solamachi — Donguri Republic (Ghibli)</li>
-        </ul>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🏪 7-Eleven / Konbini</span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">☕ <strong>% Arabica Coffee</strong> + Nishiki Market<br><small>Arashiyama'da % Arabica — dünyanın en güzel kafe manzaralarından biri • Cappuccino ¥700</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🍜 <strong>Ramen Ayam-Ya Karasuma</strong> ✅<br><small>Helal tavuk ramen! Kyoto'nun gizli mücevheri • ¥1.000–1.400</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">✅ Ayam-Ya: Helal sertifikalı</div>
+        <div class="acc-fact">☕ % Arabica: Arashiyama manzaralı</div>
+        <div class="acc-fact">🏮 Nishiki Market tadım turu</div>
+        <div class="acc-fact">🍡 Matcha mochi dene!</div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:8px;">🛍️ <strong>Alışveriş:</strong> Nishiki Market el yapımı hediyelikler · Gion bölgesi geleneksel dükkanlar · Kimono kiralama</p>
+    </div>
+  </div>
+
+  <div class="acc-item kyoto-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">6️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 6 — 26 Ağustos Çarşamba</div>
+        <div class="acc-meta">A Happy Pancake · 400°C Pizza</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🏪 7-Eleven / Konbini</span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">🥞 <strong>A Happy Pancake Kyoto</strong> 📸<br><small>Japonya'nın meşhur soufflé pancake'i — pofuduk, yumuşacık • ¥1.200–1.800 · Kuyruk olabilir!</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🍕 <strong>400°C PIZZA</strong><br><small>Kyoto'nun popüler pizza mekanı — Napoliten usulü • ¥1.500–2.500</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">🥞 A Happy Pancake: çok Instagram!</div>
+        <div class="acc-fact">⏰ Pancake: 11:00 açılış</div>
+        <div class="acc-fact">🍕 400°C: Akşam rezervasyon al</div>
+        <div class="acc-fact">📸 Pancake fotoğraf şart!</div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:8px;">🛍️ <strong>Alışveriş:</strong> Kiyomizu-dera çevresi · Oteai-zaka geleneksel dükkanlar · Yatsuhashi tatlısı (Kyoto ikonu)</p>
+    </div>
+  </div>
+
+  <!-- TOKYO -->
+  <p class="sehir-label" style="color:var(--tp);margin-top:20px;">🗼 TOKYO — GÜN 7–9</p>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">7️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 7 — 27 Ağustos Perşembe</div>
+        <div class="acc-meta">Tendon Itsuki · Sushiro Shibuya</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🏪 7-Eleven / Konbini + Shinkansen ekiben 🚅<br><small>Kyoto Station'dan shinkansen öncesi ekiben (tren bentosu) alın! ¥900–1.500</small></span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">🍚 <strong>Tendon Itsuki</strong><br><small>Tokyo'ya varış sonrası — karidesli tempura don • ¥900–1.200</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🍣 <strong>Sushiro Shibuya Station</strong><br><small>Döner sushi zinciri — uygun fiyat, lezzetli • ¥115/tabak</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">🚅 Ekiben: Shinkansen geleneği!</div>
+        <div class="acc-fact">🍱 Tendon Itsuki: uygun & doyurucu</div>
+        <div class="acc-fact">🍣 Sushiro: kalabalık olabilir</div>
+        <div class="acc-fact">🛍️ Ginza alışveriş günü!</div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:8px;">🛍️ <strong>Alışveriş:</strong> Ginza — UNIQLO (12 kat!), Ginza Six, Itoya kırtasiye, Mitsukoshi</p>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">8️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 8 — 28 Ağustos Cuma</div>
+        <div class="acc-meta">FLIPPER'S · The Emperor Kobe</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🥞 <strong>FLIPPER'S</strong><br><small>Harajuku'nun meşhur soufflé pancake'i — "miracle pancake"! • ¥1.100–1.600</small></span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">🍵 Matcha + Tatlı — Harajuku/Shibuya<br><small>Matcha dondurma, taiyaki, crepe... Harajuku crepe sokağı zorunlu!</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🥩 <strong>Ginza — The Emperor Kobe</strong><br><small>Kobe bifteği restoranı — akşamın özel yemeği • ¥4.000–8.000 · Rezervasyon şart!</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">🥞 FLIPPER'S: Erken git, kuyruk!</div>
+        <div class="acc-fact">🍦 Harajuku crepe: ¥500–800</div>
+        <div class="acc-fact">🥩 The Emperor: rezervasyon al!</div>
+        <div class="acc-fact">📸 FLIPPER'S pancake fotoğraf şart</div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:8px;">🛍️ <strong>Alışveriş:</strong> Shinjuku · Harajuku Takeshita Caddesi · Shibuya 109</p>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">9️⃣</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 9 — 29 Ağustos Cumartesi</div>
+        <div class="acc-meta">Asakusa · Skytree · Öneri eklenecek</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">☕ Öneri eklenecek<br><small>Yakın kafeler araştırılıyor...</small></span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Öğle</span><span class="ogun-val">🍰 Kahve + Tatlı<br><small>Asakusa çevresinde matcha kafe veya Nakamise'de atıştırmalık</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🍽️ Öneri eklenecek<br><small>Son Tokyo akşamı — özel bir yer seçilecek!</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">🍡 Nakamise: ningyoyaki dene!</div>
+        <div class="acc-fact">🗼 Skytree café manzaralı</div>
+        <div class="acc-fact">🏺 Kappabashi: öğle arası</div>
+        <div class="acc-fact">✍️ Akşam yeri eklenecek</div>
+      </div>
+      <p style="font-size:11px;color:#888;margin-top:8px;">🛍️ <strong>Alışveriş:</strong> Kappabashi Street — bıçak, çay seti, plastik yemek modeli · Nakamise hediyelik sokağı</p>
+    </div>
+  </div>
+
+  <div class="acc-item tokyo-acc">
+    <div class="acc-head" onclick="accToggle(this)">
+      <span class="acc-icon">🔟</span>
+      <div class="acc-preview">
+        <div class="acc-name">Gün 10 — 30 Ağustos Pazar</div>
+        <div class="acc-meta">Dönüş günü · Havalimanı alışverişi</div>
+      </div>
+      <span class="acc-arr">›</span>
+    </div>
+    <div class="acc-body">
+      <div class="gun-ogun">
+        <div class="ogun-row"><span class="ogun-label">☀️ Kahvaltı</span><span class="ogun-val">🏪 Konbini / Otel<br><small>05:30 kalkış — erken!</small></span></div>
+        <div class="ogun-row"><span class="ogun-label">🍱 Havalimanı</span><span class="ogun-val">✈️ Narita Terminal 2<br><small>Son Japon yemeği havalimanında — ramen, sushi veya udon</small></span></div>
+        <div class="ogun-row ogun-aksam"><span class="ogun-label">🌙 Akşam</span><span class="ogun-val">🇹🇷 İstanbul'da!<br><small>17:40 varış — eve dönüş</small></span></div>
+      </div>
+      <div class="acc-facts">
+        <div class="acc-fact">⏰ 05:30 kalkış!</div>
+        <div class="acc-fact">🛍️ Duty Free son alışveriş</div>
+        <div class="acc-fact">✈️ Uçuş: 10:25 Narita T2</div>
+        <div class="acc-fact">🎁 Son hediyelikler havalimanında</div>
       </div>
     </div>
   </div>
+
 </div>
 
-<!-- ============================
-     BÖLÜM 7: HARCAMA TAKİBİ
-============================= -->
-<div class="page-break">
-  <div id="bolum-eglen" class="section-cover section-cover-eglen">
-    <div class="section-num">05</div>
-    <div class="section-title-cover">
-      <h2 style="color:#1A1A2E;">✅ YAPMADAN DÖNME!</h2>
-      <p style="color:#5D3A00;">Japonya'nın En İyi Deneyimleri — Checklist</p>
-    </div>
-  </div>
-</div>
-
-<div class="content">
-  <p class="subtitle">Her birini yaptığında tikle! ☑️ &nbsp;|&nbsp; 50+ = Japonya Ustası 🏅 &nbsp;|&nbsp; 35–49 = Harika trip! 🌸 &nbsp;|&nbsp; 20–34 = Güzel başlangıç ✈️</p>
-
-  <div class="grid-2">
-    <div>
-      <h3 style="color:#E85D04; margin-bottom:12px;">🍜 Yemeden Dönme</h3>
-      <ul class="checklist">
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Takoyaki (ahtapotlu top) — Dotonbori</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Ramen (sıcak Japon eriştesi) — Helal dükkan</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Okonomiyaki (Japon pizzası) — Osaka</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Gyudon (etli pirinç kasesi) — Sukiya</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Ekiben (tren bentosu) — Shinkansen'de</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Taze mochi — Nakatanidou, Nara</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Onigiri — herhangi bir konbini</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Tamagoyaki — Kuromon/Nishiki Market</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Melon-pan (kavun ekmeği) — Asakusa</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Inarizushi (tofu cep sushi) — Fushimi Inari</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Japon curry rice — Coco Ichibanya</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Butterbeer — USJ Harry Potter</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Konbini sandviçi — 7-Eleven/Lawson</label></li>
-      </ul>
-
-      <h3 style="color:#8B5E3C; margin-top:20px; margin-bottom:12px;">🍰 Tatmadan Dönme</h3>
-      <ul class="checklist">
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Matcha dondurma / soft serve</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Matcha latte — % Arabica / Tsujiri</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Soufflé pancake — Flipper's / Gram</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Rikuro Ojisan titreyen cheesecake! 📸</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Matcha parfesi — Saryo Suisen</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Matcha KitKat — konbini / Don Quijote</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Mochi ice cream — konbini</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Dev pamuk şeker — Totti Candy, Harajuku 📸</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Pablo mini cheesecake — Dotonbori</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Yatsuhashi — Kyoto dükkanları</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Cronut — Dominique Ansel, Omotesando</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Japon meyve parfesi — Takano Fruit Parlor</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Taiyaki (balık şekilli kek) — sokak standları</label></li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 style="color:#1A5276; margin-bottom:12px;">🎌 Yapmadan Dönme</h3>
-      <ul class="checklist">
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Shinkansen'e (kurşun tren) binmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Gashapon (gacha) makinesi çevirmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Purikura (Japon fotoğraf kabini) çektirmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Tapınakta omikuji (kağıt fal) çekmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Omamori (uğur muskası) almak</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Ema tahtasına dilek yazmak — Meiji</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Geyiklere shika senbei yedirmek — Nara</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Todai-ji'de sütun deliğinden geçmek!</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Mochi dövme gösterisi izlemek — Nakatanidou</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Otowa Şelalesi'nden dilek suyu içmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Jishu Shrine'da gözler kapalı aşk taşları</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Kimono giyip fotoğraf çektirmek — Kyoto</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Mario Kart ride'a binmek — USJ</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Maid Cafe'de "büyülü" yemek yemek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Crane game (UFO catcher) oynamak</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Karaoke yapmak — Big Echo/Joysound</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Tax-free alışveriş yapmak</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Japonya'dan kartpostal göndermek ¥70</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Japon tuvaletinin tüm düğmelerini denemek 😄</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Otomatik kapılı taksiye binmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Daruma bebeğin bir gözünü boyamak</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Konbinide gece atıştırmalık alışverişi</label></li>
-      </ul>
-
-      <h3 style="color:#7B2D8B; margin-top:20px; margin-bottom:12px;">🎀 Kız Kıza Yapılacaklar</h3>
-      <ul class="checklist">
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> 4'ümüz matching şapka/taçla USJ gezmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Her şehirde aynı pozda grup fotoğrafı</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Purikura'da süslenmiş grup fotoğrafı</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Birbirimize küçük Japon hediyeliği almak</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Karaoke'de anime şarkısı söylemek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Kimono ile dörtlü fotoğraf çektirmek</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Gotokuji'de hep birlikte kedi pençe pozu</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Her birimiz farklı gashapon çekip karşılaştırmak</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Gece neon sokakta yürüyüş videosu</label></li>
-        <li><label class="cl-label"><input type="checkbox" class="cl-cb"> "Sayonara Japan" havalimanı fotoğrafı ✈️</label></li>
-      </ul>
-    </div>
-  </div>
-
-  <h3 style="color:#C0392B; margin-top:20px; margin-bottom:12px;">📸 Görmeden/Çektirmeden Dönme</h3>
-  <div class="grid-2">
-    <ul class="checklist">
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Glico Running Man önünde grup fotoğrafı</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> 10.000 turuncu torii tünelinde fotoğraf</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Bambu ormanında yürüyüş fotoğrafı</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Kiyomizu-dera ahşap platformdan manzara</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Daruma bebek denizinde fotoğraf</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Geyiklerle selfi — Nara</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Maneki-neko önünde kedi pençe pozu</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Kaminarimon dev kırmızı fener altında</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Shibuya Scramble Crossing geçişi</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Hachiko heykeli önünde fotoğraf</label></li>
-    </ul>
-    <ul class="checklist">
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Meiji Shrine dev torii kapısı</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Tokyu Plaza ayna tavan fotoğrafı ⭐</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Starbucks Ninen-zaka içinde fotoğraf</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Gion geleneksel sokakta yürüyüş</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Tatsumi Köprüsü'nde söğüt ağacı önünde</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Skytree veya Shibuya Sky panoraması</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> TeamLab infinity mirror odası</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Hogwarts Castle önünde — USJ</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Gün batımında şehir manzarası</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Shinkansen'den Fuji Dağı görüntüsü 🗻</label></li>
-    </ul>
-  </div>
-
-  <h3 style="color:#1B5E20; margin-top:20px; margin-bottom:12px;">🛍️ Almadan Dönme</h3>
-  <div class="grid-2">
-    <ul class="checklist">
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Matcha KitKat (min. 3 farklı tat!) 🍫</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Tokyo Banana (hediyelik kutu) 🍌</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Japon güneş kremi (Biore UV)</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> LuLuLun sheet mask</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Maneki-neko hediyelik — Gotokuji</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Omamori (uğur muskası) — tapınaktan</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Chopstick seti — Asakusa (isim kazıma!)</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Gashapon figürü (en az 1!)</label></li>
-    </ul>
-    <ul class="checklist">
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Japon kırtasiye (kalem/defter) — Itoya</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Anime/karakter ürünü — Akihabara</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Yatsuhashi kutusu — Kyoto</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Geyik temalı bir şey — Nara</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> ¥100 shop'tan en az 10 ürün — Daiso</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> El yapımı yelpaze (sensu) — Kyoto</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Tenugui (geleneksel el bezi)</label></li>
-      <li><label class="cl-label"><input type="checkbox" class="cl-cb"> Japon çayı (sencha/hojicha)</label></li>
-    </ul>
-  </div>
-</div>
-
-<!-- ============================
-     BÖLÜM 6: YEMEK & ALIŞVERİŞ
-============================= -->
 <div class="page-break">
   <div id="bolum-harita" class="section-cover" style="background:linear-gradient(135deg,#0D47A1,#1565C0);">
     <div class="section-num" style="font-size:56px;font-weight:700;color:rgba(255,255,255,0.15);position:absolute;top:10px;right:16px;">🗺️</div>
     <div class="section-title-cover">
-      <h2>🗺️ GOOGLE MAPS LİNKLERİ</h2>
-      <p>Tıkla — navigasyon başlasın</p>
+      <h2>🗺️ HARİTA LİNKLERİ</h2>
+      <p>Tıkla — Google Maps açılsın</p>
     </div>
   </div>
 </div>
 
 <div class="content">
 
-  <div class="tip-box">
-    <strong>💡 Nasıl Kullanılır?</strong>
-    Her yere tıklayınca Google Maps açılır, navigasyonu başlat! Telefonda Google Maps yüklü olduğundan emin ol.
-  </div>
+  <div class="tip-box"><strong>💡</strong> Her karta tıklayınca Google Maps açılır — navigasyonu başlat!</div>
 
   <!-- OSAKA -->
-  <div class="section-header" style="color:var(--op);margin-top:8px;">
-    <span class="section-icon">🏯</span>
-    <h3>Osaka</h3>
-  </div>
-
-  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
-    <a href="https://maps.google.com/?q=Osaka+Castle+Japan" target="_blank" class="map-link osaka">
-      <span class="map-icon">🏯</span>
-      <div class="map-info">
-        <div class="map-name">Osaka Castle</div>
-        <div class="map-sub">大阪城公園 · Gün 3</div>
-      </div>
-      <span class="map-arr">↗</span>
+  <p style="font-size:11px;font-weight:700;color:var(--op);letter-spacing:1px;margin:16px 0 8px;">🏯 OSAKA — GÜN 1–3</p>
+  <div class="maps-grid">
+    <a href="https://maps.google.com/?q=Katsuoji+Temple+Minoh+Osaka" target="_blank" class="map-card">
+      <span class="mc-icon">⛩️</span><span class="mc-name">Katsuoji Temple</span><span class="mc-day">Gün 2</span>
     </a>
-    <a href="https://maps.google.com/?q=Dotonbori+Osaka+Japan" target="_blank" class="map-link osaka">
-      <span class="map-icon">🌃</span>
-      <div class="map-info">
-        <div class="map-name">Dotonbori</div>
-        <div class="map-sub">道頓堀 · Gün 1–4</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Tsutenkaku+Tower+Osaka" target="_blank" class="map-card">
+      <span class="mc-icon">🗼</span><span class="mc-name">Tsutenkaku & Shinsekai</span><span class="mc-day">Gün 2</span>
     </a>
-    <a href="https://maps.google.com/?q=Shinsaibashi+Osaka+Japan" target="_blank" class="map-link osaka">
-      <span class="map-icon">🛍️</span>
-      <div class="map-info">
-        <div class="map-name">Shinsaibashi Alışveriş</div>
-        <div class="map-sub">心斎橋筋 · Gün 3</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Dotonbori+Osaka" target="_blank" class="map-card">
+      <span class="mc-icon">🌃</span><span class="mc-name">Dotonbori</span><span class="mc-day">Gün 1–3</span>
     </a>
-    <a href="https://maps.google.com/?q=Tsutenkaku+Tower+Osaka+Japan" target="_blank" class="map-link osaka">
-      <span class="map-icon">🗼</span>
-      <div class="map-info">
-        <div class="map-name">Tsutenkaku & Shinsekai</div>
-        <div class="map-sub">通天閣 · Gün 2</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Shinsaibashi+shopping+street+Osaka" target="_blank" class="map-card">
+      <span class="mc-icon">🛍️</span><span class="mc-name">Shinsaibashi</span><span class="mc-day">Gün 2–3</span>
     </a>
-    <a href="https://maps.google.com/?q=Katsuoji+Temple+Osaka+Japan" target="_blank" class="map-link osaka">
-      <span class="map-icon">⛩️</span>
-      <div class="map-info">
-        <div class="map-name">Katsuoji Temple</div>
-        <div class="map-sub">勝尾寺 · Gün 2</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Osaka+Castle+Japan" target="_blank" class="map-card">
+      <span class="mc-icon">🏯</span><span class="mc-name">Osaka Castle</span><span class="mc-day">Gün 3</span>
     </a>
-    <a href="https://maps.google.com/?q=Don+Quijote+Dotonbori+Osaka" target="_blank" class="map-link osaka">
-      <span class="map-icon">🛒</span>
-      <div class="map-info">
-        <div class="map-name">MEGA Don Quijote Dotonbori</div>
-        <div class="map-sub">ドン・キホーテ · Gün 3</div>
-      </div>
-      <span class="map-arr">↗</span>
-    </a>
-    <a href="https://maps.google.com/?q=Universal+Studios+Japan+Osaka" target="_blank" class="map-link usj">
-      <span class="map-icon">🎢</span>
-      <div class="map-info">
-        <div class="map-name">Universal Studios Japan</div>
-        <div class="map-sub">USJ · Gün 4</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Don+Quijote+Dotonbori+Osaka" target="_blank" class="map-card">
+      <span class="mc-icon">🛒</span><span class="mc-name">MEGA Don Quijote</span><span class="mc-day">Gün 3</span>
     </a>
   </div>
 
   <!-- NARA -->
-  <div class="section-header" style="color:#27AE60;margin-top:8px;">
-    <span class="section-icon">🦌</span>
-    <h3>Nara</h3>
+  <p style="font-size:11px;font-weight:700;color:#27AE60;letter-spacing:1px;margin:16px 0 8px;">🦌 NARA — GÜN 3</p>
+  <div class="maps-grid">
+    <a href="https://maps.google.com/?q=Nara+Deer+Park+Japan" target="_blank" class="map-card nara">
+      <span class="mc-icon">🦌</span><span class="mc-name">Nara Deer Park</span><span class="mc-day">Gün 3</span>
+    </a>
+    <a href="https://maps.google.com/?q=Todaiji+Temple+Nara" target="_blank" class="map-card nara">
+      <span class="mc-icon">🏛️</span><span class="mc-name">Todai-ji Temple</span><span class="mc-day">Gün 3</span>
+    </a>
   </div>
 
-  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
-    <a href="https://maps.google.com/?q=Nara+Deer+Park+Japan" target="_blank" class="map-link nara">
-      <span class="map-icon">🦌</span>
-      <div class="map-info">
-        <div class="map-name">Nara Deer Park</div>
-        <div class="map-sub">奈良公園 · Gün 3</div>
-      </div>
-      <span class="map-arr">↗</span>
-    </a>
-    <a href="https://maps.google.com/?q=Todaiji+Temple+Nara" target="_blank" class="map-link nara">
-      <span class="map-icon">🏛️</span>
-      <div class="map-info">
-        <div class="map-name">Todai-ji Temple</div>
-        <div class="map-sub">東大寺 · Gün 3</div>
-      </div>
-      <span class="map-arr">↗</span>
+  <!-- USJ -->
+  <p style="font-size:11px;font-weight:700;color:#7B2D8B;letter-spacing:1px;margin:16px 0 8px;">🎢 USJ — GÜN 4</p>
+  <div class="maps-grid">
+    <a href="https://maps.google.com/?q=Universal+Studios+Japan+Osaka" target="_blank" class="map-card usj2">
+      <span class="mc-icon">🎢</span><span class="mc-name">Universal Studios Japan</span><span class="mc-day">Gün 4</span>
     </a>
   </div>
 
   <!-- KYOTO -->
-  <div class="section-header" style="color:var(--kp);margin-top:8px;">
-    <span class="section-icon">⛩️</span>
-    <h3>Kyoto</h3>
-  </div>
-
-  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
-    <a href="https://maps.google.com/?q=Fushimi+Inari+Taisha+Kyoto" target="_blank" class="map-link kyoto">
-      <span class="map-icon">⛩️</span>
-      <div class="map-info">
-        <div class="map-name">Fushimi Inari Taisha</div>
-        <div class="map-sub">伏見稲荷大社 · Gün 6</div>
-      </div>
-      <span class="map-arr">↗</span>
+  <p style="font-size:11px;font-weight:700;color:var(--kp);letter-spacing:1px;margin:16px 0 8px;">⛩️ KYOTO — GÜN 5–6</p>
+  <div class="maps-grid">
+    <a href="https://maps.google.com/?q=Arashiyama+Bamboo+Grove+Kyoto" target="_blank" class="map-card kyoto">
+      <span class="mc-icon">🎋</span><span class="mc-name">Arashiyama Bambu</span><span class="mc-day">Gün 5</span>
     </a>
-    <a href="https://maps.google.com/?q=Arashiyama+Bamboo+Grove+Kyoto" target="_blank" class="map-link kyoto">
-      <span class="map-icon">🎋</span>
-      <div class="map-info">
-        <div class="map-name">Arashiyama Bamboo Grove</div>
-        <div class="map-sub">嵐山竹林 · Gün 5</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Nishiki+Market+Kyoto" target="_blank" class="map-card kyoto">
+      <span class="mc-icon">🏮</span><span class="mc-name">Nishiki Market</span><span class="mc-day">Gün 5</span>
     </a>
-    <a href="https://maps.google.com/?q=Kiyomizudera+Temple+Kyoto" target="_blank" class="map-link kyoto">
-      <span class="map-icon">🛕</span>
-      <div class="map-info">
-        <div class="map-name">Kiyomizu-dera Temple</div>
-        <div class="map-sub">清水寺 · Gün 5</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Gion+District+Kyoto" target="_blank" class="map-card kyoto">
+      <span class="mc-icon">🌸</span><span class="mc-name">Gion</span><span class="mc-day">Gün 5</span>
     </a>
-    <a href="https://maps.google.com/?q=Nishiki+Market+Kyoto" target="_blank" class="map-link kyoto">
-      <span class="map-icon">🏮</span>
-      <div class="map-info">
-        <div class="map-name">Nishiki Market</div>
-        <div class="map-sub">錦市場 · Gün 5</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Fushimi+Inari+Taisha+Kyoto" target="_blank" class="map-card kyoto">
+      <span class="mc-icon">⛩️</span><span class="mc-name">Fushimi Inari</span><span class="mc-day">Gün 6</span>
     </a>
-    <a href="https://maps.google.com/?q=Gion+District+Kyoto" target="_blank" class="map-link kyoto">
-      <span class="map-icon">🌸</span>
-      <div class="map-info">
-        <div class="map-name">Gion Geisha Bölgesi</div>
-        <div class="map-sub">祇園 · Gün 5–6</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Kiyomizudera+Temple+Kyoto" target="_blank" class="map-card kyoto">
+      <span class="mc-icon">🛕</span><span class="mc-name">Kiyomizu-dera</span><span class="mc-day">Gün 6</span>
     </a>
   </div>
 
   <!-- TOKYO -->
-  <div class="section-header" style="color:var(--tp);margin-top:8px;">
-    <span class="section-icon">🗼</span>
-    <h3>Tokyo</h3>
-  </div>
-
-  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
-    <a href="https://maps.google.com/?q=Sensoji+Temple+Asakusa+Tokyo" target="_blank" class="map-link tokyo">
-      <span class="map-icon">⛩️</span>
-      <div class="map-info">
-        <div class="map-name">Senso-ji & Asakusa</div>
-        <div class="map-sub">浅草 · Gün 8</div>
-      </div>
-      <span class="map-arr">↗</span>
+  <p style="font-size:11px;font-weight:700;color:var(--tp);letter-spacing:1px;margin:16px 0 8px;">🗼 TOKYO — GÜN 7–10</p>
+  <div class="maps-grid">
+    <a href="https://maps.google.com/?q=Imperial+Palace+Tokyo" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">🏯</span><span class="mc-name">İmparatorluk Sarayı</span><span class="mc-day">Gün 7</span>
     </a>
-    <a href="https://maps.google.com/?q=Akihabara+Electric+Town+Tokyo" target="_blank" class="map-link tokyo">
-      <span class="map-icon">🎮</span>
-      <div class="map-info">
-        <div class="map-name">Akihabara</div>
-        <div class="map-sub">秋葉原 · Gün 8</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Ginza+Tokyo+Japan" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">🛍️</span><span class="mc-name">Ginza</span><span class="mc-day">Gün 7–8</span>
     </a>
-    <a href="https://maps.google.com/?q=TeamLab+Planets+Tokyo" target="_blank" class="map-link tokyo">
-      <span class="map-icon">🎨</span>
-      <div class="map-info">
-        <div class="map-name">TeamLab Planets</div>
-        <div class="map-sub">チームラボ · Gün 8</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Shibuya+Crossing+Tokyo" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">🚶</span><span class="mc-name">Shibuya Crossing</span><span class="mc-day">Gün 7–8</span>
     </a>
-    <a href="https://maps.google.com/?q=Gotokuji+Temple+Tokyo" target="_blank" class="map-link tokyo">
-      <span class="map-icon">🐱</span>
-      <div class="map-info">
-        <div class="map-name">Gotokuji Temple (Şans Kedisi)</div>
-        <div class="map-sub">豪徳寺 · Gün 7</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Shinjuku+Tokyo+Japan" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">🌃</span><span class="mc-name">Shinjuku</span><span class="mc-day">Gün 8</span>
     </a>
-    <a href="https://maps.google.com/?q=Harajuku+Takeshita+Street+Tokyo" target="_blank" class="map-link tokyo">
-      <span class="map-icon">🎀</span>
-      <div class="map-info">
-        <div class="map-name">Harajuku & Takeshita Caddesi</div>
-        <div class="map-sub">原宿 · Gün 9</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Meiji+Shrine+Tokyo" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">🌿</span><span class="mc-name">Meiji Tapınağı</span><span class="mc-day">Gün 8</span>
     </a>
-    <a href="https://maps.google.com/?q=Shibuya+Crossing+Tokyo" target="_blank" class="map-link tokyo">
-      <span class="map-icon">🚶</span>
-      <div class="map-info">
-        <div class="map-name">Shibuya Crossing</div>
-        <div class="map-sub">渋谷スクランブル · Gün 9</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Sensoji+Temple+Asakusa+Tokyo" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">⛩️</span><span class="mc-name">Senso-ji & Asakusa</span><span class="mc-day">Gün 9</span>
     </a>
-    <a href="https://maps.google.com/?q=Shinjuku+Kabukicho+Tokyo" target="_blank" class="map-link tokyo">
-      <span class="map-icon">🌃</span>
-      <div class="map-info">
-        <div class="map-name">Shinjuku Gece Hayatı</div>
-        <div class="map-sub">新宿 · Gün 9–10</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Tokyo+Skytree+Japan" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">🗼</span><span class="mc-name">Tokyo Skytree</span><span class="mc-day">Gün 9</span>
     </a>
-    <a href="https://maps.google.com/?q=Narita+Airport+Terminal+2" target="_blank" class="map-link tokyo">
-      <span class="map-icon">✈️</span>
-      <div class="map-info">
-        <div class="map-name">Narita Havalimanı T2</div>
-        <div class="map-sub">成田空港 · Gün 10</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Kappabashi+Street+Tokyo" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">🏺</span><span class="mc-name">Kappabashi Street</span><span class="mc-day">Gün 9</span>
+    </a>
+    <a href="https://maps.google.com/?q=Narita+Airport+Terminal+2" target="_blank" class="map-card tokyo">
+      <span class="mc-icon">✈️</span><span class="mc-name">Narita Havalimanı T2</span><span class="mc-day">Gün 10</span>
     </a>
   </div>
 
   <!-- OTELLER -->
-  <div class="section-header" style="color:#2D6A4F;margin-top:8px;">
-    <span class="section-icon">🏨</span>
-    <h3>Oteller</h3>
-  </div>
-
-  <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px;">
-    <a href="https://maps.google.com/?q=APA+Hotel+Osaka+Higobashi+Ekimae" target="_blank" class="map-link otel">
-      <span class="map-icon">🏨</span>
-      <div class="map-info">
-        <div class="map-name">APA Hotel Osaka Higobashi</div>
-        <div class="map-sub">Osaka Oteli · Gün 1–3</div>
-      </div>
-      <span class="map-arr">↗</span>
+  <p style="font-size:11px;font-weight:700;color:#2D6A4F;letter-spacing:1px;margin:16px 0 8px;">🏨 OTELLER</p>
+  <div class="maps-grid">
+    <a href="https://maps.google.com/?q=APA+Hotel+Osaka+Higobashi+Ekimae" target="_blank" class="map-card otel">
+      <span class="mc-icon">🏨</span><span class="mc-name">APA Hotel Osaka</span><span class="mc-day">Gün 1–3</span>
     </a>
-    <a href="https://maps.google.com/?q=Lili+Hotel+Kyoto+Shimogyo" target="_blank" class="map-link otel">
-      <span class="map-icon">🏨</span>
-      <div class="map-info">
-        <div class="map-name">Lili Hotel Kyoto</div>
-        <div class="map-sub">Kyoto Oteli · Gün 4–6</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Wayfarer+Kyoto+Shijo" target="_blank" class="map-card otel">
+      <span class="mc-icon">🏨</span><span class="mc-name">Wayfarer Kyoto Shijo</span><span class="mc-day">Gün 4–6</span>
     </a>
-    <a href="https://maps.google.com/?q=Aizumi+Hostel+Shinjuku+Tokyo" target="_blank" class="map-link otel">
-      <span class="map-icon">🏨</span>
-      <div class="map-info">
-        <div class="map-name">Aizumi Hostel Shinjuku</div>
-        <div class="map-sub">Tokyo Oteli · Gün 7–9</div>
-      </div>
-      <span class="map-arr">↗</span>
+    <a href="https://maps.google.com/?q=Aizumi+Hostel+Shinjuku+Tokyo" target="_blank" class="map-card otel">
+      <span class="mc-icon">🏨</span><span class="mc-name">Aizumi Hostel Tokyo</span><span class="mc-day">Gün 7–9</span>
     </a>
   </div>
 
 </div>
-
-<style>
-.map-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: transform 0.15s, opacity 0.15s;
-  -webkit-tap-highlight-color: transparent;
-}
-.map-link:active { transform: scale(0.97); opacity: 0.8; }
-.map-icon { font-size: 22px; flex-shrink: 0; }
-.map-info { flex: 1; min-width: 0; }
-.map-name { font-size: 13px; font-weight: 700; }
-.map-sub  { font-size: 11px; margin-top: 2px; opacity: 0.7; }
-.map-arr  { font-size: 18px; opacity: 0.6; flex-shrink: 0; }
-.map-link.osaka { background: #FFF3E0; color: #DC2F02; }
-.map-link.osaka .map-name { color: #DC2F02; }
-.map-link.kyoto { background: #F5ECD7; color: #6B4226; }
-.map-link.kyoto .map-name { color: #6B4226; }
-.map-link.tokyo { background: #E8EAF6; color: #1A1A2E; }
-.map-link.tokyo .map-name { color: #0F3460; }
-.map-link.nara  { background: #E8F5E9; color: #1B5E20; }
-.map-link.nara  .map-name { color: #1B5E20; }
-.map-link.usj   { background: #F3E5F5; color: #6A1B9A; }
-.map-link.usj   .map-name { color: #6A1B9A; }
-.map-link.otel  { background: #E3F2FD; color: #0D47A1; }
-.map-link.otel  .map-name { color: #0D47A1; }
-</style>
 
 <div class="page-break">
   <div id="bolum-araclar" class="section-cover" style="background:linear-gradient(135deg,#B7410E,#E85D04);">
@@ -2957,7 +3460,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
   var VARSAYILAN = [
     {ad:'✈️ Gidiş - Dönüş Uçak Bileti', tutar:'49400',  birim:'tl'},
     {ad:'🏨 Osaka Otel',                 tutar:'4982',   birim:'tl'},
-    {ad:'🏨 Kyoto Otel',                 tutar:'3043',   birim:'tl'},
+    {ad:'🏨 Wayfarer Kyoto Shijo',        tutar:'2698',   birim:'tl'},
     {ad:'🏨 Tokyo Otel',                 tutar:'6101',   birim:'tl'},
     {ad:'🎢 USJ Bilet',                  tutar:'8400',   birim:'tl'},
     {ad:'🚄 Tokyo Shinkansen Bileti',    tutar:'4500',   birim:'tl'},
@@ -3582,5 +4085,13 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
     <p style="color:rgba(255,186,8,0.9); font-size:14px; letter-spacing:2px;">Japan Adventure 2026 • 10 Gün • Sonsuz Anı 💕</p>
   </div>
 </div>
+
+<script>
+function accToggle(head) {
+  var item = head.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+
 </body>
 </html>
