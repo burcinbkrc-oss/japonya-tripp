@@ -497,6 +497,24 @@ ul li { margin-bottom:4px; font-size:13px; }
   .ogun-val { flex:1; font-size:12px; color:#2C3E50; padding:10px 10px; line-height:1.5; }
   .ogun-val small { color:#888; font-size:10px; display:block; margin-top:2px; }
 
+
+  /* ── ÖZET KARTLAR ── */
+  .ozet-kart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 12px;
+    padding: 10px 12px;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .ozet-left { display:flex; flex-direction:column; align-items:center; min-width:32px; }
+  .ozet-gun  { font-size:16px; font-weight:800; color:#1A1A2E; line-height:1; }
+  .ozet-tarih{ font-size:9px; color:#999; margin-top:1px; white-space:nowrap; }
+  .ozet-mid  { min-width:52px; display:flex; justify-content:center; }
+  .ozet-prog { flex:1; font-size:12px; color:#444; line-height:1.5; }
+
 </style>
 </head>
 <body>
@@ -803,7 +821,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
       <ul>
         <li>eSIM veya Pocket WiFi</li>
         <li>Selfie çubuğu</li>
-        <li>Su geçirmez telefon kılıfı (TeamLab!)</li>
+        <li>Su geçirmez telefon kılıfı</li>
         <li>Şarj kablosu + ekstra priz</li>
       </ul>
     </div>
@@ -896,7 +914,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
       <ul>
         <li>Google Maps + Navitime</li>
         <li>Google Translate (kamera modu!)</li>
-        <li>USJ App + TeamLab App</li>
+        <li>USJ App (kuyruk takibi için)</li>
         <li>SmartEX (Shinkansen)</li>
         <li>PayPay + Don Quijote App</li>
       </ul>
@@ -973,32 +991,73 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
 <div class="content">
   <h2 class="section-main">Genel Program — 10 Gün Özeti</h2>
   
-  <div class="ts"><table class="gen-table">
-    <thead>
-      <tr>
-        <th>Gün</th>
-        <th>Tarih</th>
-        <th>Şehir</th>
-        <th>Ana Program</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 1</td><td>21 Ağu Cuma</td><td><span class="osaka-badge city-badge">OSAKA</span></td><td>✈️ Varış 19:05 → Otel → Hafif yemek + konbini</td></tr>
-      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 2</td><td>22 Ağu Cmt</td><td><span class="osaka-badge city-badge">OSAKA</span></td><td>⛩️ Katsuoji Temple → 🐟 Kuromon Market → 🌆 Shinsekai → 🛍️ Shinsaibashi → 🌃 Dotonbori</td></tr>
-      <tr><td style="background:#FFF3E0;font-weight:700;">GÜN 3</td><td>23 Ağu Paz</td><td><span class="nara-badge city-badge">NARA</span> + <span class="osaka-badge city-badge">OSAKA</span></td><td>🦌 Nara Deer Park + Todai-ji → 🏯 Osaka Castle → 🛒 Don Quijote → 🌃 Dotonbori</td></tr>
-      <tr><td style="background:#F3E5F5;font-weight:700;">GÜN 4</td><td>24 Ağu Pzt</td><td><span class="usj-badge city-badge">USJ</span> → <span class="kyoto-badge city-badge">KYOTO</span></td><td>🎢 Universal Studios Japan (TAM GÜN) → 20:00 JR Special Rapid → Kyoto varış</td></tr>
-      <tr><td style="background:#F5ECD7;font-weight:700;">GÜN 5</td><td>25 Ağu Sal</td><td><span class="kyoto-badge city-badge">KYOTO</span></td><td>🎋 Arashiyama (Bambu + Tenryu-ji) → ☕ %Arabica → 🥢 Nishiki Market → 🏮 Gion → 👘 Kimono</td></tr>
-      <tr><td style="background:#F5ECD7;font-weight:700;">GÜN 6</td><td>26 Ağu Çar</td><td><span class="kyoto-badge city-badge">KYOTO</span></td><td>⛩️ Fushimi Inari (torii tünelleri) → 🛕 Kiyomizu-dera → Geleneksel alışveriş</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 7</td><td>27 Ağu Per</td><td><span class="kyoto-badge city-badge">KYOTO</span> → <span class="tokyo-badge city-badge">TOKYO</span></td><td>🚅 NOZOMI242 08:21 → Tokyo 10:33 → 🏯 İmparatorluk Sarayı → 🛍️ Ginza → 🌃 Shibuya</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 8</td><td>28 Ağu Cum</td><td><span class="tokyo-badge city-badge">TOKYO</span></td><td>🏙️ Shinjuku → 🌿 Meiji Tapınağı → 🛍️ Shibuya → 🌃 Ginza akşamı</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 9</td><td>29 Ağu Cmt</td><td><span class="tokyo-badge city-badge">TOKYO</span></td><td>⛩️ Senso-ji → 🗼 Tokyo Skytree → 🏺 Kappabashi Street → Serbest zaman</td></tr>
-      <tr><td style="background:#E8EAF6;font-weight:700;">GÜN 10</td><td>30 Ağu Paz</td><td><span class="tokyo-badge city-badge">TOKYO</span> ✈️</td><td>Dönüş — 05:30 Kalkış → Havalimanı → 10:25 Uçuş → 17:40 İstanbul varış</td></tr>
-    </tbody>
-  </table></div>
+  <div style="display:flex;flex-direction:column;gap:8px;">
+
+    <div class="ozet-kart" style="border-left:4px solid #E85D04;">
+      <div class="ozet-left"><span class="ozet-gun">1</span><span class="ozet-tarih">21 Ağu</span></div>
+      <div class="ozet-mid"><span class="osaka-badge city-badge" style="font-size:9px;padding:2px 8px;">OSAKA</span></div>
+      <div class="ozet-prog">✈️ Varış → Otel → Konbini</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #E85D04;">
+      <div class="ozet-left"><span class="ozet-gun">2</span><span class="ozet-tarih">22 Ağu</span></div>
+      <div class="ozet-mid"><span class="osaka-badge city-badge" style="font-size:9px;padding:2px 8px;">OSAKA</span></div>
+      <div class="ozet-prog">⛩️ Katsuoji → 🌆 Shinsekai → 🛍️ Shinsaibashi → 🌃 Dotonbori</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #27AE60;">
+      <div class="ozet-left"><span class="ozet-gun">3</span><span class="ozet-tarih">23 Ağu</span></div>
+      <div class="ozet-mid"><span class="nara-badge city-badge" style="font-size:9px;padding:2px 8px;">NARA</span></div>
+      <div class="ozet-prog">🦌 Nara Deer Park → 🏯 Osaka Castle → 🛒 Don Quijote</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #7B2D8B;">
+      <div class="ozet-left"><span class="ozet-gun">4</span><span class="ozet-tarih">24 Ağu</span></div>
+      <div class="ozet-mid"><span class="usj-badge city-badge" style="font-size:9px;padding:2px 8px;">USJ</span></div>
+      <div class="ozet-prog">🎢 Universal Studios Japan (TAM GÜN) → Kyoto</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #6B4226;">
+      <div class="ozet-left"><span class="ozet-gun">5</span><span class="ozet-tarih">25 Ağu</span></div>
+      <div class="ozet-mid"><span class="kyoto-badge city-badge" style="font-size:9px;padding:2px 8px;">KYOTO</span></div>
+      <div class="ozet-prog">🎋 Arashiyama → ☕ %Arabica → 🏮 Gion → 👘 Kimono</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #6B4226;">
+      <div class="ozet-left"><span class="ozet-gun">6</span><span class="ozet-tarih">26 Ağu</span></div>
+      <div class="ozet-mid"><span class="kyoto-badge city-badge" style="font-size:9px;padding:2px 8px;">KYOTO</span></div>
+      <div class="ozet-prog">⛩️ Fushimi Inari → 🛕 Kiyomizu-dera → Alışveriş</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #1A1A2E;">
+      <div class="ozet-left"><span class="ozet-gun">7</span><span class="ozet-tarih">27 Ağu</span></div>
+      <div class="ozet-mid"><span class="tokyo-badge city-badge" style="font-size:9px;padding:2px 8px;">TOKYO</span></div>
+      <div class="ozet-prog">🚅 NOZOMI242 → 🏯 İmp. Sarayı → 🛍️ Ginza → 🌃 Shibuya</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #1A1A2E;">
+      <div class="ozet-left"><span class="ozet-gun">8</span><span class="ozet-tarih">28 Ağu</span></div>
+      <div class="ozet-mid"><span class="tokyo-badge city-badge" style="font-size:9px;padding:2px 8px;">TOKYO</span></div>
+      <div class="ozet-prog">🏙️ Shinjuku → 🌿 Meiji → 🛍️ Shibuya → 🌃 Ginza</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #1A1A2E;">
+      <div class="ozet-left"><span class="ozet-gun">9</span><span class="ozet-tarih">29 Ağu</span></div>
+      <div class="ozet-mid"><span class="tokyo-badge city-badge" style="font-size:9px;padding:2px 8px;">TOKYO</span></div>
+      <div class="ozet-prog">⛩️ Senso-ji → 🗼 Skytree → 🏺 Kappabashi</div>
+    </div>
+
+    <div class="ozet-kart" style="border-left:4px solid #E94560;">
+      <div class="ozet-left"><span class="ozet-gun">10</span><span class="ozet-tarih">30 Ağu</span></div>
+      <div class="ozet-mid"><span style="font-size:16px;">✈️</span></div>
+      <div class="ozet-prog">Dönüş — 10:25 Narita → 17:40 İstanbul</div>
+    </div>
+
+  </div>
 
   <div class="tip-box">
     <strong>📌 Kritik Tarihleri Unutma!</strong>
-    27 Ağustos 09:00 Shinkansen bileti • TeamLab Planets giriş 18:30 • USJ Express Pass 5 online al • Kimono kiralama rezervasyonu
+    27 Ağustos 09:00 Shinkansen bileti • USJ Express Pass 5 online al • Kimono kiralama rezervasyonu
   </div>
 </div>
 
@@ -1781,8 +1840,6 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
       <div class="route-stop stop-tokyo">🗼 Skytree<br><small>11:00</small></div>
       <div class="route-arrow">→</div>
       <div class="route-stop stop-tokyo">🎮 Akihabara<br><small>14:00</small></div>
-      <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🎨 TeamLab<br><small>18:30</small></div>
     </div>
   </div>
 
@@ -1843,48 +1900,7 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
     </div>
   </div>
 
-  <div class="program-section">
-    <span class="program-label aksam">🌙 AKŞAM (18:30) — TEAMLAB PLANETS</span>
-    <div class="tokyo-card highlight-card">
-      <p><strong>🎨 TeamLab Planets Tokyo</strong> — Akihabara → Shin-Toyosu (~30dk, ~¥500)</p>
-      <p style="font-size:10pt;">Dünyanın en etkileyici dijital sanat müzesi! 💰 ¥3.800 (online ön satın — ŞART!) ⏱️ 1.5–2 saat</p>
-      <div class="warning-box" style="margin:10px 0;">
-        <strong>👗 TeamLab Kıyafet Kuralları (ÇOK ÖNEMLİ!)</strong>
-        👣 Ayakkabı girişte çıkarılır — yalınayak • 👗 Diz altı etek/şort (suya giriyorsunuz!) • 🤍 Beyaz/açık renk giyin — projeksiyonlar yansır, efsane fotoğraf! • 📱 Su geçirmez kılıf önerilir
-      </div>
-      <p><strong>En İyi Odalar:</strong> Infinity Mirror Room • Waterfall Room • Koi & Flower Garden • Floating Flower Garden 📸</p>
-    </div>
-  </div>
-  <p style="font-size:10pt; color:#888;">💰 Tahmini Harcama: ¥12.000–22.000</p>
-</div>
-
-<!-- GÜN 9 -->
-<div class="page-break content">
-  <div class="day-header tokyo-day">
-    <div class="day-num"><div class="num">9</div><div class="label">GÜN</div></div>
-    <div class="day-info">
-      <h3>⛩️ Senso-ji + 🗼 Tokyo Skytree + 🏺 Kappabashi</h3>
-      <div class="day-meta"><span>📅 29 Ağustos Cumartesi</span><span>📍 Tokyo</span></div>
-      <div class="day-theme">Senso-ji tapınağı, Tokyo Skytree ve Kappabashi'de mutfak alışverişi!</div>
-    </div>
-  </div>
-
-  <div class="route-visual">
-    <div class="mini-route-title">🗺️ Günün Rotası — Batı Tokyo Hattı</div>
-    <div class="route-stops">
-      <div class="route-stop stop-tokyo">🥞 Flipper's<br><small>08:30</small></div>
-      <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">⛩️ Meiji<br><small>09:30</small></div>
-      <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🌈 Harajuku<br><small>10:30</small></div>
-      <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🏙️ Shibuya<br><small>14:30</small></div>
-      <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">✨ Ginza<br><small>18:30</small></div>
-      <div class="route-arrow">→</div>
-      <div class="route-stop stop-tokyo">🎤 Karaoke<br><small>21:00</small></div>
-    </div>
-  </div>
+  
 
   <div class="program-section">
     <span class="program-label sabah">☀️ SABAH — MEİJİ + HARAJUKU</span>
@@ -3195,7 +3211,6 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
     <div style="margin-top:14px;">
       <div style="color:rgba(255,255,255,0.4);font-size:10px;margin-bottom:8px;">Sık alınanlar:</div>
       <div style="display:flex;gap:6px;flex-wrap:wrap;">
-        <button onclick="taxHizli(3800)"  class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">TeamLab ¥3.800</button>
         <button onclick="taxHizli(5500)"  class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">Min. limit ¥5.500</button>
         <button onclick="taxHizli(6000)"  class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">Kimono ¥6.000</button>
         <button onclick="taxHizli(20000)" class="hizli-btn" style="border-color:rgba(165,214,167,0.4);">Alışveriş ¥20.000</button>
@@ -4057,12 +4072,12 @@ document.getElementById('toc-panel').addEventListener('click', function(e) {
       {s:'Senso-ji nerede?',c:['Kyoto','Osaka','Tokyo-Asakusa','Nara'],d:2},
       {s:'Akihabara\'nın lakabı?',c:['Anime Mahallesi','Elektrik Kasabası','Manga Şehri','Otaku Cenneti'],d:1},
       {s:'Asakusa\'daki ünlü kapının adı?',c:['Torii Kapısı','Kaminarimon','Senso-ji Kapısı','Nakamise'],d:1},
-      {s:'TeamLab Planets nerede?',c:['Shibuya','Shinjuku','Toyosu','Asakusa'],d:2},
+      {s:'Tokyo\'nun en eski tapınağı nerede?',c:['Shibuya','Shinjuku','Asakusa','Ginza'],d:2},
       {s:'Tokyo\'nun eski adı?',c:['Kyoto','Nara','Edo','Heian'],d:2}
     ],
     8:[
       {s:'Gotokuji hangi kediyle ünlü?',c:['Kuro','Maneki-neko','Pikachu','Hello Kitty'],d:1},
-      {s:'TeamLab\'da ne var?',c:['Müzik konserleri','Dijital sanat enstalasyonları','VR oyunları','Film'],d:1},
+      {s:'Kappabashi\'da ne satılır?',c:['Elektronik','Mutfak araçları & bıçaklar','Kitap','Oyuncak'],d:1},
       {s:'Harajuku hangi kültürle ünlü?',c:['Punk','Kawaii & Lolita','Hip-hop','Gothic'],d:1},
       {s:'Shibuya Crossing\'de günlük geçiş?',c:['10.000','50.000','500.000','2.500.000+'],d:3},
       {s:'Harajuku\'nun ünlü caddesi?',c:['Takeshita','Omotesando','Nakamise','Shinsaibashi'],d:0}
